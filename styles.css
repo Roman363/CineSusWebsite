@@ -1,0 +1,81 @@
+body {
+    background-color: #0F1C3F;
+    margin: 0;
+    padding: 0;
+}
+
+#mainNav{
+    display: block;
+    z-index: 10000;
+    border-bottom: 1px solid #C4C4C4;
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    right: 0%;
+    padding: 2em;
+    background-color: #0F1C3F;
+}
+
+#logo{
+    color: #600409;
+    font-size: 3em;
+    font-family: 'Abhaya Libre', serif;
+    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-color: #E50000;
+    text-decoration: none;
+    position: relative;
+    left: 2.5%;
+}
+#movies, #rewards, #cart{
+    font-size: 1.4em;
+    font-family: 'Abhaya Libre', serif;
+    text-decoration: none;
+    margin: 1em 10%;
+    position: relative;
+    left: 12em;
+    color: white;
+}
+#movies:hover, #rewards:hover, #cart:hover{
+    text-decoration: underline;
+}
+
+#featured {
+    display: block;
+    position: relative;
+    top: 8em;
+    margin: 1em 3em;
+}
+#featuredText {
+    color: #E50000;
+    display: block;
+}
+
+#movieSpace {
+    display: inline;
+    
+}
+#moviePoster {
+    display: inline;
+    margin: 2.5em;
+}
+
+button {
+    display: block;
+}
+
+label {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    left: 30px;
+}
+
+
+
+
+
+
+
+
