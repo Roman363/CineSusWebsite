@@ -52,25 +52,24 @@ body {
 }
 
 #movieSpace {
-    display: inline;
-    
-}
-#moviePoster {
-    display: inline;
-    margin: 2.5em;
+    display: inline-block;
+    text-align: center;
+    padding: 2em;
 }
 
-button {
-    display: block;
-}
+
 
 label {
     color: white;
     text-align: center;
     padding: 1em;
-    position: relative;
-    left: 30px;
+    display: block;
+
 }
+
+/* div {
+    border: 1px solid red;
+} */
 
 
 
