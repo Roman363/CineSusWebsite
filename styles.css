@@ -56,6 +56,56 @@ body {
     text-align: center;
     padding: 2em;
 }
+#movie-image {
+    display: block;
+    align-items: center;
+    float: left;
+    height: 100%;
+    width: 20%;
+    padding: 5em 2em;
+}
+.movie-info {
+    display: inline-block;
+    float: center;
+    height: 100%;
+    width: 50%;
+    padding: 15em 5em;
+    color: white;
+    
+    
+}
+.movie-title {
+    text-align: center;
+}
+.movie-length, .movie-rating, .movie-review, .movie-year {
+    display: inline;
+    text-align: center;
+    position: relative;
+    left: 25%;
+}
+.movie-description {
+    padding-top: 2em;
+}
+.movie-tickets {
+    display: block;
+    float: right;
+    height: 100%;
+    width: 30%;
+    color: white;
+    padding: 15em 5em;
+    
+}
+.childTicket, .childTicketPrice, .adultTicket, .adultTicketPrice, .elderTicket, .elderTicketPrice {
+    display: inline;
+    margin: 1em 0;
+}
+.submit {
+    background-color: #E50000;
+    padding: 10px;
+    align-self: center;
+    border-radius: 5px;
+    margin: 2em 7.5em 0;
+}
 
 
 
