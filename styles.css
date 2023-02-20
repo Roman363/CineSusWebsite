@@ -14,7 +14,8 @@ body {
     left: 0%;
     right: 0%;
     padding: 2em;
-    background-color: #0F1C3F;
+    background-color: #040b1e;
+
 }
 
 #logo{
@@ -51,6 +52,7 @@ body {
     display: block;
 }
 
+
 #regularText {
     color: #ffffff;
     display: block;
@@ -61,6 +63,7 @@ body {
     text-align: center;
     padding: 2em;
 }
+
 
 #movieInfo{
     position: absolute;
@@ -86,9 +89,130 @@ label {
 
 }
 
-/* div {
-    border: 1px solid red;
-} */
+
+label {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    display: block;
+
+}
+
+form{
+    display: inline;
+}
+
+div {
+    color: white;
+}
+
+#logo2{
+    color: #600409;
+    font-size: 3em;
+    font-family: 'Abhaya Libre', serif;
+    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-color: #E50000;
+    text-decoration: none;
+    position: relative;
+    left: 2.5%;
+    display: block;
+}
+
+#statement{
+    position: relative;
+    bottom: 0%;
+    left: 45%;
+    color: white;
+    display: block;
+}
+
+#footer{
+    background-color: #787878;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: -1em;
+}
+
+
+#moviePayInfo{
+    position: absolute;
+    width: 561px;
+    height: 74px;
+    left: 350px;
+    top: 75px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 39px;
+    
+    color: #FFFFFF;
+    }
+    
+    #ticketPayInfo{
+    position: absolute;
+    width: 316px;
+    height: 76px;
+    left: 10px;
+    top: 570px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 39px;
+    
+    color: #FFFFFF;
+    }
+    
+    #ticketPayInfo2{
+        position: absolute;
+        width: 316px;
+        height: 76px;
+        right: 500px;
+        top: 570px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 39px;
+        
+        color: #FFFFFF;
+        }
+    
+    #ticketPayBox{
+        position: absolute;
+        width: 300px;
+        height: 550px;
+        right: 50px;
+        top: 75px;
+        box-shadow: 0.5em 0 0.5em #000;
+        border-radius: 30px;
+        background-color: #C4C4C4;
+    }
+    
+    .ticketPayDropDown{
+        width: 300px;
+        height: 550px;
+        right: 50px;
+        top: 76px;
+        box-shadow: 0.5em 0 0.5em #000;
+        border-radius: 30px;
+        background-color: #C4C4C4;
+    }
+    
+    #payBox{
+        font-size: 28px;
+        font-family: 'Inter';
+        font-weight: 800;
+        text-decoration: none;
+        color: white;
+        
+    }
+    
 
 
 
