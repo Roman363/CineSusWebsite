@@ -51,63 +51,32 @@ body {
     display: block;
 }
 
+#regularText {
+    color: #ffffff;
+    display: block;
+}
+
 #movieSpace {
     display: inline-block;
     text-align: center;
     padding: 2em;
 }
-#movie-image {
+
+#movieInfo{
+    position: absolute;
+    width: 550px;
+    height: 775px;
+    left: 470px;
+    top: 190px;
+
+    color: #ffffff;
     display: block;
-    align-items: center;
-    float: left;
-    height: 100%;
-    width: 20%;
-    padding: 5em 2em;
 }
-.movie-info {
+
+h3 {
     display: inline-block;
-    float: center;
-    height: 100%;
-    width: 50%;
-    padding: 15em 5em;
-    color: white;
-    
-    
+    vertical-align: top;
 }
-.movie-title {
-    text-align: center;
-}
-.movie-length, .movie-rating, .movie-review, .movie-year {
-    display: inline;
-    text-align: center;
-    position: relative;
-    left: 25%;
-}
-.movie-description {
-    padding-top: 2em;
-}
-.movie-tickets {
-    display: block;
-    float: right;
-    height: 100%;
-    width: 30%;
-    color: white;
-    padding: 15em 5em;
-    
-}
-.childTicket, .childTicketPrice, .adultTicket, .adultTicketPrice, .elderTicket, .elderTicketPrice {
-    display: inline;
-    margin: 1em 0;
-}
-.submit {
-    background-color: #E50000;
-    padding: 10px;
-    align-self: center;
-    border-radius: 5px;
-    margin: 2em 7.5em 0;
-}
-
-
 
 label {
     color: white;
@@ -116,86 +85,6 @@ label {
     display: block;
 
 }
-
-#moviePayInfo{
-position: absolute;
-width: 561px;
-height: 74px;
-left: 350px;
-top: 75px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 32px;
-line-height: 39px;
-
-color: #FFFFFF;
-}
-
-#ticketPayInfo{
-position: absolute;
-width: 316px;
-height: 76px;
-left: 10px;
-top: 570px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 30px;
-line-height: 39px;
-
-color: #FFFFFF;
-}
-
-#ticketPayInfo2{
-    position: absolute;
-    width: 316px;
-    height: 76px;
-    right: 500px;
-    top: 570px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 39px;
-    
-    color: #FFFFFF;
-    }
-
-#ticketPayBox{
-    position: absolute;
-    width: 300px;
-    height: 550px;
-    right: 50px;
-    top: 75px;
-    box-shadow: 0.5em 0 0.5em #000;
-    border-radius: 30px;
-    background-color: #C4C4C4;
-}
-
-.ticketPayDropDown{
-    width: 300px;
-    height: 550px;
-    right: 50px;
-    top: 76px;
-    box-shadow: 0.5em 0 0.5em #000;
-    border-radius: 30px;
-    background-color: #C4C4C4;
-}
-
-#payBox{
-    font-size: 28px;
-    font-family: 'Inter';
-    font-weight: 800;
-    text-decoration: none;
-    color: white;
-    
-}
-
-
 
 /* div {
     border: 1px solid red;
