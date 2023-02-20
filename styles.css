@@ -14,7 +14,7 @@ body {
     left: 0%;
     right: 0%;
     padding: 2em;
-    background-color: #0F1C3F;
+    background-color: #040b1e;
 }
 
 #logo{
@@ -27,6 +27,8 @@ body {
     position: relative;
     left: 2.5%;
 }
+
+
 #movies, #rewards, #cart{
     font-size: 1.4em;
     font-family: 'Abhaya Libre', serif;
@@ -67,9 +69,41 @@ label {
 
 }
 
-/* div {
-    border: 1px solid red;
-} */
+form{
+    display: inline;
+}
+
+div {
+    color: white;
+}
+
+#logo2{
+    color: #600409;
+    font-size: 3em;
+    font-family: 'Abhaya Libre', serif;
+    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-color: #E50000;
+    text-decoration: none;
+    position: relative;
+    left: 2.5%;
+    display: block;
+}
+
+#statement{
+    position: relative;
+    bottom: 0%;
+    left: 45%;
+    color: white;
+    display: block;
+}
+
+#footer{
+    background-color: #787878;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: -1em;
+}
 
 
 
