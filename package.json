@@ -1,0 +1,28 @@
+{
+  "name": "sprint2",
+  "version": "1.0.0",
+  "description": "1. Clone assignment 0 to your local repository (Do this through the command line)\r 2. Update index.html and change the line \"Your Name Goes Here!\"\r 3. Put your name in this line\r 4. git add changes\r 5. git commit changes (Make sure that you have a meaningful message)\r 6. git push changes\r 7. Submit screenshot on Blackboard of Github with changes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UTEP-Agile-SP23/assignment0-car70scep.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UTEP-Agile-SP23/assignment0-car70scep/issues"
+  },
+  "homepage": "https://github.com/UTEP-Agile-SP23/assignment0-car70scep#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "firebase": "^9.17.1"
+  }
+}
