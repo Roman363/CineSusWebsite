@@ -22,7 +22,7 @@ const createAccountForm = document.getElementById("createAccount")
 
 createAccountForm.addEventListener("submit", (event) =>
 {
-  event.preventDefault()
+   event.preventDefault()
 
   const firstName = createAccountForm.firstName.value
   const lastName = createAccountForm.lastName.value
