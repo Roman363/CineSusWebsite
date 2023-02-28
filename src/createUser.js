@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app"
-import { getAuth,onAuthStateChanged, updateProfile} from 'firebase/auth'
-import {doc, getFirestore, setDoc} from 'firebase/firestore'
+import { getAuth, browserSessionPersistence,setPersistence,createUserWithEmailAndPassword} from 'firebase/auth'
+import {getFirestore } from 'firebase/firestore'
 
 
 // Your web app's Firebase configuration
@@ -18,51 +18,88 @@ const fireApp = initializeApp(firebaseConfig);
 const auth = getAuth(fireApp);
 const db = getFirestore();
 
-onAuthStateChanged(auth, (user) => {
+const createAccountForm = document.getElementById("createAccount")
+
+createAccountForm.addEventListener("submit", (event) =>
+{
+  event.preventDefault()
+
+  const firstName = createAccountForm.firstName.value
+  const lastName = createAccountForm.lastName.value
+  const email = createAccountForm.email.value
+  const password = createAccountForm.password.value
+  const address1 = createAccountForm.address1.value
+  const address2 = createAccountForm.address2.value
+  const city = createAccountForm.city.value 
+  const state = createAccountForm.state.value
+  const zip = createAccountForm.zip.value
   
-  if (user) {
-   const uid = user.uid
-    console.log(uid)
-    const initialProfileForm = document.querySelector("#newUser")
-    initialProfileForm.addEventListener("submit", (event) => {
-      event.preventDefault()
+
+  setPersistence(auth, browserSessionPersistence)
+  .then(() =>{
+    //Promise returned by setPersistence
+    createUserWithEmailAndPassword(auth,email, password)
+    .then((userCredential)=> {
+      const user = userCredential.user
+      console.log(user)
+      console.log(user.uid)
+      console.log("user created")
+    })
+  })
+  .catch((e)=>{
+    //Error from persistence caught
+    console.log(e)
+  })
+})
+
+// onAuthStateChanged(auth, (user) => {
+  
+//   if (user) {
+//    const uid = user.uid
+//     console.log(uid)
+//     const initialProfileForm = document.querySelector("#newUser")
+//     initialProfileForm.addEventListener("submit", (event) => {
+//       event.preventDefault()
    
 
-    const newUser = {
-      firstName: initialProfileForm.firstName.value,
-      lastName: initialProfileForm.lastName.value,
-      dob: initialProfileForm.dob.value,
-      deposit: initialProfileForm.deposit.value,
-      uid: uid
+//     const newUser = {
+//       firstName: initialProfileForm.firstName.value,
+//       email: initialProfileForm.email.value,
+//       password: initialProfileForm.password.value,
+//       address1: initialProfileForm.address1.value,
+//       city: initialProfileForm.city.vlaue,
+//       state: initialProfileForm.state.value,
+//       zip: initialProfileForm.zip.value,
+//       uid: uid
 
-    }
+//     }
 
-    updateProfile(auth.currentUser,{
-      displayName: initialProfileForm.firstName.value
-    })
-    .then(() => {
-      //Promise
-      console.log("Updated profile")
-    })
-    .catch((e) => {
-      console.log(e)
-    })
-    console.log(auth.currentUser.displayName)
-    console.log(newUser)
+//     updateProfile(auth.currentUser,{
+//       displayName: initialProfileForm.firstName.value
+//     })
+//     .then(() => {
+//       //Promise
+//       console.log("Updated profile")
+//     })
+//     .catch((e) => {
+//       console.log(e)
+//     })
+//     console.log(auth.currentUser.displayName)
+//     console.log(newUser)
 
-    const userDocRef = doc(db,"users", uid)
+//     const userDocRef = doc(db,"users", uid)
 
-    setDoc(userDocRef, newUser)
-    .then(() => {
-      console.log("New User Added")
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+//     setDoc(userDocRef, newUser)
+//     .then(() => {
+//       console.log("New User Added")
+//     })
+//     .catch((error) => {
+//       console.log(error)
+//     })
     
-  })
+//   })
 
-  }else {
-    console.log("Signed Out")
-  }
-})
+//   }else {
+//     console.log("Signed Out")
+//   }
+// })
