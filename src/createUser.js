@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app"
-import { getAuth, browserSessionPersistence,setPersistence,createUserWithEmailAndPassword} from 'firebase/auth'
+import { getAuth, browserSessionPersistence,setPersistence,createUserWithEmailAndPassword,onAuthStateChanged} from 'firebase/auth'
 import {getFirestore } from 'firebase/firestore'
 
 
@@ -44,6 +44,7 @@ createAccountForm.addEventListener("submit", (event) =>
       console.log(user)
       console.log(user.uid)
       console.log("user created")
+      location.href = "index.html"
     })
   })
   .catch((e)=>{
@@ -52,6 +53,19 @@ createAccountForm.addEventListener("submit", (event) =>
   })
 })
 
+
+//Observer
+onAuthStateChanged(auth, (user) => {
+  
+  if (user) {
+    //User is signed in
+    const uid = user.uid;
+    console.log(uid)
+    console.log("Signed In")
+  }else {
+    console.log("Signed Out")
+  }
+})
 // onAuthStateChanged(auth, (user) => {
   
 //   if (user) {

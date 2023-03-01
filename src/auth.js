@@ -58,6 +58,7 @@ signInForm.addEventListener("submit", (event) =>{
    console.log(user.displayName)
    console.log("Signed in 2")
    console.log(auth)
+   location.href = "index.html"
   })
   .catch((e)=>{
     console.log(e)
@@ -78,14 +79,14 @@ signInForm.addEventListener("submit", (event) =>{
 // })
 
 //Observer
-// onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, (user) => {
   
-//   if (user) {
-//     //User is signed in
-//     const uid = user.uid;
-//     console.log(uid)
-//     console.log("Signed In")
-//   }else {
-//     console.log("Signed Out")
-//   }
-// })
+  if (user) {
+    //User is signed in
+    const uid = user.uid;
+    console.log(uid)
+    console.log("Signed In")
+  }else {
+    console.log("Signed Out")
+  }
+})
