@@ -11,25 +11,23 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <header id="mainNav">
-        <a href="#" id="logo">CINඞSUS</a>
-        <a href="" id="movies">Movies</a>
-        <a href="" id="rewards">Rewards</a>
-        <a href="" id="cart">Cart</a>
+      <a href="index.html" id="logo">CINඞSUS</a>
+      <a href="" id="movies">Movies</a>
+      <a href="" id="rewards">Rewards</a>
+      <a href="paymentPage.html" id="cart">Cart</a>
     </header>
 
 
     <div id="featured">
-        <h2 id="featuredText">Featured:</h2>
 
         <form method="get" action="purchasepage.html">
 
           <div id="movieSpace">
-            <button id="joker" ><img src="pictures/joker.png" width="254" height="432" left= "-4" top = "187" alt="jokerPic"></button>
-            <label for="joker">joker | Rated R | 4.7/ 5.0</label>
-        </div>
+            <img src="" width="254" height="432" left= "-4" top = "187" id="displayMovie">
+            <label for="displayMovie" id="movieInfoPayment">Now Loading...</label>
+          </div>
         
         <div id="moviePayInfo">
-            <Strong>Joker</Strong></br>
             <Strong>Saturday, February 18 at 3:50 PM</Strong></br>
             <Strong>XD Luxury Lounger 3D  </Strong></br>
             <Strong>Cinesus 7 XD </Strong></br>
@@ -50,12 +48,12 @@
        <div id="ticketPayBox">
         <text id="payBox" style ="position: relative; left: 48px;">Cart Summary</text></br></br>
         <text id="payBox" style ="position: relative; left: 15px; font-size: 20;">Tickets</text>
-        <text id="payBox" style ="position: relative; left: 100px; font-size: 20;">$14.25</text></br></br>
+        <text id="subTotal" style ="position: relative; left: 100px; font-size: 20;">$...</text></br></br>
         <text id="payBox" style ="position: relative; left: 17px; font-size: 20;">Tax</text>
-        <text id="payBox" style ="position: relative; left: 160px; font-size: 20;">$1.33</text></br></br></br></br>
+        <text id="tax" style ="position: relative; left: 160px; font-size: 20;">$...</text></br></br></br></br>
         <hr size= 25 style="position: relative; color: white; width: 100%;">
         <text id="payBox" style ="position: relative; left: 15px; font-size: 20;">Total</text>
-        <text id="payBox" style ="position: relative; left: 130px; font-size: 20;">$15.58</text></br></br>
+        <text id="total" style ="position: relative; left: 130px; font-size: 20;">$...</text></br></br>
 
         <a href="signIn.html">
           <div class="d-flex justify-content-center">
@@ -96,6 +94,7 @@
             </div>
 
             <div class="d-flex justify-content-center">
+              <input type="hidden" id="currentMovieGet" name="movieName" value="">
               <button type="submit" class="btn btn-warning margin-auto">Submit</button>
             </div>
 
@@ -105,6 +104,8 @@
   
         </form>
     </div>
+
+    <script src="paymentPage.bundle.js"></script>
 
 
       
