@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app"
-import { getAuth, onAuthStateChanged} from 'firebase/auth'
+import { getAuth, onAuthStateChanged,signOut} from 'firebase/auth'
 
 
 // Your web app's Firebase configuration
@@ -28,4 +28,16 @@ onAuthStateChanged(auth, (user) => {
   }else {
     console.log("Signed Out")
   }
+})
+
+const signOutUserForm = document.querySelector("#signOut")
+signOutUserForm.addEventListener("submit", (event)=> {
+  event.preventDefault()
+
+  signOut(auth)
+  .then(() => {
+    console.log("Signed out")
+  }).catch((error) => {
+
+  })
 })
