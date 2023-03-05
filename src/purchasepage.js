@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app"
 import{ getFirestore, collection, getDocs, addDoc, deleteDoc, doc, updateDoc, query, orderBy, onSnapshot} from "firebase/firestore"
+import { getAuth, onAuthStateChanged} from 'firebase/auth'
 
 
 // Your web app's Firebase configuration
@@ -18,6 +19,8 @@ console.log(movieName);
 
 // Initialize Firebase
 const fireApp = initializeApp(firebaseConfig);
+
+const auth = getAuth(fireApp);
 
 const db = getFirestore(fireApp);
 const movieCollection = collection(db, 'movie_info')
@@ -42,3 +45,16 @@ getDocs(movieCollection)
     .catch(err => {
         console.log(err.message)
     })
+
+    //Observer
+onAuthStateChanged(auth, (user) => {
+  
+    if (user) {
+      //User is signed in
+      const uid = user.uid;
+      console.log(uid)
+      console.log("Signed In to " + user.displayName)
+    }else {
+      console.log("Signed Out")
+    }
+  })

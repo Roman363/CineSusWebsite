@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app"
-import { getAuth,setPersistence, createUserWithEmailAndPassword,browserSessionPersistence, signInWithEmailAndPassword,signOut, onAuthStateChanged} from 'firebase/auth'
+import { getAuth,signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
 
 
 // Your web app's Firebase configuration
