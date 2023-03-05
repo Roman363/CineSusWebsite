@@ -10,7 +10,8 @@ module.exports =
     config: './src/config.js',
     detailpage: './src/detailpage.js',
     paymentPage: './src/paymentPage.js',
-    purchasepage: './src/purchasepage.js'},
+    purchasepage: './src/purchasepage.js',
+    updateInfo: './src/updateInfo.js'},
   
     output: 
   {

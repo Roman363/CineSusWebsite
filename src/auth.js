@@ -16,32 +16,6 @@ const firebaseConfig = {
 const fireApp = initializeApp(firebaseConfig);
 const auth = getAuth(fireApp);
 
-// const createAccountForm = document.getElementById("createAccount")
-
-// createAccountForm.addEventListener("submit", (event) =>
-// {
-//   event.preventDefault()
-
-//   const name = createAccountForm.name.value
-//   const email = createAccountForm.email.value
-//   const pass = createAccountForm.password.value
-
-//   setPersistence(auth, browserSessionPersistence)
-//   .then(() =>{
-//     //Promise returned by setPersistence
-//     createUserWithEmailAndPassword(auth,email, pass)
-//     .then((userCredential)=> {
-//       const user = userCredential.user
-//       console.log(user)
-//       console.log(user.uid)
-//       location.href = "createUser.html"
-//     })
-//   })
-//   .catch((e)=>{
-//     //Error from persistence caught
-//     console.log(e)
-//   })
-// })
 
 const signInForm = document.getElementById("signIn")
 signInForm.addEventListener("submit", (event) =>{
@@ -56,8 +30,9 @@ signInForm.addEventListener("submit", (event) =>{
   signInWithEmailAndPassword(auth,email,pass)
   .then((user) =>{
    console.log(user.displayName)
-   console.log("Signed in 2")
+   console.log("Signed in 2 " + user.displayName)
    console.log(auth)
+   location.href = "index.html"
   })
   .catch((e)=>{
     console.log(e)
@@ -65,27 +40,14 @@ signInForm.addEventListener("submit", (event) =>{
 
 })
 
-// const signOutUserForm = document.querySelector("#signOut")
-// signOutUserForm.addEventListener("submit", (event)=> {
-//   event.preventDefault()
-
-//   signOut(auth)
-//   .then(() => {
-//     console.log("Signed out")
-//   }).catch((error) => {
-
-//   })
-// })
-
-//Observer
-// onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, (user) => {
   
-//   if (user) {
-//     //User is signed in
-//     const uid = user.uid;
-//     console.log(uid)
-//     console.log("Signed In")
-//   }else {
-//     console.log("Signed Out")
-//   }
-// })
+  if (user) {
+    //User is signed in
+    const uid = user.uid;
+    console.log(uid)
+    console.log("Signed into " + user.displayName)
+  }else {
+    console.log("Signed Out")
+  }
+})
