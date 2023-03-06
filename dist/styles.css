@@ -1,5 +1,10 @@
+
+ color theme{ 
+    color: #0B0C10, #1F2833, #C5C6C7, #66FCF1, #45A29E;
+ }
+
 body {
-  background-color: #0F1C3F;
+  background-color: #0B0C10;
   margin: 0;
   padding: 0;
 }
@@ -14,12 +19,12 @@ body {
   left: 0%;
   right: 0%;
   padding: 2em;
-  background-color: #040b1e;
+  background-color: #1F2833;
 
 }
 
 #logo{
-  color: #600409;
+  color: #66FCF1;
   font-size: 3em;
   font-family: 'Abhaya Libre', serif;
   -webkit-text-stroke-width: .3px;
@@ -35,7 +40,7 @@ body {
   margin: 1em 10%;
   position: relative;
   left: 12em;
-  color: white;
+  color: #C4C4C4;
 }
 #movies:hover, #rewards:hover, #cart:hover{
   text-decoration: underline;
@@ -48,7 +53,7 @@ body {
   margin: 1em 3em;
 }
 #featuredText {
-  color: #E50000;
+  color: #66FCF1;
   display: block;
 }
 
@@ -61,6 +66,8 @@ body {
 #movieSpace {
   display: inline-block;
   text-align: center;
+  border: solid;
+  border-color: #45A29E;
   padding: 2em;
 }
 
@@ -107,7 +114,7 @@ div {
 }
 
 #logo2{
-  color: #600409;
+  color: #66FCF1;
   font-size: 3em;
   font-family: 'Abhaya Libre', serif;
   -webkit-text-stroke-width: .3px;
@@ -127,7 +134,7 @@ div {
 }
 
 #footer{
-  background-color: #787878;
+  background-color: #1F2833;
   margin: 0;
   padding: 0;
   position: relative;
