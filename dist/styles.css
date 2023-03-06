@@ -7,6 +7,8 @@ body {
   background-color: #0B0C10;
   margin: 0;
   padding: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 #mainNav{
@@ -253,16 +255,16 @@ color: #FFFFFF;
       
       
   }
-  .movie-title {
+  #movie-title {
       text-align: center;
   }
-  .movie-length, .movie-rating, .movie-review, .movie-year {
+  #movie-length, #movie-rating, #movie-review, #movie-year {
       display: inline;
       text-align: center;
       position: relative;
       left: 25%;
   }
-  .movie-description {
+  #movie-description {
       padding-top: 2em;
   }
   .movie-tickets {

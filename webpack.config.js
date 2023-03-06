@@ -7,7 +7,11 @@ module.exports =
     index: './src/index.js',
     auth: './src/auth.js',
     createUser: './src/createUser.js',
-    config: './src/config.js'},
+    config: './src/config.js',
+    detailpage: './src/detailpage.js',
+    paymentPage: './src/paymentPage.js',
+    purchasepage: './src/purchasepage.js',
+    updateInfo: './src/updateInfo.js'},
   
     output: 
   {

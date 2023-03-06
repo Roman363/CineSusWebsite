@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app"
-import { getAuth,onAuthStateChanged, updateProfile} from 'firebase/auth'
-import {doc, getFirestore, setDoc} from 'firebase/firestore'
+import { getAuth, browserSessionPersistence,setPersistence,createUserWithEmailAndPassword,onAuthStateChanged} from 'firebase/auth'
+import {getFirestore } from 'firebase/firestore'
 
 
 // Your web app's Firebase configuration
@@ -18,50 +18,41 @@ const fireApp = initializeApp(firebaseConfig);
 const auth = getAuth(fireApp);
 const db = getFirestore();
 
+const createAccountForm = document.getElementById("createAccount")
+
+createAccountForm.addEventListener("submit", (event) =>
+{
+   event.preventDefault()
+
+  const email = createAccountForm.email.value
+  const password = createAccountForm.password.value  
+
+  setPersistence(auth, browserSessionPersistence)
+  .then(() =>{
+    //Promise returned by setPersistence
+    createUserWithEmailAndPassword(auth,email, password)
+    .then((userCredential)=> {
+      const user = userCredential.user
+      console.log(user)
+      console.log(user.uid)
+      console.log("user created")
+      location.href = "updateInfo.html"
+    })
+  })
+  .catch((e)=>{
+    //Error from persistence caught
+    console.log(e)
+  })
+})
+
+//Observer
 onAuthStateChanged(auth, (user) => {
   
   if (user) {
-   const uid = user.uid
+    //User is signed in
+    const uid = user.uid;
     console.log(uid)
-    const initialProfileForm = document.querySelector("#newUser")
-    initialProfileForm.addEventListener("submit", (event) => {
-      event.preventDefault()
-   
-
-    const newUser = {
-      firstName: initialProfileForm.firstName.value,
-      lastName: initialProfileForm.lastName.value,
-      dob: initialProfileForm.dob.value,
-      deposit: initialProfileForm.deposit.value,
-      uid: uid
-
-    }
-
-    updateProfile(auth.currentUser,{
-      displayName: initialProfileForm.firstName.value
-    })
-    .then(() => {
-      //Promise
-      console.log("Updated profile")
-    })
-    .catch((e) => {
-      console.log(e)
-    })
-    console.log(auth.currentUser.displayName)
-    console.log(newUser)
-
-    const userDocRef = doc(db,"users", uid)
-
-    setDoc(userDocRef, newUser)
-    .then(() => {
-      console.log("New User Added")
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-    
-  })
-
+    console.log("Signed In")
   }else {
     console.log("Signed Out")
   }

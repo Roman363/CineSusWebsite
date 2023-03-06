@@ -13,37 +13,49 @@
     <header id="mainNav">
         <a href="index.html" id="logo">CINඞSUS</a>
         <a href="" id="movies">Movies</a>
-        <a href="" id="rewards">Rewards</a>
+        <a href="rewardsPage.html" id="rewards">Rewards</a>
         <a href="paymentPage.html" id="cart">Cart</a>
-    </header>
+        <div class="dropdown dropstart">
+            <button class="btn btn-link" style="position: absolute; left: 200px" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ඞ
+            </button>
+              <ul class="dropdown-menu">
+                <text id="myAccount">My Account</text></br></br></br>
 
+                <form id="signOut">
+                   <button class="btn btn-warning">
+                        Sign Out
+                   </button>
+                </form>
+        </div>
+    </header>
 
 
     <div id="featured">
         <h2 id="featuredText">Featured:</h2>
         <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="joker"/>
+            <input type="hidden" name="movieName" value="Joker"/>
             <input type="submit" value="" style="background-image: url('pictures/joker.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
             
             <label>Joker | Rated R | 4.7/ 5.0</label>
         </form>
 
         <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="shrek"/>
+            <input type="hidden" name="movieName" value="Shrek"/>
             <input type="submit" value="" style="background-image: url('pictures/shrek.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
             
             <label>Shrek | Rated R | 4.7/ 5.0</label>
         </form>
 
         <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="jurassicPark"/>
+            <input type="hidden" name="movieName" value="Jurassic Park"/>
             <input type="submit" value="" style="background-image: url('pictures/jurassicPark.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
             
             <label>Jurassic Park | Rated R | 4.7/ 5.0</label>
         </form>
 
         <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="gatoConBotas"/>
+            <input type="hidden" name="movieName" value="Puss in Boots: The Last Wish"/>
             <input type="submit" value="" style="background-image: url('pictures/GatoConBotas.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
             
             <label>GatoConBotas | Rated R | 4.7/ 5.0</label>
@@ -69,7 +81,7 @@
     
 
 
-<script src = "bundle.js"></script>
+<script src = "index.bundle.js"></script>
       
 </body>
 </html>
