@@ -21,7 +21,9 @@ body {
   left: 0%;
   right: 0%;
   padding: 2em;
+  width: 100%;
   background-color: #1F2833;
+  
 
 }
 
@@ -48,13 +50,15 @@ body {
   text-decoration: underline;
 }
 
-#featured {
+#featured, #rewardsPage {
   display: block;
   position: relative;
   top: 8em;
-  margin: 1em 3em;
+  left: 5px;
+  margin: 10px;
+  /* outline: solid 1px red; */
 }
-#featuredText {
+#featuredText, #rewardsText {
   color: #66FCF1;
   display: block;
 }
@@ -70,7 +74,7 @@ body {
   text-align: center;
   border: solid;
   border-color: #45A29E;
-  padding: 2em;
+  padding: 1em;
 }
 
 
