@@ -1,0 +1,16 @@
+//$primary: #063852;
+
+@import '../node_modules/bootstrap/scss/_functions';
+@import '../node_modules/bootstrap/scss/_variables';
+
+$custom-colors: (
+  "color1": #ff5722,
+  "top": #222831,
+  "color3": #222831,
+  "color4": #ff5722
+);
+
+$theme-colors: map-merge($custom-colors, $theme-colors);
+
+
+@import '../node_modules/bootstrap/scss/bootstrap';

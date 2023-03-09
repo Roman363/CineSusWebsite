@@ -1,10 +1,10 @@
 
  color theme{ 
-    color: #0B0C10, #1F2833, #C5C6C7, #66FCF1, #45A29E;
+    color: #F0810F, #F0810F, #C5C6C7, #66FCF1, #45A29E;
  }
 
 body {
-  background-color: #0B0C10;
+  background-color: #eeeeee;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -23,12 +23,17 @@ body {
   padding: 2em;
   width: 100%;
   background-color: #1F2833;
-  
+}
 
+.posters{
+  font-size: 18px; 
+  font-family:"Brush Script", cursive;
+  font-style: normal;
+  color: #ff5722;
 }
 
 #logo{
-  color: #66FCF1;
+  color: #ff5722;
   font-size: 3em;
   font-family: 'Abhaya Libre', serif;
   -webkit-text-stroke-width: .3px;
@@ -69,13 +74,18 @@ body {
   display: block;
 }
 
-#movieSpace {
+.movieSpace {
   display: inline-block;
   text-align: center;
-  border: solid;
-  border-color: #45A29E;
+  border-radius: 25px;
   padding: 2em;
+  transition: box-shadow .3s;
 }
+
+.movieSpace:hover {
+  box-shadow: 0 0px 14px rgba(33,33,33,.2); 
+}
+
 
 
 #movieInfo{
