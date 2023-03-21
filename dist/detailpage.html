@@ -6,38 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="/css/main.min.css" rel="stylesheet" >
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <header id="mainNav">
-        <a href="index.html" id="logo">CINඞSUS</a>
-        <a href="#" id="movies">Movies</a>
-        <a href="#" id="rewards">Rewards</a>
-        <a href="#" id="cart">Cart</a>
-    </header> 
+    <div class="container-fluid bg-top">
+        <div class="container-md" style="height: 12%;">
+          <header class="d-lg-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-decoration-none" style="color:#ff5722;font-family: 'Abhaya Libre', serif;">
+              <span class="fs-1">CINඞSUS</span>
+            </a>
+        
+            <ul class="nav nav-pills nav-fill align-items-center">
+              
+              
+              <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
+              <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
+              <li class="nav-item fs-5" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+            </ul>
+          </header>
+        </div>
+      </div>
     <div class = "movie-container">
         <div class = "movie-card">
             <!---container: movie flyer @ left, movie info @ center, movie tickets @ right-->
             <div id = "movie-image">
                 <!--- add <img src picture from post method-->
-                <img src="pictures/childs play.jpg" width="350" height="530" alt="jokerPic">
+                <img src="" width="350" height="530" alt="Fetching Information..." id="methodMovieImage">
                 
             </div>
             <div class = "movie-info">
-                <h2 class = "movie-title">Child's Play</h2>
-                <h4 class = "movie-length"> 1hr 27min |</h4>
-                <h4 class = "movie-rating">Rated R |</h4>
-                <h4 class = "movie-review"> 100% |</h4>
-                <h4 class = "movie-year">1988</h4>
-                <p class = "movie-description">When Charles Lee Ray needs to get a quick escape from cop Mike Norris, he takes his soul and buries it into playful, seemingly good guy doll Chucky. 
-                    Little does he know a little boy by the name of Andy Barclay will be the new owner of him soon-to-come. 
-                    Charles confides in Andy while he commits numerous murders and once the adults accept Andy's story as truth, it's too late."</p>
+                <h2 id = "movie-title"></h2>
+                <h4 id = "movie-length"></h4>
+                <h4 id = "movie-rating"></h4>
+                <h4 id = "movie-review"></h4>
+                <h4 id = "movie-year"></h4>
+                <p id = "movie-description">Now Loading...</p>
             </div>
             <div class = "movie-tickets">
-                <form id = "tickets">
+                <form id = "tickets" method="get" action="paymentPage.html">
                     <label for = "childTicket" class = "childTicket"> Child: </label>
+
                     <input type = "number" id = "childTicket"/>
                     <p class = "childTicketPrice">$7.99</p><br>
                     <label for = "adultTicket" class = "adultTicket"> Adult: </label>
@@ -45,9 +55,11 @@
                     <p class = "adultTicketPrice">$14.99</p><br>
                     <label for = "elderTicket" class = "elderTicket"> Elder: </label>
                     <input type = "number" id = "elderTicket"/>
+
                     <p class = "elderTicketPrice">$7.99</p><br>
-                    <a href = "index.html">
-                        <input type = "submit" value = "Add to Cart" class = "submit"/>
+                    <!-- <a href = "index.html"> -->
+                    <input type="hidden" name="movieName" value="" id="currentMovieGet" >
+                    <input type = "submit" value = "Add to Cart" class = "submit"/>
                     </a>
                 </form>
             </div>
@@ -55,11 +67,8 @@
         </div>
     </div>
     <!-- need footer -->
-    <script src="detailpage.js"></script>
+    <script src="detailpage.bundle.js"></script>
     
-    <script>
-        const name =  new URLSearchParams(window.location.search).get('movieName')
-    </script>
     
     
 </body>

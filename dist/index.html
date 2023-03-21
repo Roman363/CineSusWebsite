@@ -5,69 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineSus</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="/css/main.min.css" rel="stylesheet" >
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <header id="mainNav">
-        <a href="index.html" id="logo">CINඞSUS</a>
-        <a href="" id="movies">Movies</a>
-        <a href="" id="rewards">Rewards</a>
-        <a href="paymentPage.html" id="cart">Cart</a>
-    </header>
-
-
-
-    <div id="featured">
-        <h2 id="featuredText">Featured:</h2>
-        <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="joker"/>
-            <input type="submit" value="" style="background-image: url('pictures/joker.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
+ 
+    <div class="container-fluid bg-top">
+      <div class="container-md" style="height: 12%;">
+        <header class="d-lg-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-decoration-none" style="color:#ff5722;font-family: 'Abhaya Libre', serif;">
+            <span class="fs-1">CINඞSUS</span>
+          </a>
+      
+          <ul class="nav nav-pills nav-fill align-items-center">
             
-            <label>Joker | Rated R | 4.7/ 5.0</label>
+            
+            <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
+            <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
+            <li class="nav-item fs-5" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+          </ul>
+        </header>
+      </div>
+    </div>
+    
+  
+    <div class="container-lg">
+        <form method="get" action="detailpage.html" class="movieSpace">
+            <input type="hidden" name="movieName" value="Joker"/>
+            <input type="submit" value="" style="background-image: url('pictures/joker.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
+            
+            <div class="container">
+              <div class="p2 bg-color3 rounded">
+            <label class="posters">Joker | Rated R | 4.7/ 5.0</label>
+          </div>
+          </div>
         </form>
 
-        <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="shrek"/>
-            <input type="submit" value="" style="background-image: url('pictures/shrek.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
+        <form method="get" action="detailpage.html" class="movieSpace">
+            <input type="hidden" name="movieName" value="Shrek"/>
+            <input type="submit" value="" style="background-image: url('pictures/shrek.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
             
-            <label>Shrek | Rated R | 4.7/ 5.0</label>
+            <div class="container">
+              <div class="p2 bg-color3 rounded">
+            <label class="posters">Shrek | Rated R | 4.7/ 5.0</label>
+          </div>
+        </div>
         </form>
 
-        <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="jurassicPark"/>
-            <input type="submit" value="" style="background-image: url('pictures/jurassicPark.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
+        <form method="get" action="detailpage.html" class="movieSpace">
+            <input type="hidden" name="movieName" value="Jurassic Park"/>
+            <input type="submit" value="" style="background-image: url('pictures/jurassicPark.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
             
-            <label>Jurassic Park | Rated R | 4.7/ 5.0</label>
+            <div class="container">
+              <div class="p2 bg-color3 rounded">
+            <label class="posters">Jurassic Park | Rated R | 4.7/ 5.0</label>
+          </div>
+        </div>
         </form>
 
-        <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="gatoConBotas"/>
-            <input type="submit" value="" style="background-image: url('pictures/GatoConBotas.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
+        <form method="get" action="detailpage.html" class="movieSpace">
+            <input type="hidden" name="movieName" value="Puss in Boots: The Last Wish"/>
+            <input type="submit" value="" style="background-image: url('pictures/GatoConBotas.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
             
-            <label>GatoConBotas | Rated R | 4.7/ 5.0</label>
+            <div class="container">
+              <div class="p2 bg-color3 rounded">
+            <label class="posters">GatoConBotas | Rated R | 4.7/ 5.0</label>
+          </div>
+        </div>
         </form>
 
     </div>
     <br><br><br><br><br>
-
-    <div>
-        <p>place holder text lorem ipsum</p>
-        <p>place holder text lorem ipsum</p>
-        <p>place holder text lorem ipsum</p>
-        <p>place holder text lorem ipsum</p>
-    </div>
-
-
-
-    <div id="footer">
-        <h2 id="logo2">CINඞSUS</h2><br>
-        <p id="statement">CINඞSUS, Inc. 2023. All Rights Reserved.</p>
-    </div>
-
     
-
 
 <script src = "index.bundle.js"></script>
       

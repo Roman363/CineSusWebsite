@@ -24,6 +24,7 @@ createAccountForm.addEventListener("submit", (event) =>
 {
    event.preventDefault()
 
+
   const firstName = createAccountForm.firstName.value
   const lastName = createAccountForm.lastName.value
   const email = createAccountForm.email.value
@@ -33,7 +34,6 @@ createAccountForm.addEventListener("submit", (event) =>
   const city = createAccountForm.city.value 
   const state = createAccountForm.state.value
   const zip = createAccountForm.zip.value
-  
 
   setPersistence(auth, browserSessionPersistence)
   .then(() =>{
@@ -44,7 +44,8 @@ createAccountForm.addEventListener("submit", (event) =>
       console.log(user)
       console.log(user.uid)
       console.log("user created")
-      location.href = "index.html"
+
+      location.href = "updateInfo.html"
     })
   })
   .catch((e)=>{
@@ -52,7 +53,6 @@ createAccountForm.addEventListener("submit", (event) =>
     console.log(e)
   })
 })
-
 
 //Observer
 onAuthStateChanged(auth, (user) => {
@@ -65,6 +65,7 @@ onAuthStateChanged(auth, (user) => {
   }else {
     console.log("Signed Out")
   }
+
 })
 // onAuthStateChanged(auth, (user) => {
   

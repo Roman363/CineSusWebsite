@@ -1,0 +1,376 @@
+
+color theme{ 
+  color: #0B0C10, #1F2833, #C5C6C7, #66FCF1, #45A29E;
+}
+
+body {
+background-color: #0B0C10;
+margin: 0;
+padding: 0;
+height: 100vh;
+width: 100vw;
+}
+
+#mainNav{
+display: block;
+z-index: 10000;
+border-bottom: 1px solid #C4C4C4;
+color: white;
+position: fixed;
+top: 0px;
+left: 0%;
+right: 0%;
+padding: 2em;
+width: 100%;
+background-color: #1F2833;
+
+
+}
+
+#logo{
+color: #66FCF1;
+font-size: 3em;
+font-family: 'Abhaya Libre', serif;
+-webkit-text-stroke-width: .3px;
+-webkit-text-stroke-color: #E50000;
+text-decoration: none;
+position: relative;
+left: 2.5%;
+}
+#movies, #rewards, #cart{
+font-size: 1.4em;
+font-family: 'Abhaya Libre', serif;
+text-decoration: none;
+margin: 1em 10%;
+position: relative;
+left: 12em;
+color: #C4C4C4;
+}
+#movies:hover, #rewards:hover, #cart:hover{
+text-decoration: underline;
+}
+
+#featured {
+display: block;
+position: relative;
+top: 8em;
+left: 5px;
+margin: 10px;
+/* outline: solid 1px red; */
+}
+#featuredText {
+color: #66FCF1;
+display: block;
+}
+
+
+#regularText {
+color: #ffffff;
+display: block;
+}
+
+#movieSpace {
+display: inline-block;
+text-align: center;
+border: solid;
+border-color: #45A29E;
+padding: 1em;
+}
+
+
+#movieInfo{
+position: absolute;
+width: 550px;
+height: 775px;
+left: 470px;
+top: 190px;
+
+color: #ffffff;
+display: block;
+}
+
+h3 {
+display: inline-block;
+vertical-align: top;
+}
+
+label {
+color: white;
+text-align: center;
+padding: 1em;
+display: block;
+
+}
+
+
+label {
+color: white;
+text-align: center;
+padding: 1em;
+display: block;
+
+}
+
+form{
+display: inline;
+}
+
+div {
+color: white;
+}
+
+#logo2{
+color: #66FCF1;
+font-size: 3em;
+font-family: 'Abhaya Libre', serif;
+-webkit-text-stroke-width: .3px;
+-webkit-text-stroke-color: #E50000;
+text-decoration: none;
+position: relative;
+left: 2.5%;
+display: block;
+}
+
+#statement{
+position: relative;
+bottom: 0%;
+left: 45%;
+color: white;
+display: block;
+}
+
+#footer{
+background-color: #1F2833;
+margin: 0;
+padding: 0;
+position: relative;
+bottom: -1em;
+}
+
+
+#moviePayInfo{
+position: absolute;
+width: 561px;
+height: 74px;
+left: 350px;
+top: 75px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 32px;
+line-height: 39px;
+
+color: #FFFFFF;
+}
+
+#ticketPayInfo{
+position: absolute;
+width: 316px;
+height: 76px;
+left: 10px;
+top: 570px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 30px;
+line-height: 39px;
+
+color: #FFFFFF;
+}
+
+#ticketPayInfo2{
+position: absolute;
+width: 316px;
+height: 76px;
+right: 500px;
+top: 570px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 30px;
+line-height: 39px;
+
+color: #FFFFFF;
+}
+
+#ticketPayInfo2{
+    position: absolute;
+    width: 316px;
+    height: 76px;
+    right: 500px;
+    top: 570px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 39px;
+    
+    color: #FFFFFF;
+    }
+
+#ticketPayBox{
+    position: absolute;
+    width: 300px;
+    height: 550px;
+    right: 50px;
+    top: 75px;
+    box-shadow: 0.5em 0 0.5em #000;
+    border-radius: 30px;
+    background-color: #C4C4C4;
+}
+
+.ticketPayDropDown{
+    width: 300px;
+    height: 550px;
+    right: 50px;
+    top: 76px;
+    box-shadow: 0.5em 0 0.5em #000;
+    border-radius: 30px;
+    background-color: #C4C4C4;
+}
+
+#payBox{
+    font-size: 28px;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-decoration: none;
+    color: white;
+    
+}
+#movie-image {
+    display: block;
+    align-items: center;
+    float: left;
+    height: 100%;
+    width: 20%;
+    padding: 5em 2em;
+}
+.movie-info {
+    display: inline-block;
+    float: center;
+    height: 100%;
+    width: 50%;
+    padding: 15em 5em;
+    color: white;
+    
+    
+}
+#movie-title {
+    text-align: center;
+}
+#movie-length, #movie-rating, #movie-review, #movie-year {
+    display: inline;
+    text-align: center;
+    position: relative;
+    left: 25%;
+}
+#movie-description {
+    padding-top: 2em;
+}
+.movie-tickets {
+    display: block;
+    float: right;
+    height: 100%;
+    width: 30%;
+    color: white;
+    padding: 15em 5em;
+    
+}
+.childTicket, .childTicketPrice, .adultTicket, .adultTicketPrice, .elderTicket, .elderTicketPrice {
+    display: inline;
+    margin: 1em 0;
+}
+.submit {
+    background-color: #E50000;
+    padding: 10px;
+    align-self: center;
+    border-radius: 5px;
+    margin: 2em 7.5em 0;
+}
+
+
+
+#ticketPayBox{
+position: absolute;
+width: 300px;
+height: 550px;
+right: 50px;
+top: 75px;
+box-shadow: 0.5em 0 0.5em #000;
+border-radius: 30px;
+background-color: #C4C4C4;
+}
+
+.ticketPayDropDown{
+width: 300px;
+height: 550px;
+right: 50px;
+top: 76px;
+box-shadow: 0.5em 0 0.5em #000;
+border-radius: 30px;
+background-color: #C4C4C4;
+}
+
+#payBox{
+font-size: 28px;
+font-family: 'Inter';
+font-weight: 800;
+text-decoration: none;
+color: white;
+
+}
+
+#movie-image {
+display: block;
+align-items: center;
+float: left;
+height: 100%;
+width: 20%;
+padding: 5em 2em;
+}
+.movie-info {
+display: inline-block;
+float: center;
+height: 100%;
+width: 50%;
+padding: 15em 5em;
+color: white;
+
+
+}
+.movie-title {
+text-align: center;
+}
+.movie-length, .movie-rating, .movie-review, .movie-year {
+display: inline;
+text-align: center;
+position: relative;
+left: 25%;
+}
+.movie-description {
+padding-top: 2em;
+}
+.movie-tickets {
+display: block;
+float: right;
+height: 100%;
+width: 30%;
+color: white;
+padding: 15em 5em;
+
+}
+.childTicket, .childTicketPrice, .adultTicket, .adultTicketPrice, .elderTicket, .elderTicketPrice {
+display: inline;
+margin: 1em 0;
+}
+.submit {
+background-color: #E50000;
+padding: 10px;
+align-self: center;
+border-radius: 5px;
+margin: 2em 7.5em 0;
+}

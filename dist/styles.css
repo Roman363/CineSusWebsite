@@ -1,7 +1,14 @@
+
+ color theme{ 
+    color: #F0810F, #F0810F, #C5C6C7, #66FCF1, #45A29E;
+ }
+
 body {
-  background-color: #0F1C3F;
+  background-color: #eeeeee;
   margin: 0;
   padding: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 #mainNav{
@@ -14,12 +21,19 @@ body {
   left: 0%;
   right: 0%;
   padding: 2em;
-  background-color: #040b1e;
+  width: 100%;
+  background-color: #1F2833;
+}
 
+.posters{
+  font-size: 18px; 
+  font-family:"Brush Script", cursive;
+  font-style: normal;
+  color: #ff5722;
 }
 
 #logo{
-  color: #600409;
+  color: #ff5722;
   font-size: 3em;
   font-family: 'Abhaya Libre', serif;
   -webkit-text-stroke-width: .3px;
@@ -35,20 +49,22 @@ body {
   margin: 1em 10%;
   position: relative;
   left: 12em;
-  color: white;
+  color: #C4C4C4;
 }
 #movies:hover, #rewards:hover, #cart:hover{
   text-decoration: underline;
 }
 
-#featured {
+#featured, #rewardsPage {
   display: block;
   position: relative;
   top: 8em;
-  margin: 1em 3em;
+  left: 5px;
+  margin: 10px;
+  /* outline: solid 1px red; */
 }
-#featuredText {
-  color: #E50000;
+#featuredText, #rewardsText {
+  color: #66FCF1;
   display: block;
 }
 
@@ -58,11 +74,18 @@ body {
   display: block;
 }
 
-#movieSpace {
+.movieSpace {
   display: inline-block;
   text-align: center;
+  border-radius: 25px;
   padding: 2em;
+  transition: box-shadow .3s;
 }
+
+.movieSpace:hover {
+  box-shadow: 0 0px 14px rgba(33,33,33,.2); 
+}
+
 
 
 #movieInfo{
@@ -107,7 +130,7 @@ div {
 }
 
 #logo2{
-  color: #600409;
+  color: #66FCF1;
   font-size: 3em;
   font-family: 'Abhaya Libre', serif;
   -webkit-text-stroke-width: .3px;
@@ -127,7 +150,7 @@ div {
 }
 
 #footer{
-  background-color: #787878;
+  background-color: #1F2833;
   margin: 0;
   padding: 0;
   position: relative;
@@ -246,16 +269,16 @@ color: #FFFFFF;
       
       
   }
-  .movie-title {
+  #movie-title {
       text-align: center;
   }
-  .movie-length, .movie-rating, .movie-review, .movie-year {
+  #movie-length, #movie-rating, #movie-review, #movie-year {
       display: inline;
       text-align: center;
       position: relative;
       left: 25%;
   }
-  .movie-description {
+  #movie-description {
       padding-top: 2em;
   }
   .movie-tickets {
