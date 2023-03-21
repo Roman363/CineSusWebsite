@@ -11,6 +11,8 @@ body {
   width: 100vw;
 }
 
+
+
 #mainNav{
   display: block;
   z-index: 10000;
@@ -26,7 +28,7 @@ body {
 }
 
 .posters{
-  font-size: 18px; 
+  font-size: 22px; 
   font-family:"Brush Script", cursive;
   font-style: normal;
   color: #ff5722;
@@ -94,7 +96,6 @@ body {
   height: 775px;
   left: 470px;
   top: 190px;
-
   color: #ffffff;
   display: block;
 }
@@ -242,6 +243,12 @@ color: #FFFFFF;
       border-radius: 30px;
       background-color: #C4C4C4;
   }
+  .movieSelectBox{
+    align-items: center;
+    height: 650px;
+    width: 300px;
+    left: 400px;
+  }
   
   #payBox{
       font-size: 28px;
@@ -258,6 +265,7 @@ color: #FFFFFF;
       height: 100%;
       width: 20%;
       padding: 5em 2em;
+      border-radius: 25px;
   }
   .movie-info {
       display: inline-block;
@@ -334,14 +342,15 @@ color: #FFFFFF;
   
 }
 
-#movie-image {
+/* #movie-image {
   display: block;
   align-items: center;
   float: left;
   height: 100%;
   width: 20%;
   padding: 5em 2em;
-}
+  border-radius: 25px;
+} */
 .movie-info {
   display: inline-block;
   float: center;

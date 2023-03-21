@@ -7,20 +7,23 @@
     <title>CineSus</title>
     <link href="/css/main.min.css" rel="stylesheet" >
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ 
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
  
+
+
     <div class="container-fluid bg-top">
       <div class="container-md" style="height: 12%;">
-        <header class="d-lg-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <header class="d-lg-flex flex-wrap justify-content-center py-3  border-bottom" style="margin-bottom: 0;">
           <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-decoration-none" style="color:#ff5722;font-family: 'Abhaya Libre', serif;">
             <span class="fs-1">CINඞSUS</span>
           </a>
       
           <ul class="nav nav-pills nav-fill align-items-center">
             
-            
+            <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
             <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
             <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
             <li class="nav-item fs-5" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
@@ -28,14 +31,62 @@
         </header>
       </div>
     </div>
+
+    
+
+    <div id="carouselExampleCrossfade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCrossfade"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCrossfade"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCrossfade"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Wild Landscape"/>
+        </div>
+        <div class="carousel-item">
+          <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera"/>
+        </div>
+        <div class="carousel-item">
+          <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits"/>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
     
   
-    <div class="container-lg">
-        <form method="get" action="detailpage.html" class="movieSpace">
+    <div class="col" style="top:100%;">
+        <form method="get" action="detailpage.html"class="movieSpace" >
             <input type="hidden" name="movieName" value="Joker"/>
             <input type="submit" value="" style="background-image: url('pictures/joker.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
             
-            <div class="container">
+            <div class="container"style="width: 420px;" >
               <div class="p2 bg-color3 rounded">
             <label class="posters">Joker | Rated R | 4.7/ 5.0</label>
           </div>
@@ -46,7 +97,7 @@
             <input type="hidden" name="movieName" value="Shrek"/>
             <input type="submit" value="" style="background-image: url('pictures/shrek.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
             
-            <div class="container">
+            <div class="container-sm" style="width: 420px;">
               <div class="p2 bg-color3 rounded">
             <label class="posters">Shrek | Rated R | 4.7/ 5.0</label>
           </div>
@@ -57,7 +108,7 @@
             <input type="hidden" name="movieName" value="Jurassic Park"/>
             <input type="submit" value="" style="background-image: url('pictures/jurassicPark.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
             
-            <div class="container">
+            <div class="container" style="width: 420px;">
               <div class="p2 bg-color3 rounded">
             <label class="posters">Jurassic Park | Rated R | 4.7/ 5.0</label>
           </div>
@@ -68,7 +119,7 @@
             <input type="hidden" name="movieName" value="Puss in Boots: The Last Wish"/>
             <input type="submit" value="" style="background-image: url('pictures/GatoConBotas.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
             
-            <div class="container">
+            <div class="container-sm" style="width: 420px;">
               <div class="p2 bg-color3 rounded">
             <label class="posters">GatoConBotas | Rated R | 4.7/ 5.0</label>
           </div>

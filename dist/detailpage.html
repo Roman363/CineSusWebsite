@@ -20,7 +20,7 @@
         
             <ul class="nav nav-pills nav-fill align-items-center">
               
-              
+                        <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>  
               <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
               <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
               <li class="nav-item fs-5" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
@@ -28,6 +28,7 @@
           </header>
         </div>
       </div>
+
     <div class = "movie-container">
         <div class = "movie-card">
             <!---container: movie flyer @ left, movie info @ center, movie tickets @ right-->
@@ -36,25 +37,27 @@
                 <img src="" width="350" height="530" alt="Fetching Information..." id="methodMovieImage">
                 
             </div>
-            <div class = "movie-info">
+            <div class = "movie-info" style="color: #011A27;">
                 <h2 id = "movie-title"></h2>
                 <h4 id = "movie-length"></h4>
                 <h4 id = "movie-rating"></h4>
                 <h4 id = "movie-review"></h4>
                 <h4 id = "movie-year"></h4>
-                <p id = "movie-description">Now Loading...</p>
+                <h4 id = "mTime"></h4>
+                <p id = "movie-description" style="color: #011A27;">Now Loading...</p>
             </div>
             <div class = "movie-tickets">
                 <form id = "tickets" method="get" action="paymentPage.html">
-                    <label for = "childTicket" class = "childTicket"> Child: </label>
+                  <label for=""></label>
+                    <label for = "childTicket" class = "childTicket" style="color: #011A27;"> Child: </label>
                     <input type = "number" class = "childTicket" name="childTickets" />
-                    <p class = "childTicketPrice">$7.99</p><br>
-                    <label for = "adultTicket" class = "adultTicket"> Adult: </label>
+                    <p class = "childTicketPrice" style="color: #011A27;">$7.99</p><br>
+                    <label for = "adultTicket" class = "adultTicket" style="color: #011A27;"> Adult: </label>
                     <input type = "number" class = "adultTicket" name="adultTicket"/>
-                    <p class = "adultTicketPrice">$7.99</p><br>
-                    <label for = "elderTicket" class = "elderTicket"> Elder: </label>
+                    <p class = "adultTicketPrice" style="color: #011A27;">$7.99</p><br>
+                    <label for = "elderTicket" class = "elderTicket" style="color: #011A27;"> Elder: </label>
                     <input type = "number" class = "elderTicket" name="elderTicket"/>
-                    <p class = "elderTicketPrice">$7.99</p><br>
+                    <p class = "elderTicketPrice" style="color: #011A27;">$7.99</p><br>
                     <!-- <a href = "index.html"> -->
                     <input type="hidden" name="movieName" value="" id="currentMovieGet" >
                     <input type = "submit" value = "Add to Cart" class = "submit"/>

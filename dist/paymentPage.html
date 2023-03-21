@@ -19,7 +19,7 @@
       
           <ul class="nav nav-pills nav-fill align-items-center">
             
-            
+            <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
             <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
             <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
             <li class="nav-item fs-5" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
@@ -78,37 +78,39 @@
           </button>
           <ul class="dropdown-menu ticketPayDropDown">
             <text id="payBox" style ="position: absolute; left: 20px;">Payment Information</text></br></br></br>
-            
+
+            <form id="paymentReceipt">
+
             <text id="payBox" style ="text-align: left;">Card Number</text></br>
             <div class="input-group input-group-sm mb-3">
               <span class="input-group-text" id="inputGroup-sizing-sm"></span>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              <input type="text" id="cardNumber" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
             </div>
 
             <text id="payBox" style ="text-align: left;">Expiration date</text></br>
             <div class="input-group">
               <span class="input-group-text">MM/YYYY</span>
-              <input type="text" aria-label="First name" class="form-control">
-              <input type="text" aria-label="Last name" class="form-control">
+              <input type="text" aria-label="First name" id="month" class="form-control" required>
+              <input type="text" aria-label="Last name" id="year" class="form-control" required>
             </div>
 
             <text id="payBox" style ="text-align: left;">Billing Zip Code</text></br>
             <div class="input-group input-group-sm mb-3">
               <span class="input-group-text" id="inputGroup-sizing-sm"></span>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="zipCode" required>
             </div>
 
             <text id="payBox" style ="text-align: left;">Security Code</text></br>
             <div class="input-group input-group-sm mb-3">
               <span class="input-group-text" id="inputGroup-sizing-sm"></span>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="securityCode" required>
             </div>
 
             <div class="d-flex justify-content-center">
               <input type="hidden" id="currentMovieGet" name="movieName" value="">
               <button type="submit" class="btn btn-warning margin-auto">Submit</button>
             </div>
-
+            </form>
           </ul>
         </div>
        </div>
