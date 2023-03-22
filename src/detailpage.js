@@ -16,6 +16,8 @@ const firebaseConfig = {
 //from the get method, find out what movie the user wants to see information from
 const movieName = new URLSearchParams(window.location.search).get('movieName')
 console.log(movieName); 
+const movieTime = new URLSearchParams(window.location.search).get('movieTime')
+console.log(movieTime); 
 
 // Initialize Firebase
 const fireApp = initializeApp(firebaseConfig);
