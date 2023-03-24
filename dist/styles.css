@@ -21,7 +21,7 @@ input[type="radio"]:checked+span
 { 
   font-weight: bold; 
   color: #222831; 
-  transition: all .3s ease-out;
+  transition: all .1s ease-out;
 }
 
 #mainNav{
