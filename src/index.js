@@ -1,5 +1,10 @@
 import { initializeApp } from "firebase/app"
+import{ getFirestore, collection, getDocs, addDoc, deleteDoc, doc, updateDoc, query, orderBy, onSnapshot,} from "firebase/firestore"
 import { getAuth, onAuthStateChanged,signOut} from 'firebase/auth'
+
+
+
+
 
 
 // Your web app's Firebase configuration
@@ -16,6 +21,68 @@ const firebaseConfig = {
 const fireApp = initializeApp(firebaseConfig);
 const auth = getAuth(fireApp);
 
+//accessing the database
+const db = getFirestore(fireApp);
+const movieCollection = collection(db, 'movie_info')
+
+
+//creating an array to store the movie information
+var movieData = []
+//get the information from the database and save it to an array
+getDocs(movieCollection).then((snapshot) => {
+  
+  snapshot.docs.forEach((doc) => {
+    var data = doc.data();
+    movieData.push(data)
+
+    
+  })
+  //replace the placeholder information
+
+  //details
+  document.getElementById("indexMovie1Details").innerHTML = movieData[0].title + "<br>" + movieData[0].rating + " | " + movieData[0].length + " | " + movieData[0].review
+  document.getElementById("indexMovie2Details").innerHTML = movieData[1].title + "<br>" + movieData[1].rating + " | " + movieData[1].length + " | " + movieData[1].review
+  document.getElementById("indexMovie3Details").innerHTML = movieData[2].title + "<br>" + movieData[2].rating + " | " + movieData[2].length + " | " + movieData[2].review
+  document.getElementById("indexMovie4Details").innerHTML = movieData[3].title + "<br>" + movieData[3].rating + " | " + movieData[3].length + " | " + movieData[3].review
+
+  //images
+  document.getElementById("indexMovie1Image").setAttribute("src", movieData[0].image_link)
+  document.getElementById("indexMovie2Image").setAttribute("src", movieData[1].image_link)
+  document.getElementById("indexMovie3Image").setAttribute("src", movieData[2].image_link)
+  document.getElementById("indexMovie4Image").setAttribute("src", movieData[3].image_link)
+
+})
+  .catch(err => {
+  console.log(err.message)
+})
+
+
+
+
+
+
+
+//replace the placeholder information with the informtion from the databse
+// document.getElementById("indexMovie1Details").innerHTML = movieData
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Observer
 onAuthStateChanged(auth, (user) => {
@@ -30,14 +97,14 @@ onAuthStateChanged(auth, (user) => {
   }
 })
 
-const signOutUserForm = document.querySelector("#signOut")
-signOutUserForm.addEventListener("submit", (event)=> {
-  event.preventDefault()
+// const signOutUserForm = document.querySelector("#signOut")
+// signOutUserForm.addEventListener("submit", (event)=> {
+//   event.preventDefault()
 
-  signOut(auth)
-  .then(() => {
-    console.log("Signed out")
-  }).catch((error) => {
+//   signOut(auth)
+//   .then(() => {
+//     console.log("Signed out")
+//   }).catch((error) => {
 
-  })
-})
+//   })
+// })

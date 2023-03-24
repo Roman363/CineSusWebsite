@@ -99,7 +99,7 @@
 
 
 
-   <div class="container" style="padding-bottom: 35px;">
+   <div class="container" style="padding-bottom: 35px;" id="movie1Times">
     <div class="row bg-color3" style="border-radius: 25px;">
     <div class="col-sm">
       
@@ -140,8 +140,8 @@
   </div> 
   </div> 
    
-  <div class="container" style="padding-bottom: 35px;">
-    <div class="row bg-color3" style="border-radius: 25px;"">
+  <div class="container" style="padding-bottom: 35px;" id="movie2Times">
+    <div class="row bg-color3" style="border-radius: 25px;">
     <div class="col-sm">
       
         <div id = "movie-image">
@@ -177,8 +177,8 @@
   </div> 
   </div> 
 
-  <div class="container" style="padding-bottom: 35px;">
-    <div class="row bg-color3" style="border-radius: 25px;"">
+  <div class="container" style="padding-bottom: 35px;" id="movie3Times">
+    <div class="row bg-color3" style="border-radius: 25px;">
     <div class="col-sm">
       
         <div id = "movie-image">
@@ -209,10 +209,49 @@
           </div>
       </div>
     </div>
+
+    </div>
+    </div>
     
-   
-  </div> 
-  </div> 
+
+
+    <!-- 4th movie we are showing -->
+    <div class="container" style="padding-bottom: 35px;" id="movie4Times">
+      <div class="row bg-color3" style="border-radius: 25px;">
+      <div class="col-sm">
+        
+          <div id = "movie-image">
+            <!--- add <img src picture from post method-->
+            <img id="movieSelectPicture4" src="" style="background-image: url('pictures/jurassicPark.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
+  
+          </div>
+        </div>
+          <div class="col-md" style="margin-top: 100px; margin-right:90px;">
+            <div class="d-grid gap-5">
+          <div class="col mt-6">
+            <h1 id="movieSelectName4" style="color:#ff5722;"></h1>
+          </div>
+          <div class="col">
+            <h4 id="movieSelectDescription4">Now Loading...</h4>
+          </div>
+        <div class="col">
+          <form id="movieTime" method="get" action="detailpage.html">
+            <input type="hidden" value="Jurassic Park" name="movieName">
+            <input class="btn btn-color1 btn-lg" type="submit" value="3:45PM" name="movieTime">
+            <input class="btn btn-color1 btn-lg" type="submit" value="5:35PM" name="movieTime">
+            <input class="btn btn-color1 btn-lg" type="submit" value="8:45PM" name="movieTime">
+            <input class="btn btn-color1 btn-lg" type="submit" value="10:30PM" name="movieTime">
+          </form>
+          </div> 
+          <div class="col"> 
+            <h5 id="movieSelectDetails4"></h5>
+            </div>
+        </div>
+      </div>
+      
+     
+    </div> 
+    </div> 
   
   
 
