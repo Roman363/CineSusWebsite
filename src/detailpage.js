@@ -77,16 +77,9 @@ console.log(movieTime);
 var weekDayString = sessionStorage.getItem('weekDay')
 var weekDay = JSON.parse(weekDayString)
 
-var adultTicketsString = sessionStorage.getItem('adultTickets')
-var adultTickets = JSON.parse(adultTicketsString)
 
-var childTicketsString = sessionStorage.getItem('childTickets')
-var childTickets = JSON.parse(childTicketsString)
-
-var seniorTicketsString = sessionStorage.getItem('seniorTickets')
-var seniorTickets = JSON.parse(seniorTicketsString)
+var ticketsArrayString = sessionStorage.getItem("ticketsArray")
+var ticketsArray = JSON.parse(ticketsArrayString)
 
 console.log(weekDay)
-console.log("adult tickets: ", adultTickets);
-console.log("child tickets: ", childTickets);
-console.log("senior tickets: ", seniorTickets);
+console.log(ticketsArray);
