@@ -3,7 +3,6 @@
 var movieDataString = sessionStorage.getItem('movieData')
 var movieData = JSON.parse(movieDataString)
 
-console.log(movieData[0].title);
 
 //replacing place holder information
 
@@ -30,3 +29,13 @@ document.getElementById("movieSelect1Details").innerHTML = movieData[0].review +
 document.getElementById("movieSelect2Details").innerHTML = movieData[1].review + " | " + movieData[1].length + " | " + movieData[1].rating
 document.getElementById("movieSelect3Details").innerHTML = movieData[2].review + " | " + movieData[2].length + " | " + movieData[2].rating
 document.getElementById("movieSelect4Details").innerHTML = movieData[3].review + " | " + movieData[3].length + " | " + movieData[3].rating
+
+//movie values
+document.getElementById("movieSelect1Value").setAttribute("value", movieData[0].title)
+document.getElementById("movieSelect2Value").setAttribute("value", movieData[1].title)
+document.getElementById("movieSelect3Value").setAttribute("value", movieData[2].title)
+document.getElementById("movieSelect4Value").setAttribute("value", movieData[3].title)
+
+
+
+

@@ -4,15 +4,6 @@ import { getAuth, onAuthStateChanged,signOut} from 'firebase/auth'
 
 
 
-
-
-
-
-
-
-
-
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCXO12r4N_stiHoEcXrjUJksTniRAOwdxw",
