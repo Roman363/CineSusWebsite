@@ -12,6 +12,7 @@ module.exports =
     paymentPage: './src/paymentPage.js',
     purchasepage: './src/purchasepage.js',
     movieSelect: './src/movieSelect.js',
+    gatherData: './src/gatherData.js',
     updateInfo: './src/updateInfo.js'},
   
     output: 
