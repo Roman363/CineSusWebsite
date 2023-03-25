@@ -244,6 +244,7 @@
 
   <script>
     function submitForms() {
+
       
       var weekDay = new FormData(document.getElementById("weekDay"));
       var ticketAmount = new FormData(document.getElementById("ticketAmount"));
@@ -262,24 +263,14 @@
       ticketsArray.push(formData["adultTickets"])
       ticketsArray.push(formData["childTickets"])
       ticketsArray.push(formData["seniorTickets"])
-      console.log(ticketsArray);
 
 
       sessionStorage.setItem("weekDay", JSON.stringify(formData["weekDay"]))
       sessionStorage.setItem("ticketsArray", JSON.stringify(ticketsArray))
 
-
-
-
-
-      
     }
 
   </script>
-
-
-    
-
 
 
   <script src = "movieSelect.bundle.js"></script>

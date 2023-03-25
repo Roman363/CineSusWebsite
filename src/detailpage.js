@@ -70,16 +70,16 @@
 
 const movieName = new URLSearchParams(window.location.search).get('movieName')
 const movieTime = new URLSearchParams(window.location.search).get('movieTime')
-console.log(movieName); 
-console.log(movieTime); 
-
 
 var weekDayString = sessionStorage.getItem('weekDay')
 var weekDay = JSON.parse(weekDayString)
 
-
 var ticketsArrayString = sessionStorage.getItem("ticketsArray")
 var ticketsArray = JSON.parse(ticketsArrayString)
 
-console.log(weekDay)
-console.log(ticketsArray);
+//merging the array
+//USE THIS ARRAY
+var dataArray = {"movieName":movieName, "movieTime": movieTime, "weekDay":weekDay, "adultTickets": ticketsArray[0], "childTickets": ticketsArray[1], "seniorTickets": ticketsArray[2]}
+
+console.log(dataArray);
+
