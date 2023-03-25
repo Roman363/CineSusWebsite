@@ -90,15 +90,15 @@
       <div class="row mb-4">
         <div class="col-sm w-25">
           <h4 style="color: #222831;">Adult</h4>
-          <input type="number" class="form-control w-75" id="adultTickets" value="1"s name="adultTickets">
+          <input type="number" class="form-control w-75"  value="1"s name="adultTickets">
         </div>
         <div class="col-sm w-25">
           <h4 style="color: #222831;">Child</h4>
-          <input type="number" class="form-control w-75" id="childTickets" placeholder="0" name="childTickets">
+          <input type="number" class="form-control w-75"  value="0" name="childTickets">
         </div>
         <div class="col-sm w-25">
           <h4 style="color: #222831;">Senior</h4>
-          <input type="number" class="form-control w-75" id="seniorTickets" placeholder="0" name="seniorTickets">
+          <input type="number" class="form-control w-75"  value="0" name="seniorTickets">
         </div>
       </div>
     </form>
@@ -244,14 +244,11 @@
 
   <script>
     function submitForms() {
-
+      
       var weekDay = new FormData(document.getElementById("weekDay"));
       var ticketAmount = new FormData(document.getElementById("ticketAmount"));
 
-
       
-
-
       // Combine the form data into a single object
       var formData = [];
       for (var pair of weekDay.entries()) {
@@ -261,12 +258,20 @@
         formData[pair[0]] = pair[1];
       }
 
-      sessionStorage.setItem('weekDay', JSON.stringify(formData["weekDay"]))
-      sessionStorage.setItem('adultTickets', JSON.stringify(formData["adultTickets"]))
-      sessionStorage.setItem('adultTickets', JSON.stringify(formData["childTickets"]))
-      sessionStorage.setItem('adultTickets', JSON.stringify(formData["seniorTickets"]))
+      var ticketsArray = []
+      ticketsArray.push(formData["adultTickets"])
+      ticketsArray.push(formData["childTickets"])
+      ticketsArray.push(formData["seniorTickets"])
+      console.log(ticketsArray);
 
-      window.location.href = "detailpage.html"
+
+      sessionStorage.setItem("weekDay", JSON.stringify(formData["weekDay"]))
+      sessionStorage.setItem("ticketsArray", JSON.stringify(ticketsArray))
+
+
+
+
+
       
     }
 
