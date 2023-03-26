@@ -3,6 +3,13 @@
     color: #F0810F, #F0810F, #C5C6C7, #66FCF1, #45A29E;
  }
 
+#paymentPageBody{
+  background-color: #000;
+}
+#purchasePageBody{
+  background-color: #000;
+}
+
 body {
   background-color: #eeeeee;
   margin: 0;
