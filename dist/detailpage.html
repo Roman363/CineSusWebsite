@@ -1,76 +1,137 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies</title>
-    <link href="/css/main.min.css" rel="stylesheet" >
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="/css/main.min.css" rel="stylesheet" >
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <title>Seating Chart</title>
+  </head>
+      
+  <body>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!--navigation bar -->
     <div class="container-fluid bg-top">
-        <div class="container-md" style="height: 12%;">
-          <header class="d-lg-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-decoration-none" style="color:#ff5722;font-family: 'Abhaya Libre', serif;">
-              <span class="fs-1">CINඞSUS</span>
-            </a>
+      <div class="container-md" style="height: 12%;">
+        <header class="d-lg-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-decoration-none" style="color:#b22607;font-family: 'Abhaya Libre', serif;">
+            <span class="fs-1">CINඞSUS</span>
+          </a>
         
-            <ul class="nav nav-pills nav-fill align-items-center">
+          <ul class="nav nav-pills nav-fill align-items-center">
               
-                        <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>  
-              <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
-              <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
-              <li class="nav-item fs-5" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
-            </ul>
-          </header>
-        </div>
+            <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>  
+            <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
+            <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
+            <li class="nav-item fs-5"><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+          </ul>
+        </header>
       </div>
+    </div>
 
-    <div class = "movie-container">
-        <div class = "movie-card">
-            <!---container: movie flyer @ left, movie info @ center, movie tickets @ right-->
-            <div id = "movie-image">
-                <!--- add <img src picture from post method-->
-                <img src="" width="350" height="530" alt="Fetching Information..." id="methodMovieImage">
-                
-            </div>
-            <div class = "movie-info" style="color: #011A27;">
-                <h2 id = "movie-title"></h2>
-                <h4 id = "movie-length"></h4>
-                <h4 id = "movie-rating"></h4>
-                <h4 id = "movie-review"></h4>
-                <h4 id = "movie-year"></h4>
-                <h4 id = "mTime"></h4>
-                <p id = "movie-description" style="color: #011A27;">Now Loading...</p>
-            </div>
-            <div class = "movie-tickets">
-                <form id = "tickets" method="get" action="paymentPage.html">
-                  <label for=""></label>
-                    <label for = "childTicket" class = "childTicket" style="color: #011A27;"> Child: </label>
-                    <input type = "number" class = "childTicket" name="childTickets" />
-                    <p class = "childTicketPrice" style="color: #011A27;">$7.99</p><br>
-                    <label for = "adultTicket" class = "adultTicket" style="color: #011A27;"> Adult: </label>
-                    <input type = "number" class = "adultTicket" name="adultTicket"/>
-                    <p class = "adultTicketPrice" style="color: #011A27;">$7.99</p><br>
-                    <label for = "elderTicket" class = "elderTicket" style="color: #011A27;"> Elder: </label>
-                    <input type = "number" class = "elderTicket" name="elderTicket"/>
-                    <p class = "elderTicketPrice" style="color: #011A27;">$7.99</p><br>
-                    <!-- <a href = "index.html"> -->
-                    <input type="hidden" name="movieName" value="" id="currentMovieGet" >
-                    <input type = "submit" value = "Add to Cart" class = "submit"/>
-                    </a>
-                </form>
-            </div>
-            
+    <!--seating info-->
+    <div class = "seating-container">
+      <!---container: movie title @ center-top, movie date & time below title, # tickets left below date & time-->
+        <div class = "seating-info" style="color: #011A27;">
+          <p id = "movie-title"> Movie</p><br>
+          <p id = "date">Date |</p>
+          <p id = "mTime">Time</p>
+          <p id = "ticket-counter"># Tickets Left</p>
         </div>
+        <div class = "seating-chart">
+          <form id = "seats" method="get" action="paymentPage.html">
+            <!--<label for = "childTicket" class = "childTicket" style="color: #011A27;"> Child: </label>
+            <input type = "number" class = "childTicket" name="childTickets" />
+            <p class = "childTicketPrice" style="color: #011A27;">$7.99</p><br>-->
+            <ul>
+              <li>
+                <div class = "seat available" style="color:rgb(100, 138, 36)">
+                  <small style="color:black">Available</small>
+                </div>
+              </li>
+              <li>
+                <div class = "seat selected" style="color:#992907">
+                  <small style="color:black"> Selected</small>
+                </div>
+              </li>
+              <li>
+                <div class = "seat wheelchair" style="color:rgb(17, 55, 66)">
+                  <small style="color:black"> Wheelchair</small>
+                </div>
+              </li>
+              <li>
+                <div class = "seat unavailable" style="color:#1f1b1a">
+                  <small style="color:black"> Unavailable</small>
+                </div>
+              </li>
+            </ul>
+            <div class = "seating-grid">
+              <div class = "screen"></div>
+                <div class = "row">
+                  <div class = "seat available"></div>
+                  <div class = "seat unavailable"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                </div>
+                <div class = "row">
+                  <div class = "seat wheelchair"></div>
+                  <div class = "seat wheelchair"></div>
+                  <div class = "seat wheelchair"></div>
+                  <div class = "seat wheelchair"></div>
+                  <div class = "seat wheelchair"></div>
+                  <div class = "seat wheelchair"></div>
+                  <div class = "seat wheelchair"></div>
+                </div>
+                <div class = "row">
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat selected"></div>
+                  <div class = "seat selected"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                </div>
+                <div class = "row">
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                </div>
+                <div class = "row">
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                  <div class = "seat available"></div>
+                </div>
+              
+
+              <p style="color:black">
+                You have selected <span id = "count">0</span> seats
+              </p>
+            </div>
+            <!-- <a href = "index.html"> -->
+            <input type="hidden" name="movieName" value="" id="currentMovieGet" >
+            <input type = "submit" value = "Add to Cart" class = "submit"/>
+            </a>
+          </form>
+        </div>     
+      </div>
     </div>
     <!-- need footer -->
     <script src="detailpage.bundle.js"></script>
     
-    
-    
-</body>
+      
+      
+  </body>
 </html>
