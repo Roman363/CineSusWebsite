@@ -80,6 +80,95 @@ var ticketsArray = JSON.parse(ticketsArrayString)
 //merging the array
 //USE THIS ARRAY
 var dataArray = {"movieName":movieName, "movieTime": movieTime, "weekDay":weekDay, "adultTickets": ticketsArray[0], "childTickets": ticketsArray[1], "seniorTickets": ticketsArray[2]}
-
 console.log(dataArray);
+var total = JSON.stringify(parseInt(dataArray['adultTickets']) + parseInt(dataArray['childTickets']) + parseInt(dataArray['seniorTickets']))
+
+
+
+
+
+
+
+
+
+
+
+const seatingGrid = document.querySelector(".seating-grid");
+const seats = document.querySelectorAll(".seating-grid .row .seat:not(.unavailable)");
+const selectedMovie = document.getElementById("movie-title").innerHTML = dataArray['movieName']
+const selectedWeekday = document.getElementById("weekDay").innerHTML = dataArray['weekDay']
+const selectedTime = document.getElementById("time").innerHTML = dataArray['movieTime']
+var count = document.getElementById("tickets-left").innerHTML = total
+
+
+
+function totalSeats(){
+    const totalSeats = document.querySelectorAll('.seating-grid .row .seat');
+    return totalSeats.length;
+}
+function mappingSeats(){
+    const selectedSeats = document.querySelectorAll('.seating-grid .selected');
+    const rows = document.querySelectorAll('.seating-grid .row');
+    var columns = document.querySelector('.seating-grid .row');
+    columns = columns.querySelectorAll('*');
+    const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat))
+    var seatData = []
+    for(let i = 0; i < selectedSeats.length; i++){
+        const text = selectedSeats[i].innerText;
+        seatData.push(text);
+    }
+    const json = JSON.stringify(seatData);
+    localStorage.setItem('seatData', json);
+    updateDataArray(seatData);
+    return seatData;
+}
+function updateDataArray(seatData){
+    dataArray['seats'] = seatData;
+    return dataArray;
+}
+
+function updateSelectedCount(){
+    var selectedSeats = mappingSeats();
+    const selectedSeatsCount = selectedSeats.length;
+    var left = JSON.stringify(parseInt(total) - parseInt(selectedSeatsCount))
+    count = document.getElementById("tickets-left").innerHTML = left;
+    
+}
+
+seatingGrid.addEventListener('click', e => {
+    if(
+        e.target.classList.contains('seat') &&
+        !e.target.classList.contains('unavailable')
+    ){
+        e.target.classList.toggle('selected')
+        
+        toggleItem(e);
+        console.log(updateDataArray(mappingSeats()));
+        
+    }
+});
+
+function toggleItem(item) {
+    var seatData = mappingSeats();
+    const index = seatData.indexOf(item);
+    if (index === -1){
+        seatData.push(item);
+    }
+    else {
+        seatData.splice(index, 1);
+    }
+}
+const myForm = document.querySelector('#seats')
+
+myForm.addEventListener("submit", (event)=> {
+    event.preventDefault();
+    console.log(dataArray);
+    sessionStorage.setItem('dataArray', JSON.stringify(dataArray));
+    window.location.href = 'paymentPage.html'
+
+});
+
+
+
+
 
