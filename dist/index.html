@@ -11,6 +11,7 @@
  
 </head>
 <body>
+  <script src = "gatherData.bundle.js"></script>
  
 
 
@@ -59,13 +60,13 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Wild Landscape"/>
+          <img src="/dist/pictures/popcorn.png" class="d-block w-100" alt="Wild Landscape"/>
         </div>
         <div class="carousel-item">
-          <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera"/>
+          <img src="/dist/pictures/coke.jpg" class="d-block w-100" alt="Camera"/>
         </div>
         <div class="carousel-item">
-          <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits"/>
+          <img src="/dist/pictures/Pic3.png" class="d-block w-100" alt="Exotic Fruits"/>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide="prev">
@@ -79,58 +80,54 @@
     </div>
 
 
-    
+    <!-- movie spaces  -->
   
     <div class="col" style="top:100%;">
-        <form method="get" action="detailpage.html"class="movieSpace" >
-            <input type="hidden" name="movieName" value="Joker"/>
-            <input type="submit" value="" style="background-image: url('pictures/joker.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
-            
-            <div class="container"style="width: 420px;" >
-              <div class="p2 bg-color3 rounded">
-            <label class="posters">Joker | Rated R | 4.7/ 5.0</label>
-          </div>
-          </div>
-        </form>
 
-        <form method="get" action="detailpage.html" class="movieSpace">
-            <input type="hidden" name="movieName" value="Shrek"/>
-            <input type="submit" value="" style="background-image: url('pictures/shrek.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
-            
-            <div class="container-sm" style="width: 420px;">
-              <div class="p2 bg-color3 rounded">
-            <label class="posters">Shrek | Rated R | 4.7/ 5.0</label>
+      <div id="indexMovie1" class="movieSpace" >
+        <a href="movieSelect.html#movieSelect1"><img id="indexMovie1Image" src="pictures/loading.gif" alt="moviePicture1" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
+        <div class="container" style="width: 420px;" >
+          <div class="p2 bg-color3 rounded">
+            <label class="posters" id="indexMovie1Details">Now Loading...</label>
           </div>
         </div>
-        </form>
+      </div>
 
-        <form method="get" action="detailpage.html" class="movieSpace">
-            <input type="hidden" name="movieName" value="Jurassic Park"/>
-            <input type="submit" value="" style="background-image: url('pictures/jurassicPark.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
-            
-            <div class="container" style="width: 420px;">
-              <div class="p2 bg-color3 rounded">
-            <label class="posters">Jurassic Park | Rated R | 4.7/ 5.0</label>
+      <div id="indexMovie2" class="movieSpace" >
+        <a href="movieSelect.html#movieSelect2"><img id="indexMovie2Image" src="pictures/loading.gif" alt="moviePicture2" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
+        <div class="container" style="width: 420px;" >
+          <div class="p2 bg-color3 rounded">
+            <label class="posters" id="indexMovie2Details">Now Loading...</label>
           </div>
         </div>
-        </form>
+      </div>
 
-        <form method="get" action="detailpage.html" class="movieSpace">
-            <input type="hidden" name="movieName" value="Puss in Boots: The Last Wish"/>
-            <input type="submit" value="" style="background-image: url('pictures/GatoConBotas.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
-            
-            <div class="container-sm" style="width: 420px;">
-              <div class="p2 bg-color3 rounded">
-            <label class="posters">GatoConBotas | Rated R | 4.7/ 5.0</label>
+      <div id="indexMovie3" class="movieSpace" >
+        <a href="movieSelect.html#movieSelect3"><img id="indexMovie3Image" src="pictures/loading.gif" alt="moviePicture3" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
+        <div class="container" style="width: 420px;" >
+          <div class="p2 bg-color3 rounded">
+            <label class="posters" id="indexMovie3Details">Now Loading...</label>
           </div>
         </div>
-        </form>
+      </div>
+
+      <div id="indexMovie4" class="movieSpace" >
+        <a href="movieSelect.html#movieSelect4"><img id="indexMovie4Image" src="pictures/loading.gif" alt="moviePicture4" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
+        <div class="container" style="width: 420px;" >
+          <div class="p2 bg-color3 rounded">
+            <label class="posters" id="indexMovie4Details">Now Loading...</label>
+          </div>
+        </div>
+      </div>
+
+
 
     </div>
-    <br><br><br><br><br>
+<br><br>
     
 
-<script src = "index.bundle.js"></script>
+
+<script defer src = "index.bundle.js"></script>
       
 </body>
 </html>

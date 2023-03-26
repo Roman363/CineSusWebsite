@@ -11,7 +11,18 @@ body {
   width: 100vw;
 }
 
+input[type="radio"]{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
 
+input[type="radio"]:checked+span 
+{ 
+  font-weight: bold; 
+  color: #222831; 
+  transition: all .1s ease-out;
+}
 
 #mainNav{
   display: block;
@@ -160,19 +171,13 @@ div {
 
 
 #moviePayInfo{
-  position: absolute;
-  width: 561px;
-  height: 74px;
-  left: 350px;
-  top: 75px;
   
   font-family: 'Inter';
   font-style: normal;
   font-weight: 800;
-  font-size: 32px;
-  line-height: 39px;
-  
-  color: #FFFFFF;
+  font-size: 27px;
+  line-height: 35px;
+  color: #eeeeee;
 }
   
 #ticketPayInfo{
@@ -223,7 +228,7 @@ color: #FFFFFF;
       color: #FFFFFF;
       }
   
-  #ticketPayBox{
+  #ticketPayBox{ 
       position: absolute;
       width: 300px;
       height: 550px;
@@ -231,7 +236,7 @@ color: #FFFFFF;
       top: 75px;
       box-shadow: 0.5em 0 0.5em #000;
       border-radius: 30px;
-      background-color: #C4C4C4;
+      background-color: #ff5722;
   }
   
   .ticketPayDropDown{
@@ -239,9 +244,9 @@ color: #FFFFFF;
       height: 550px;
       right: 50px;
       top: 76px;
-      box-shadow: 0.5em 0 0.5em #000;
+      
       border-radius: 30px;
-      background-color: #C4C4C4;
+      background-color: #ff5722;
   }
   .movieSelectBox{
     align-items: center;
@@ -311,36 +316,6 @@ color: #FFFFFF;
   }
   
 
-
-#ticketPayBox{
-  position: absolute;
-  width: 300px;
-  height: 550px;
-  right: 50px;
-  top: 75px;
-  box-shadow: 0.5em 0 0.5em #000;
-  border-radius: 30px;
-  background-color: #C4C4C4;
-}
-
-.ticketPayDropDown{
-  width: 300px;
-  height: 550px;
-  right: 50px;
-  top: 76px;
-  box-shadow: 0.5em 0 0.5em #000;
-  border-radius: 30px;
-  background-color: #C4C4C4;
-}
-
-#payBox{
-  font-size: 28px;
-  font-family: 'Inter';
-  font-weight: 800;
-  text-decoration: none;
-  color: white;
-  
-}
 
 /* #movie-image {
   display: block;

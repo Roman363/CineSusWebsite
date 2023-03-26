@@ -29,122 +29,251 @@
       </div>
     </div>
 
+    <div class="container" style="border-bottom: solid; border-bottom-color:#222831;">
+      <form id="weekDay">
+        <h1 style="color: #222831; font-weight:bold;">Showtimes</h1></br>
+        <div class="row">
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Monday" checked>
+              <span style="font-size: 23px; color:#222831;">Monday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Tuesday">
+              <span style="font-size: 23px; color:#222831;">Tuesday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Wednesday">
+              <span style="font-size: 23px; color:#222831;">Wednesday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Thursday">
+              <span style="font-size: 23px; color:#222831;">Thursday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Friday">
+              <span style="font-size: 23px; color:#222831;">Friday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Saturday">
+              <span style="font-size: 23px; color:#222831;">Saturday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Sunday">
+              <span style="font-size: 23px; color:#222831;">Sunday</span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
 
-   <div class="container" style="padding-bottom: 35px;">
+      
+
+    
+  </br></br>
+
+  <div class="container" style="border-bottom: solid; border-bottom-color:#222831;">
+    <form id="ticketAmount">
+      <h2 style="color: #222831; font-weight:bold;">Tickets</h2></br>
+      <div class="row mb-4">
+        <div class="col-sm w-25">
+          <h4 style="color: #222831;">Adult</h4>
+          <input type="number" class="form-control w-75"  value="1"s name="adultTickets">
+        </div>
+        <div class="col-sm w-25">
+          <h4 style="color: #222831;">Child</h4>
+          <input type="number" class="form-control w-75"  value="0" name="childTickets">
+        </div>
+        <div class="col-sm w-25">
+          <h4 style="color: #222831;">Senior</h4>
+          <input type="number" class="form-control w-75"  value="0" name="seniorTickets">
+        </div>
+      </div>
+    </form>
+    
+  </div>  </br></br>
+
+
+
+  <!-- 1st movie we are showing -->
+  <div class="container" style="padding-bottom: 35px;" id="movieSelect1">
     <div class="row bg-color3" style="border-radius: 25px;">
-    <div class="col-sm">
-      
+      <div class="col-sm">
         <div id = "movie-image">
-          <!--- add <img src picture from post method-->
-          <img src="" style="background-image: url('pictures/GatoConBotas.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
+          <img id="movieSelect1Image" src="" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
         </div>
       </div>
-        <div class="col-md" style="margin-top: 100px; margin-right:90px;">
-          <div class="d-grid gap-5">
-        <div class="col mt-6">
-          <h1 style="color:#ff5722;">Gato Con Botas: El Ultimo Deseo</h1>
-        </div>
-        <div class="col">
-          <h4>Antonio Banderas as Puss in Boots, a swashbuckling cat fugitive from the law and a hero of San Ricardo who has lost eight of his nine lives. Salma Hayek Pinault as Kitty Softpaws, a street-savvy Tuxedo cat who is Puss' ex-fiancée, and seeks the Wishing Star to find somebody she can trust.</h4>
-        </div>
-      <div class="col">
-        <form id="movieTime"> <a href="detailpage.html">
-          <input class="btn btn-color1 btn-lg" type="button" value="3:45PM">
-          <input class="btn btn-color1 btn-lg" type="button" value="5:35PM">
-          <input class="btn btn-color1 btn-lg" type="button" value="8:45PM">
-          <input class="btn btn-color1 btn-lg" type="button" value="10:30PM">
-        </a>
-        </form>
-        </div>
+      <div class="col-md" style="margin-top: 100px; margin-right:90px;">
+        <div class="d-grid gap-5">
+          <div class="col mt-6">
+            <h1 id="movieSelect1Title" style="color:#ff5722;"></h1>
+          </div>
+          <div class="col">
+            <h4 id="movieSelect1Description">Now Loading...</h4>
+          </div>
+          <div class="col">
+            <form id="movieTime" onsubmit="submitForms()" method="get" action="detailpage.html">
+              <input id="movieSelect1Value" type="hidden" value="" name="movieName">
+              <input class="btn btn-color1 btn-lg" type="submit" value="3:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="5:35PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="8:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="10:30PM" name="movieTime">
+            </form>
+          </div> 
           <div class="col"> 
-          <h5 >Rated R | 2 Hr 3 Min | 4.7/ 5.0</h5>
+            <h5 id="movieSelect1Details"></h5>
           </div>
+        </div>
       </div>
-    </div>
-    
+    </div> 
+  </div>
    
-  </div> 
-  </div> 
-   
-  <div class="container" style="padding-bottom: 35px;">
-    <div class="row bg-color3" style="border-radius: 25px;"">
-    <div class="col-sm">
-      
+  <!-- 2nd movie we are showing -->
+  <div class="container" style="padding-bottom: 35px;" id="movieSelect2">
+    <div class="row bg-color3" style="border-radius: 25px;">
+      <div class="col-sm">
         <div id = "movie-image">
-          <!--- add <img src picture from post method-->
-          <img src="" style="background-image: url('pictures/jurassicPark.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
-
+          <img id="movieSelect2Image" src="" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
         </div>
       </div>
-        <div class="col-md" style="margin-top: 100px; margin-right:90px;">
-          <div class="d-grid gap-5">
-        <div class="col mt-6">
-          <h1 style="color:#ff5722;">Jurassic Park</h1>
-        </div>
-        <div class="col">
-          <h4>Industrialist John Hammond has created Jurassic Park, a theme park of cloned dinosaurs, on tropical Isla Nublar. After a dinosaur handler is killed by a Velociraptor, the park's investors, represented by lawyer Donald Gennaro, demand a safety certification.</h4>
-        </div>
-      <div class="col">
-        <form id="movieTime">
-          <input class="btn btn-color1 btn-lg" type="button" value="3:45PM" href="detailpage.html">
-          <input class="btn btn-color1 btn-lg" type="button" value="5:35PM" href="detailpage.html">
-          <input class="btn btn-color1 btn-lg" type="button" value="8:45PM" href="detailpage.html">
-          <input class="btn btn-color1 btn-lg" type="button" value="10:30PM" href="detailpage.html">
-        </form>
-        </div> 
-        <div class="col"> 
-          <h5 >Rated R | 2 Hr 30 Min | 5.0/ 5.0</h5>
+      <div class="col-md" style="margin-top: 100px; margin-right:90px;">
+        <div class="d-grid gap-5">
+          <div class="col mt-6">
+            <h1 id="movieSelect2Title" style="color:#ff5722;"></h1>
           </div>
+          <div class="col">
+            <h4 id="movieSelect2Description">Now Loading...</h4>
+          </div>
+          <div class="col">
+            <form id="movieTime" onsubmit="submitForms()" method="get" action="detailpage.html">
+              <input id="movieSelect2Value" type="hidden" value="" name="movieName">
+              <input class="btn btn-color1 btn-lg" type="submit" value="3:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="5:35PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="8:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="10:30PM" name="movieTime">
+            </form>
+          </div> 
+          <div class="col"> 
+            <h5 id="movieSelect2Details"></h5>
+          </div>
+        </div>
       </div>
-    </div>
-    
-   
-  </div> 
+    </div> 
   </div> 
 
-  <div class="container" style="padding-bottom: 35px;">
-    <div class="row bg-color3" style="border-radius: 25px;"">
-    <div class="col-sm">
-      
+  <!-- 3rd movie we are showing -->
+  <div class="container" style="padding-bottom: 35px;" id="movieSelect3">
+    <div class="row bg-color3" style="border-radius: 25px;">
+      <div class="col-sm">
         <div id = "movie-image">
-          <!--- add <img src picture from post method-->
-          <img src="" style="background-image: url('pictures/shrek.png'); border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
-
+          <img id="movieSelect3Image" src="" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
         </div>
       </div>
-        <div class="col-md" style="margin-top: 100px; margin-right:90px;">
-          <div class="d-grid gap-5">
-        <div class="col mt-6">
-          <h1 style="color:#ff5722;">Shrek</h1>
-        </div>
-        <div class="col">
-          <h4>A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back. It's the story of a terrifying green ogre by the name of Shrek, who lives in a swamp.</h4>
-        </div>
-      <div class="col">
-        <form id="movieTime">
-          <input class="btn btn-color1 btn-lg" type="button" value="3:45PM" href="detailpage.html">
-          <input class="btn btn-color1 btn-lg" type="button" value="5:35PM" href="detailpage.html">
-          <input class="btn btn-color1 btn-lg" type="button" value="8:45PM" href="detailpage.html">
-          <input class="btn btn-color1 btn-lg" type="button" value="10:30PM" href="detailpage.html">
-        </form>
-        </div> 
-        <div class="col"> 
-          <h5 >Rated E | 1 Hr 47 Min | 5.0/ 5.0</h5>
+      <div class="col-md" style="margin-top: 100px; margin-right:90px;">
+        <div class="d-grid gap-5">
+          <div class="col mt-6">
+            <h1 id="movieSelect3Title" style="color:#ff5722;"></h1>
           </div>
+          <div class="col">
+            <h4 id="movieSelect3Description">Now Loading...</h4>
+          </div>
+          <div class="col">
+            <form id="movieTime" method="get" onsubmit="submitForms()" action="detailpage.html">
+              <input id="movieSelect3Value" type="hidden" value="" name="movieName">
+              <input class="btn btn-color1 btn-lg" type="submit" value="3:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="5:35PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="8:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="10:30PM" name="movieTime">
+            </form>
+          </div> 
+          <div class="col"> 
+            <h5 id="movieSelect3Details"></h5>
+          </div>
+        </div>
       </div>
-    </div>
-    
-   
-  </div> 
-  </div> 
-  
-  
-
+    </div> 
+  </div>
     
 
+  <!-- 4th movie we are showing -->
+  <div class="container" style="padding-bottom: 35px;" id="movieSelect4">
+    <div class="row bg-color3" style="border-radius: 25px;">
+      <div class="col-sm">
+        <div id = "movie-image">
+          <img id="movieSelect4Image" src="" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
+        </div>
+      </div>
+      <div class="col-md" style="margin-top: 100px; margin-right:90px;">
+        <div class="d-grid gap-5">
+          <div class="col mt-6">
+            <h1 id="movieSelect4Title" style="color:#ff5722;"></h1>
+          </div>
+          <div class="col">
+            <h4 id="movieSelect4Description">Now Loading...</h4>
+          </div>
+          <div class="col">
+            <form id="movieTime" method="get" onsubmit="submitForms()" action="detailpage.html">
+              <input id="movieSelect4Value" type="hidden" value="" name="movieName">
+              <input class="btn btn-color1 btn-lg" type="submit" value="3:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="5:35PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="8:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="10:30PM" name="movieTime">
+            </form>
+          </div> 
+          <div class="col"> 
+            <h5 id="movieSelect4Details"></h5>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
 
 
-    <script src = "detailpage.bundle.js"></script>
+
+  <script>
+    function submitForms() {
+
+      
+      var weekDay = new FormData(document.getElementById("weekDay"));
+      var ticketAmount = new FormData(document.getElementById("ticketAmount"));
+
+      
+      // Combine the form data into a single object
+      var formData = [];
+      for (var pair of weekDay.entries()) {
+        formData[pair[0]] = pair[1];
+      }
+      for (var pair of ticketAmount.entries()) {
+        formData[pair[0]] = pair[1];
+      }
+
+      var ticketsArray = []
+      ticketsArray.push(formData["adultTickets"])
+      ticketsArray.push(formData["childTickets"])
+      ticketsArray.push(formData["seniorTickets"])
+
+
+      sessionStorage.setItem("weekDay", JSON.stringify(formData["weekDay"]))
+      sessionStorage.setItem("ticketsArray", JSON.stringify(ticketsArray))
+
+    }
+
+  </script>
+
+
+  <script src = "movieSelect.bundle.js"></script>
       
 </body>
 </html>
