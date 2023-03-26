@@ -13,38 +13,36 @@ const firebaseConfig = {
   appId: "1:638627407505:web:390587f6f32e9467784130"
 };
 
-//from the get method, find out what movie the user wants to see information from
-const movieName = new URLSearchParams(window.location.search).get('movieName')
-console.log(movieName); 
-
 // Initialize Firebase
 const fireApp = initializeApp(firebaseConfig);
 
 const auth = getAuth(fireApp);
 
 const db = getFirestore(fireApp);
-const movieCollection = collection(db, 'movie_info')
 
-//replace the placeholder info to the actual movie info
-getDocs(movieCollection)
-    .then((snapshot) => {
-        var movieData = ""
-        snapshot.docs.forEach((doc) => {
-            if (doc.data().title == movieName) {
-                movieData = doc.data()
-            }
-        })
-        document.getElementById("purchasedMovie").innerHTML = movieData.title + " | " + movieData.range + " | " + movieData.review
-        document.getElementById("purchasedMovieImage").setAttribute("src", movieData.image_link)
-        
 
-        
-        
+//getting information
+var dataArrayString = sessionStorage.getItem("dataArray")
+var dataArray = JSON.parse(dataArrayString)
 
-    })
-    .catch(err => {
-        console.log(err.message)
-    })
+console.log(dataArray);
+
+var movieDataString = sessionStorage.getItem("movieData")
+var movieData = JSON.parse(movieDataString)
+
+document.getElementById("purchasePageTitle").innerHTML = dataArray.movieTitle
+document.getElementById("purchasePageDateAndTime").innerHTML = dataArray.weekDay + " | " + dataArray.movieTime
+document.getElementById("purchasePageTotalTickets").innerHTML = dataArray["totalTickets"] + " Ticket(s)"
+
+var imageLink = ""
+for (let i = 0; i < movieData.length; i++) {
+    if (movieData[i].title == dataArray["movieTitle"]) {
+        imageLink = movieData[i].image_link
+    }
+    
+}
+
+document.getElementById("purchasePageImage").setAttribute("src", imageLink)
 
     //Observer
 onAuthStateChanged(auth, (user) => {
@@ -58,3 +56,28 @@ onAuthStateChanged(auth, (user) => {
       console.log("Signed Out")
     }
   })
+
+
+
+
+
+//uploading transactions to database
+const transactionCollection = collection(db, 'transactions')
+
+
+const transaction = {
+  adultTickets: dataArray["adultTickets"],
+  childTickets: dataArray["childTickets"],
+  seniorTickets: dataArray["seniorTickets"],
+  weekDay: dataArray["weekDay"],
+  movie: dataArray["movieTitle"],
+  time: dataArray["movieTime"],
+  totalPrice: dataArray["total"]
+
+}
+
+addDoc(transactionCollection, transaction).then((doc) =>{
+  console.log(doc)
+}).catch((e) =>{
+  console.log(e);
+})
