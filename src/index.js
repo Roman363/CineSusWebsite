@@ -82,6 +82,7 @@ getDocs(movieCollection).then((snapshot) => {
   document.getElementById("indexMovie2Image").setAttribute("src", movieData[1].image_link)
   document.getElementById("indexMovie3Image").setAttribute("src", movieData[2].image_link)
   document.getElementById("indexMovie4Image").setAttribute("src", movieData[3].image_link)
+  console.log(movieData);
 
 
 
