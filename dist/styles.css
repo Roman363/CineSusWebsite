@@ -381,9 +381,9 @@ color: #FFFFFF;
   border-radius: 5px;
   margin: 2em 7.5em 0;
 }
+/* seating info */
 
-/*seating info*/
-#text {
+ #text {
   font-size: 1.2em;
   font-family: 'Abhaya Libre', serif;
   text-decoration: none;
@@ -399,12 +399,14 @@ color: #FFFFFF;
   position: relative;
   color: black;
 }
+
 #date, #mTime{
   display: inline-block;
   text-align: center;
   position:relative;
   font-size: 1em;
 }
+
 #seat-key {
   font-family: 'Abhaya Libre', serif;
   color: black;
@@ -420,9 +422,11 @@ color: #FFFFFF;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 }
+
 .seat.selected {
   background-color: #992907;
 }
+
 .seat.unavailable {
   background-color: rgb(139, 139, 139);
 }
@@ -460,12 +464,13 @@ color: #FFFFFF;
   margin-left: 6px;
 }
 
-.row{
+.detailPageRow{
   display: flex;
   align-content: center;
   position: relative;
   padding-left: 11em;
 }
+
 .screen {
   background-color:rgb(250, 247, 242);
   height: 240px;
@@ -484,7 +489,7 @@ color: #FFFFFF;
   background-color: rgb(223, 221, 220);
 }
 
-p #text{
+#text{
   margin: 5px 0;
 }
 .seating-grid #text #count{
