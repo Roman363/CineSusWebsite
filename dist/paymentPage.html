@@ -5,17 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineSus</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="/css/main.min.css" rel="stylesheet" >
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <header id="mainNav">
-      <a href="index.html" id="logo">CINඞSUS</a>
-      <a href="" id="movies">Movies</a>
-      <a href="rewardsPage.html" id="rewards">Rewards</a>
-      <a href="paymentPage.html" id="cart">Cart</a>
-    </header>
+    <div class="container-fluid bg-top">
+      <div class="container-md" style="height: 12%;">
+        <header class="d-lg-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-decoration-none" style="color:#ff5722;font-family: 'Abhaya Libre', serif;">
+            <span class="fs-1">CINඞSUS</span>
+          </a>
+      
+          <ul class="nav nav-pills nav-fill align-items-center">
+            
+            <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
+            <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
+            <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
+            <li class="nav-item fs-5" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+          </ul>
+        </header>
+      </div>
+    </div>
 
 
     <div id="featured">
@@ -67,37 +78,39 @@
           </button>
           <ul class="dropdown-menu ticketPayDropDown">
             <text id="payBox" style ="position: absolute; left: 20px;">Payment Information</text></br></br></br>
-            
+
+            <form id="paymentReceipt">
+
             <text id="payBox" style ="text-align: left;">Card Number</text></br>
             <div class="input-group input-group-sm mb-3">
               <span class="input-group-text" id="inputGroup-sizing-sm"></span>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              <input type="text" id="cardNumber" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
             </div>
 
             <text id="payBox" style ="text-align: left;">Expiration date</text></br>
             <div class="input-group">
               <span class="input-group-text">MM/YYYY</span>
-              <input type="text" aria-label="First name" class="form-control">
-              <input type="text" aria-label="Last name" class="form-control">
+              <input type="text" aria-label="First name" id="month" class="form-control" required>
+              <input type="text" aria-label="Last name" id="year" class="form-control" required>
             </div>
 
             <text id="payBox" style ="text-align: left;">Billing Zip Code</text></br>
             <div class="input-group input-group-sm mb-3">
               <span class="input-group-text" id="inputGroup-sizing-sm"></span>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="zipCode" required>
             </div>
 
             <text id="payBox" style ="text-align: left;">Security Code</text></br>
             <div class="input-group input-group-sm mb-3">
               <span class="input-group-text" id="inputGroup-sizing-sm"></span>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="securityCode" required>
             </div>
 
             <div class="d-flex justify-content-center">
               <input type="hidden" id="currentMovieGet" name="movieName" value="">
               <button type="submit" class="btn btn-warning margin-auto">Submit</button>
             </div>
-
+            </form>
           </ul>
         </div>
        </div>

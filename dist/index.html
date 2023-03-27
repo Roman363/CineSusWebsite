@@ -5,83 +5,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineSus</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="/css/main.min.css" rel="stylesheet" >
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ 
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <header id="mainNav">
-        <a href="index.html" id="logo">CINඞSUS</a>
-        <a href="" id="movies">Movies</a>
-        <a href="rewardsPage.html" id="rewards">Rewards</a>
-        <a href="paymentPage.html" id="cart">Cart</a>
-        <div class="dropdown dropstart">
-            <button class="btn btn-link" style="position: absolute; left: 200px" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                ඞ
-            </button>
-              <ul class="dropdown-menu">
-                <text id="myAccount">My Account</text></br></br></br>
-
-                <form id="signOut">
-                   <button class="btn btn-warning">
-                        Sign Out
-                   </button>
-                </form>
-        </div>
-    </header>
+  <script src = "gatherData.bundle.js"></script>
+ 
 
 
-    <div id="featured">
-        <h2 id="featuredText">Featured:</h2>
-        <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="Joker"/>
-            <input type="submit" value="" style="background-image: url('pictures/joker.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
+    <div class="container-fluid bg-top">
+      <div class="container-md" style="height: 12%;">
+        <header class="d-lg-flex flex-wrap justify-content-center py-3  border-bottom" style="margin-bottom: 0;">
+          <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-decoration-none" style="color:#ff5722;font-family: 'Abhaya Libre', serif;">
+            <span class="fs-1">CINඞSUS</span>
+          </a>
+      
+          <ul class="nav nav-pills nav-fill align-items-center">
             
-            <label>Joker | Rated R | 4.7/ 5.0</label>
-        </form>
-
-        <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="Shrek"/>
-            <input type="submit" value="" style="background-image: url('pictures/shrek.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
-            
-            <label>Shrek | Rated R | 4.7/ 5.0</label>
-        </form>
-
-        <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="Jurassic Park"/>
-            <input type="submit" value="" style="background-image: url('pictures/jurassicPark.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
-            
-            <label>Jurassic Park | Rated R | 4.7/ 5.0</label>
-        </form>
-
-        <form method="get" action="detailpage.html" id="movieSpace">
-            <input type="hidden" name="movieName" value="Puss in Boots: The Last Wish"/>
-            <input type="submit" value="" style="background-image: url('pictures/GatoConBotas.png'); border:none; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"/>
-            
-            <label>GatoConBotas | Rated R | 4.7/ 5.0</label>
-        </form>
-
-    </div>
-    <br><br><br><br><br>
-
-    <div>
-        <p>place holder text lorem ipsum</p>
-        <p>place holder text lorem ipsum</p>
-        <p>place holder text lorem ipsum</p>
-        <p>place holder text lorem ipsum</p>
-    </div>
-
-
-
-    <div id="footer">
-        <h2 id="logo2">CINඞSUS</h2><br>
-        <p id="statement">CINඞSUS, Inc. 2023. All Rights Reserved.</p>
+            <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
+            <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
+            <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
+            <li class="nav-item fs-5" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+          </ul>
+        </header>
+      </div>
     </div>
 
     
 
+    <div id="carouselExampleCrossfade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCrossfade"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCrossfade"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCrossfade"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/dist/pictures/popcorn.png" class="d-block w-100" alt="Wild Landscape"/>
+        </div>
+        <div class="carousel-item">
+          <img src="/dist/pictures/coke.jpg" class="d-block w-100" alt="Camera"/>
+        </div>
+        <div class="carousel-item">
+          <img src="/dist/pictures/Pic3.png" class="d-block w-100" alt="Exotic Fruits"/>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-<script src = "index.bundle.js"></script>
+
+    <!-- movie spaces  -->
+  
+    <div class="col" style="top:100%;">
+
+      <div id="indexMovie1" class="movieSpace" >
+        <a href="movieSelect.html#movieSelect1"><img id="indexMovie1Image" src="pictures/loading.gif" alt="moviePicture1" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
+        <div class="container" style="width: 420px;" >
+          <div class="p2 bg-color3 rounded">
+            <label class="posters" id="indexMovie1Details">Now Loading...</label>
+          </div>
+        </div>
+      </div>
+
+      <div id="indexMovie2" class="movieSpace" >
+        <a href="movieSelect.html#movieSelect2"><img id="indexMovie2Image" src="pictures/loading.gif" alt="moviePicture2" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
+        <div class="container" style="width: 420px;" >
+          <div class="p2 bg-color3 rounded">
+            <label class="posters" id="indexMovie2Details">Now Loading...</label>
+          </div>
+        </div>
+      </div>
+
+      <div id="indexMovie3" class="movieSpace" >
+        <a href="movieSelect.html#movieSelect3"><img id="indexMovie3Image" src="pictures/loading.gif" alt="moviePicture3" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
+        <div class="container" style="width: 420px;" >
+          <div class="p2 bg-color3 rounded">
+            <label class="posters" id="indexMovie3Details">Now Loading...</label>
+          </div>
+        </div>
+      </div>
+
+      <div id="indexMovie4" class="movieSpace" >
+        <a href="movieSelect.html#movieSelect4"><img id="indexMovie4Image" src="pictures/loading.gif" alt="moviePicture4" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
+        <div class="container" style="width: 420px;" >
+          <div class="p2 bg-color3 rounded">
+            <label class="posters" id="indexMovie4Details">Now Loading...</label>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+<br><br>
+    
+
+
+<script defer src = "index.bundle.js"></script>
       
 </body>
 </html>
