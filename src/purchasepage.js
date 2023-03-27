@@ -25,21 +25,24 @@ const db = getFirestore(fireApp);
 var dataArrayString = sessionStorage.getItem("dataArray")
 var dataArray = JSON.parse(dataArrayString)
 
-console.log(dataArray);
 
 var movieDataString = sessionStorage.getItem("movieData")
 var movieData = JSON.parse(movieDataString)
 
-document.getElementById("purchasePageTitle").innerHTML = dataArray.movieTitle
+console.log(dataArray);
+console.log(movieData);
+
+
+
+document.getElementById("purchasePageTitle").innerHTML = dataArray.movieName
 document.getElementById("purchasePageDateAndTime").innerHTML = dataArray.weekDay + " | " + dataArray.movieTime
 document.getElementById("purchasePageTotalTickets").innerHTML = dataArray["totalTickets"] + " Ticket(s)"
 
 var imageLink = ""
 for (let i = 0; i < movieData.length; i++) {
-    if (movieData[i].title == dataArray["movieTitle"]) {
-        imageLink = movieData[i].image_link
-    }
-    
+  if (movieData[i]["title"] == dataArray["movieName"]) {
+      imageLink = movieData[i]["image_link"]
+  }
 }
 
 document.getElementById("purchasePageImage").setAttribute("src", imageLink)
@@ -60,7 +63,7 @@ onAuthStateChanged(auth, (user) => {
 
 
 
-
+console.log(dataArray);
 //uploading transactions to database
 const transactionCollection = collection(db, 'transactions')
 
@@ -70,7 +73,7 @@ const transaction = {
   childTickets: dataArray["childTickets"],
   seniorTickets: dataArray["seniorTickets"],
   weekDay: dataArray["weekDay"],
-  movie: dataArray["movieTitle"],
+  movie: dataArray["movieName"],
   time: dataArray["movieTime"],
   totalPrice: dataArray["total"]
 

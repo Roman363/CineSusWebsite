@@ -81,15 +81,11 @@ var ticketsArray = JSON.parse(ticketsArrayString)
 //USE THIS ARRAY
 var dataArray = {"movieName":movieName, "movieTime": movieTime, "weekDay":weekDay, "adultTickets": ticketsArray[0], "childTickets": ticketsArray[1], "seniorTickets": ticketsArray[2]}
 console.log(dataArray);
+
+//sending the information
+sessionStorage.setItem("dataArray", JSON.stringify(dataArray))
+
 var total = JSON.stringify(parseInt(dataArray['adultTickets']) + parseInt(dataArray['childTickets']) + parseInt(dataArray['seniorTickets']))
-
-
-
-
-
-
-
-
 
 
 
