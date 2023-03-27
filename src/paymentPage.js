@@ -4,30 +4,16 @@ import { getAuth,onAuthStateChanged} from 'firebase/auth'
 
 
 
-//getting all the information
+
+//getting information
+var dataArrayString = sessionStorage.getItem("dataArray")
+var dataArray = JSON.parse(dataArrayString)
 
 var movieDataString = sessionStorage.getItem('movieData')
 var movieData = JSON.parse(movieDataString)
 
-const movieName = new URLSearchParams(window.location.search).get('movieName')
-const movieTime = new URLSearchParams(window.location.search).get('movieTime')
-
-var weekDayString = sessionStorage.getItem('weekDay')
-var weekDay = JSON.parse(weekDayString)
-
-var ticketsArrayString = sessionStorage.getItem("ticketsArray")
-var ticketsArray = JSON.parse(ticketsArrayString)
-
-//merging the array
-//USE THIS ARRAY
-var dataArray = {"movieTitle":movieName, "movieTime": movieTime, "weekDay":weekDay, "adultTickets": parseInt(ticketsArray[0]), "childTickets": parseInt(ticketsArray[1]), "seniorTickets": parseInt(ticketsArray[2])}
-sessionStorage.setItem("dataArray", JSON.stringify(dataArray))
-
-//sending the information
-sessionStorage.setItem("dataArray", JSON.stringify(dataArray))
-
-
 console.log(dataArray);
+console.log(movieData);
 
 
 // calculating total
@@ -52,18 +38,20 @@ console.log(total);
 document.getElementById("subTotal").innerHTML = subtotal.toString()
 document.getElementById("tax").innerHTML = tax
 document.getElementById("total").innerHTML = total
-document.getElementById("paymentPageTitle").innerHTML = dataArray.movieTitle
-document.getElementById("paymentPageDateAndTime").innerHTML = dataArray.weekDay + " | " + dataArray.movieTime
+document.getElementById("paymentPageTitle").innerHTML = dataArray["movieName"]
+document.getElementById("paymentPageDateAndTime").innerHTML = dataArray["weekDay"] + " | " + dataArray["movieTime"]
 document.getElementById("paymentPagePriceAndAmount").innerHTML = "$" + total + "&emsp;" + totalTickets
+
+
 
 
 var imageLink = ""
 for (let i = 0; i < movieData.length; i++) {
-    if (movieData[i].title == dataArray["movieTitle"]) {
-        imageLink = movieData[i].image_link
-    }
-    
+  if (movieData[i]["title"] == dataArray["movieName"]) {
+      imageLink = movieData[i]["image_link"]
+  }
 }
+console.log(imageLink);
 
 document.getElementById("paymentPageImage").setAttribute("src", imageLink)
 
