@@ -27,45 +27,44 @@
           </header>
         </div>
       </div>
-    <!-- <br><br><br><br><br> -->
 
-  <!-- <div id = "memberRewards"> -->
-    <div id="rewardsPage">
-        <h2 id="rewardsText" style="color: #222831; text-align: center;">Rewards:</h2>
-        <form id="member" style="color: #222831">
-            <p>Welcome, </p>
-            <p id ='username'>Valeria</p>
-            <p>These are your rewards:</p><br>
-    
-            <p style="text-align: center;">Current points:</p>
-            <p  id = 'rewardPoints' style="text-align: center;">500 points</p><br>
-            <div id = 'rewardInfo' style="color: #222831">
-                <img src = './pictures/ticket-vector.webp' style="height: 50%; width: 50%;">
-                <p>$1 spent = 10 points</p><br>
-                <p>One free ticket for every 250 points</p><br>
-            </div>
-            <button type = 'button' style="color: #ff5722;" onclick = "location.href = 'paymentPage.html'">Redeem now!</button>
-
-  <!-- </div> -->
-
-  <!-- <div id="guestRewards"> -->
-            <p>Welcome! Not a member?</p>
-        <button type = 'button' style="color: #ff5722;" onclick = "location.href = 'createAccount.html'">Create your account here!</button> <p>& start saving now!</p>
-        <div id = 'rewardInfo' style="color: #222831">
-            <img src = './pictures/ticket-vector.webp' style="height: 50%; width: 50%;">
-            <p>$1 spent = 10 points</p><br>
-            <p>One free ticket for every 250 points</p><br>
-        </div>
-        <p>Have an account?</p>
-        <button type = 'button' onclick = "location.href = 'signIn.html'">Sign in here</button>
-        </form>
+    <div id="rewardsPageSignedIn" style="color: black; padding: 30px; display: none;">
+      <h2 id="rewardsText" style="color: #222831; text-align: center;">Rewards:</h2>
+      <p>Welcome, </p>
+      <p id ='rewardsPageUsername'>Valeria</p>
+      <p>These are your rewards:</p><br>
+  
+      <p style="text-align: center;">Current points:</p>
+      <p  id = 'rewardPoints' style="text-align: center;">500 points</p><br>
+      <div id = 'rewardInfo' style="color: #222831">
+        <img src = './pictures/ticket-vector.webp' style="height: 25%; width: 25%;">
+        <p>$1 spent = 10 points</p><br>
+        <p>One free ticket for every 250 points</p><br>
+        <button type = 'button' style="color: #ff5722;" onclick = "location.href = 'paymentPage.html'">Redeem now!</button>
+      </div>
     </div>
-<!-- </div> -->
+          
 
-    <div id="footer">
-        <h2 id="logo2">CINඞSUS</h2><br>
-        <p id="statement">CINඞSUS, Inc. 2023. All Rights Reserved.</p>
+
+    <div id="rewardsPageSignedOut" style="color:black; display: block;">
+      <p>Welcome! Not a member?</p>
+      <button type = 'button' style="color: #ff5722;" onclick = "location.href = 'createAccount.html'">Create your account here!</button> <p>& start saving now!</p>
+      <div id = 'rewardInfo' style="color: #222831">
+          <img src = './pictures/ticket-vector.webp' style="height: 25%; width: 25%;">
+          <p>$1 spent = 10 points</p><br>
+          <p>One free ticket for every 250 points</p><br>
+      </div>
+      <p>Have an account?</p>
+      <button type = 'button' onclick = "location.href = 'signIn.html'">Sign in here</button>
     </div>
+
+    <form id="signOut">
+      <input type="submit" value="signOut">
+    </form>
+
+
+
+    <script defer src = "rewardsPage.bundle.js"></script>
 
 </body>
 </html>

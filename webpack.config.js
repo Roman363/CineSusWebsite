@@ -13,6 +13,7 @@ module.exports =
     purchasepage: './src/purchasepage.js',
     movieSelect: './src/movieSelect.js',
     gatherData: './src/gatherData.js',
+    rewardsPage: './src/rewardsPage.js',
     updateInfo: './src/updateInfo.js'},
   
     output: 

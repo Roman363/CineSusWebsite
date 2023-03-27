@@ -37,17 +37,17 @@ onAuthStateChanged(auth, (user) => {
   }
 })
 
-// const signOutUserForm = document.querySelector("#signOut")
-// signOutUserForm.addEventListener("submit", (event)=> {
-//   event.preventDefault()
+const signOutUserForm = document.querySelector("#signOut")
+signOutUserForm.addEventListener("submit", (event)=> {
+  event.preventDefault()
 
-//   signOut(auth)
-//   .then(() => {
-//     console.log("Signed out")
-//   }).catch((error) => {
+  signOut(auth)
+  .then(() => {
+    console.log("Signed out")
+  }).catch((error) => {
 
-//   })
-// })
+  })
+})
 
 
 
