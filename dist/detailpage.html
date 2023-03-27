@@ -35,95 +35,90 @@
     <div class = "seating-container">
       <!---container: movie title @ center-top, movie date & time below title, # tickets left below date & time-->
         <div class = "seating-info" style="color: #011A27;">
-          <p id = "movie-title"> Movie</p><br>
-          <p id = "date">Date |</p>
-          <p id = "mTime">Time</p>
-          <p id = "ticket-counter"># Tickets Left</p>
+          <p id = "movie-title"> Movie </p>
+          <p id = "weekDay">Date |</p>
+          <p id = "time">Time</p>
+          <p id = "ticket-counter"><span id = "tickets-left"> # </span> Tickets Left</p>
         </div>
         <div class = "seating-chart">
-          <form id = "seats" method="get" action="paymentPage.html">
+          <form id = "seats">
             <!--<label for = "childTicket" class = "childTicket" style="color: #011A27;"> Child: </label>
             <input type = "number" class = "childTicket" name="childTickets" />
             <p class = "childTicketPrice" style="color: #011A27;">$7.99</p><br>-->
-            <ul>
-              <li>
-                <div class = "seat available" style="color:rgb(100, 138, 36)">
-                  <small style="color:black">Available</small>
-                </div>
-              </li>
-              <li>
-                <div class = "seat selected" style="color:#992907">
-                  <small style="color:black"> Selected</small>
-                </div>
-              </li>
-              <li>
-                <div class = "seat wheelchair" style="color:rgb(17, 55, 66)">
-                  <small style="color:black"> Wheelchair</small>
-                </div>
-              </li>
-              <li>
-                <div class = "seat unavailable" style="color:#1f1b1a">
-                  <small style="color:black"> Unavailable</small>
-                </div>
-              </li>
-            </ul>
+            <div class = "key-box">
+              <ul>
+                <li>
+                  <div class = "seat available">
+                    <small id = "seat-key">Available</small>
+                  </div>
+                </li>
+                <li>
+                  <div class = "seat selected">
+                    <small id = "seat-key"> Selected</small>
+                  </div>
+                </li>
+                <li>
+                  <div class = "seat wheelchair">
+                    <small id = "seat-key"> Wheelchair</small>
+                  </div>
+                </li>
+                <li>
+                  <div class = "seat unavailable">
+                    <small id = "seat-key"> Unavailable</small>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class = "seating-grid">
-              <div class = "screen"></div>
+              <div class = "screen">Screen</div>
                 <div class = "row">
-                  <div class = "seat available"></div>
-                  <div class = "seat unavailable"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
+                  <div class = "seat available">A1</div>
+                  <div class = "seat available">A2</div>
+                  <div class = "seat available">A3</div>
+                  <div class = "seat available">A4</div>
+                  <div class = "seat available">A5</div>
+                  <div class = "seat available">A6</div>
+                  <div class = "seat available">A7</div>
                 </div>
                 <div class = "row">
-                  <div class = "seat wheelchair"></div>
-                  <div class = "seat wheelchair"></div>
-                  <div class = "seat wheelchair"></div>
-                  <div class = "seat wheelchair"></div>
-                  <div class = "seat wheelchair"></div>
-                  <div class = "seat wheelchair"></div>
-                  <div class = "seat wheelchair"></div>
+                  <div class = "seat available">B1</div>
+                  <div class = "seat available">B2</div>
+                  <div class = "seat available">B3</div>
+                  <div class = "seat available">B4</div>
+                  <div class = "seat available">B5</div>
+                  <div class = "seat available">B6</div>
+                  <div class = "seat available">B7</div>
                 </div>
                 <div class = "row">
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat selected"></div>
-                  <div class = "seat selected"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
+                  <div class = "seat available">C1</div>
+                  <div class = "seat available">C2</div>
+                  <div class = "seat available">C3</div>
+                  <div class = "seat available">C4</div>
+                  <div class = "seat available">C5</div>
+                  <div class = "seat available">C6</div>
+                  <div class = "seat available">C7</div>
                 </div>
                 <div class = "row">
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
+                  <div class = "seat available">D1</div>
+                  <div class = "seat available">D2</div>
+                  <div class = "seat available">D3</div>
+                  <div class = "seat available">D4</div>
+                  <div class = "seat available">D5</div>
+                  <div class = "seat available">D6</div>
+                  <div class = "seat available">D7</div>
                 </div>
                 <div class = "row">
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
-                  <div class = "seat available"></div>
+                  <div class = "seat available">E1</div>
+                  <div class = "seat available">E2</div>
+                  <div class = "seat available">E3</div>
+                  <div class = "seat available">E4</div>
+                  <div class = "seat available">E5</div>
+                  <div class = "seat available">E6</div>
+                  <div class = "seat available">E7</div>
                 </div>
-              
-
-              <p style="color:black">
-                You have selected <span id = "count">0</span> seats
-              </p>
             </div>
             <!-- <a href = "index.html"> -->
-            <input type="hidden" name="movieName" value="" id="currentMovieGet" >
             <input type = "submit" value = "Add to Cart" class = "submit"/>
-            </a>
           </form>
         </div>     
       </div>
@@ -131,7 +126,7 @@
     <!-- need footer -->
     <script src="detailpage.bundle.js"></script>
     
-      
+    
       
   </body>
 </html>
