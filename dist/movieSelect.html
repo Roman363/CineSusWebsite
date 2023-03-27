@@ -31,7 +31,7 @@
 
     <div class="container" style="border-bottom: solid; border-bottom-color:#222831;">
       <form id="weekDay">
-        <h1 style="color: #222831; font-weight:bold;">Showtimes</h1></br>
+        <h1 style="color: #222831; font-weight:bold;">Showtimes</h1><br>
         <div class="row">
           <div class="col-sm">
             <label>
@@ -82,11 +82,11 @@
       
 
     
-  </br></br>
+  <br><br>
 
   <div class="container" style="border-bottom: solid; border-bottom-color:#222831;">
     <form id="ticketAmount">
-      <h2 style="color: #222831; font-weight:bold;">Tickets</h2></br>
+      <h2 style="color: #222831; font-weight:bold;">Tickets</h2><br>
       <div class="row mb-4">
         <div class="col-sm w-25">
           <h4 style="color: #222831;">Adult</h4>
@@ -103,7 +103,7 @@
       </div>
     </form>
     
-  </div>  </br></br>
+  </div>  <br><br>
 
 
 
@@ -124,6 +124,7 @@
             <h4 id="movieSelect1Description">Now Loading...</h4>
           </div>
           <div class="col">
+
             <form id="movieTime" onsubmit="submitForms()" method="get" action="detailpage.html">
               <input id="movieSelect1Value" type="hidden" value="" name="movieName">
               <input class="btn btn-color1 btn-lg" type="submit" value="3:45PM" name="movieTime">
@@ -244,6 +245,7 @@
 
   <script>
     function submitForms() {
+
       
       var weekDay = new FormData(document.getElementById("weekDay"));
       var ticketAmount = new FormData(document.getElementById("ticketAmount"));
@@ -262,24 +264,14 @@
       ticketsArray.push(formData["adultTickets"])
       ticketsArray.push(formData["childTickets"])
       ticketsArray.push(formData["seniorTickets"])
-      console.log(ticketsArray);
 
 
       sessionStorage.setItem("weekDay", JSON.stringify(formData["weekDay"]))
       sessionStorage.setItem("ticketsArray", JSON.stringify(ticketsArray))
 
-
-
-
-
-      
     }
 
   </script>
-
-
-    
-
 
 
   <script src = "movieSelect.bundle.js"></script>
