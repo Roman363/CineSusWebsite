@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSus</title>
+    <link href="/css/main.min.css" rel="stylesheet" >
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ 
+    <div class="container-fluid bg-top">
+      <div class="container-md" style="height: 12%;">
+        <header class="d-lg-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-decoration-none" style="color:#ff5722;font-family: 'Abhaya Libre', serif;">
+            <span class="fs-1">CINඞSUS</span>
+          </a>
+      
+          <ul class="nav nav-pills nav-fill align-items-center">
+            
+            <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
+            <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
+            <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
+            <li class="nav-item fs-5" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+          </ul>
+        </header>
+      </div>
+    </div>
+
+    <div class="container" style="border-bottom: solid; border-bottom-color:#222831;">
+      <form id="weekDay">
+        <h1 style="color: #222831; font-weight:bold;">Showtimes</h1><br>
+        <div class="row">
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Monday" checked>
+              <span style="font-size: 23px; color:#222831;">Monday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Tuesday">
+              <span style="font-size: 23px; color:#222831;">Tuesday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Wednesday">
+              <span style="font-size: 23px; color:#222831;">Wednesday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Thursday">
+              <span style="font-size: 23px; color:#222831;">Thursday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Friday">
+              <span style="font-size: 23px; color:#222831;">Friday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Saturday">
+              <span style="font-size: 23px; color:#222831;">Saturday</span>
+            </label>
+          </div>
+          <div class="col-sm">
+            <label>
+              <input type="radio" name="weekDay" value="Sunday">
+              <span style="font-size: 23px; color:#222831;">Sunday</span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+      
+
+    
+  <br><br>
+
+  <div class="container" style="border-bottom: solid; border-bottom-color:#222831;">
+    <form id="ticketAmount">
+      <h2 style="color: #222831; font-weight:bold;">Tickets</h2><br>
+      <div class="row mb-4">
+        <div class="col-sm w-25">
+          <h4 style="color: #222831;">Adult</h4>
+          <input type="number" class="form-control w-75"  value="1"s name="adultTickets">
+        </div>
+        <div class="col-sm w-25">
+          <h4 style="color: #222831;">Child</h4>
+          <input type="number" class="form-control w-75"  value="0" name="childTickets">
+        </div>
+        <div class="col-sm w-25">
+          <h4 style="color: #222831;">Senior</h4>
+          <input type="number" class="form-control w-75"  value="0" name="seniorTickets">
+        </div>
+      </div>
+    </form>
+    
+  </div>  <br><br>
+
+
+
+  <!-- 1st movie we are showing -->
+  <div class="container" style="padding-bottom: 35px;" id="movieSelect1">
+    <div class="row bg-color3" style="border-radius: 25px;">
+      <div class="col-sm">
+        <div id = "movie-image">
+          <img id="movieSelect1Image" src="" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
+        </div>
+      </div>
+      <div class="col-md" style="margin-top: 100px; margin-right:90px;">
+        <div class="d-grid gap-5">
+          <div class="col mt-6">
+            <h1 id="movieSelect1Title" style="color:#ff5722;"></h1>
+          </div>
+          <div class="col">
+            <h4 id="movieSelect1Description">Now Loading...</h4>
+          </div>
+          <div class="col">
+
+            <form id="movieTime" onsubmit="submitForms()" method="get" action="detailpage.html">
+              <input id="movieSelect1Value" type="hidden" value="" name="movieName">
+              <input class="btn btn-color1 btn-lg" type="submit" value="3:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="5:35PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="8:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="10:30PM" name="movieTime">
+            </form>
+          </div> 
+          <div class="col"> 
+            <h5 id="movieSelect1Details"></h5>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+   
+  <!-- 2nd movie we are showing -->
+  <div class="container" style="padding-bottom: 35px;" id="movieSelect2">
+    <div class="row bg-color3" style="border-radius: 25px;">
+      <div class="col-sm">
+        <div id = "movie-image">
+          <img id="movieSelect2Image" src="" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
+        </div>
+      </div>
+      <div class="col-md" style="margin-top: 100px; margin-right:90px;">
+        <div class="d-grid gap-5">
+          <div class="col mt-6">
+            <h1 id="movieSelect2Title" style="color:#ff5722;"></h1>
+          </div>
+          <div class="col">
+            <h4 id="movieSelect2Description">Now Loading...</h4>
+          </div>
+          <div class="col">
+            <form id="movieTime" onsubmit="submitForms()" method="get" action="detailpage.html">
+              <input id="movieSelect2Value" type="hidden" value="" name="movieName">
+              <input class="btn btn-color1 btn-lg" type="submit" value="3:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="5:35PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="8:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="10:30PM" name="movieTime">
+            </form>
+          </div> 
+          <div class="col"> 
+            <h5 id="movieSelect2Details"></h5>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div> 
+
+  <!-- 3rd movie we are showing -->
+  <div class="container" style="padding-bottom: 35px;" id="movieSelect3">
+    <div class="row bg-color3" style="border-radius: 25px;">
+      <div class="col-sm">
+        <div id = "movie-image">
+          <img id="movieSelect3Image" src="" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
+        </div>
+      </div>
+      <div class="col-md" style="margin-top: 100px; margin-right:90px;">
+        <div class="d-grid gap-5">
+          <div class="col mt-6">
+            <h1 id="movieSelect3Title" style="color:#ff5722;"></h1>
+          </div>
+          <div class="col">
+            <h4 id="movieSelect3Description">Now Loading...</h4>
+          </div>
+          <div class="col">
+            <form id="movieTime" method="get" onsubmit="submitForms()" action="detailpage.html">
+              <input id="movieSelect3Value" type="hidden" value="" name="movieName">
+              <input class="btn btn-color1 btn-lg" type="submit" value="3:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="5:35PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="8:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="10:30PM" name="movieTime">
+            </form>
+          </div> 
+          <div class="col"> 
+            <h5 id="movieSelect3Details"></h5>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+    
+
+  <!-- 4th movie we are showing -->
+  <div class="container" style="padding-bottom: 35px;" id="movieSelect4">
+    <div class="row bg-color3" style="border-radius: 25px;">
+      <div class="col-sm">
+        <div id = "movie-image">
+          <img id="movieSelect4Image" src="" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:500px">
+        </div>
+      </div>
+      <div class="col-md" style="margin-top: 100px; margin-right:90px;">
+        <div class="d-grid gap-5">
+          <div class="col mt-6">
+            <h1 id="movieSelect4Title" style="color:#ff5722;"></h1>
+          </div>
+          <div class="col">
+            <h4 id="movieSelect4Description">Now Loading...</h4>
+          </div>
+          <div class="col">
+            <form id="movieTime" method="get" onsubmit="submitForms()" action="detailpage.html">
+              <input id="movieSelect4Value" type="hidden" value="" name="movieName">
+              <input class="btn btn-color1 btn-lg" type="submit" value="3:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="5:35PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="8:45PM" name="movieTime">
+              <input class="btn btn-color1 btn-lg" type="submit" value="10:30PM" name="movieTime">
+            </form>
+          </div> 
+          <div class="col"> 
+            <h5 id="movieSelect4Details"></h5>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+
+
+  <script>
+    function submitForms() {
+
+      
+      var weekDay = new FormData(document.getElementById("weekDay"));
+      var ticketAmount = new FormData(document.getElementById("ticketAmount"));
+
+      
+      // Combine the form data into a single object
+      var formData = [];
+      for (var pair of weekDay.entries()) {
+        formData[pair[0]] = pair[1];
+      }
+      for (var pair of ticketAmount.entries()) {
+        formData[pair[0]] = pair[1];
+      }
+
+      var ticketsArray = []
+      ticketsArray.push(formData["adultTickets"])
+      ticketsArray.push(formData["childTickets"])
+      ticketsArray.push(formData["seniorTickets"])
+
+
+      sessionStorage.setItem("weekDay", JSON.stringify(formData["weekDay"]))
+      sessionStorage.setItem("ticketsArray", JSON.stringify(ticketsArray))
+
+    }
+
+  </script>
+
+
+  <script src = "movieSelect.bundle.js"></script>
+      
+</body>
+</html>
