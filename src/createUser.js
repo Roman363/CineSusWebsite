@@ -25,15 +25,15 @@ createAccountForm.addEventListener("submit", (event) =>
    event.preventDefault()
 
 
-  const firstName = createAccountForm.firstName.value
-  const lastName = createAccountForm.lastName.value
+  // const firstName = createAccountForm.firstName.value
+  // const lastName = createAccountForm.lastName.value
   const email = createAccountForm.email.value
   const password = createAccountForm.password.value
-  const address1 = createAccountForm.address1.value
-  const address2 = createAccountForm.address2.value
-  const city = createAccountForm.city.value 
-  const state = createAccountForm.state.value
-  const zip = createAccountForm.zip.value
+  // const address1 = createAccountForm.address1.value
+  // const address2 = createAccountForm.address2.value
+  // const city = createAccountForm.city.value 
+  // const state = createAccountForm.state.value
+  // const zip = createAccountForm.zip.value
 
   setPersistence(auth, browserSessionPersistence)
   .then(() =>{
