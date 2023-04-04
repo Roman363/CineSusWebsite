@@ -32,23 +32,26 @@ onAuthStateChanged(auth, (user) => {
     const uid = user.uid;
     console.log(uid)
     console.log("Signed In to " + user.displayName)
-
+    document.getElementById('signedInHeader').style.display='none';
+    document.getElementById('signedOutHeader').style.display='block';
     // Show signed-in content
     document.getElementById('rewardsPageSignedIn').style.display = 'block';
     document.getElementById('rewardsPageSignedOut').style.display = 'none';
     document.getElementById("rewardsPageUsername").innerHTML = user.displayName
-
+    
   }else {
     console.log("Signed Out")
-
+    document.getElementById('signedInHeader').style.display='block';
+    document.getElementById('signedOutHeader').style.display='none';
     // Show non-signed-in content
     document.getElementById('rewardsPageSignedIn').style.display = 'none';
     document.getElementById('rewardsPageSignedOut').style.display = 'block';
 
-}
+   
+  }
 })
 
-const signOutUserForm = document.querySelector("#signOut")
+const signOutUserForm = document.querySelector("#signedOutHeader")
 signOutUserForm.addEventListener("submit", (event)=> {
   event.preventDefault()
 
@@ -59,4 +62,3 @@ signOutUserForm.addEventListener("submit", (event)=> {
 
   })
 })
-

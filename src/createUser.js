@@ -61,60 +61,28 @@ onAuthStateChanged(auth, (user) => {
     //User is signed in
     const uid = user.uid;
     console.log(uid)
-    console.log("Signed In")
+    console.log("Signed In to " + user.displayName)
+    document.getElementById('signedInHeader').style.display='none';
+    document.getElementById('signedOutHeader').style.display='block';
+    
   }else {
     console.log("Signed Out")
-  }
+    document.getElementById('signedInHeader').style.display='block';
+    document.getElementById('signedOutHeader').style.display='none';
 
-})
-// onAuthStateChanged(auth, (user) => {
-  
-//   if (user) {
-//    const uid = user.uid
-//     console.log(uid)
-//     const initialProfileForm = document.querySelector("#newUser")
-//     initialProfileForm.addEventListener("submit", (event) => {
-//       event.preventDefault()
    
+  }
+})
 
-//     const newUser = {
-//       firstName: initialProfileForm.firstName.value,
-//       email: initialProfileForm.email.value,
-//       password: initialProfileForm.password.value,
-//       address1: initialProfileForm.address1.value,
-//       city: initialProfileForm.city.vlaue,
-//       state: initialProfileForm.state.value,
-//       zip: initialProfileForm.zip.value,
-//       uid: uid
+const signOutUserForm = document.querySelector("#signedOutHeader")
+signOutUserForm.addEventListener("submit", (event)=> {
+  event.preventDefault()
 
-//     }
+  signOut(auth)
+  .then(() => {
+    console.log("Signed out")
+  }).catch((error) => {
 
-//     updateProfile(auth.currentUser,{
-//       displayName: initialProfileForm.firstName.value
-//     })
-//     .then(() => {
-//       //Promise
-//       console.log("Updated profile")
-//     })
-//     .catch((e) => {
-//       console.log(e)
-//     })
-//     console.log(auth.currentUser.displayName)
-//     console.log(newUser)
+  })
+})
 
-//     const userDocRef = doc(db,"users", uid)
-
-//     setDoc(userDocRef, newUser)
-//     .then(() => {
-//       console.log("New User Added")
-//     })
-//     .catch((error) => {
-//       console.log(error)
-//     })
-    
-//   })
-
-//   }else {
-//     console.log("Signed Out")
-//   }
-// })

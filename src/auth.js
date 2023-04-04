@@ -17,32 +17,7 @@ const firebaseConfig = {
 const fireApp = initializeApp(firebaseConfig);
 const auth = getAuth(fireApp);
 
-// const createAccountForm = document.getElementById("createAccount")
 
-// createAccountForm.addEventListener("submit", (event) =>
-// {
-//   event.preventDefault()
-
-//   const name = createAccountForm.name.value
-//   const email = createAccountForm.email.value
-//   const pass = createAccountForm.password.value
-
-//   setPersistence(auth, browserSessionPersistence)
-//   .then(() =>{
-//     //Promise returned by setPersistence
-//     createUserWithEmailAndPassword(auth,email, pass)
-//     .then((userCredential)=> {
-//       const user = userCredential.user
-//       console.log(user)
-//       console.log(user.uid)
-//       location.href = "createUser.html"
-//     })
-//   })
-//   .catch((e)=>{
-//     //Error from persistence caught
-//     console.log(e)
-//   })
-// })
 
 const signInForm = document.getElementById("signIn")
 signInForm.addEventListener("submit", (event) =>{
@@ -67,17 +42,7 @@ signInForm.addEventListener("submit", (event) =>{
 
 })
 
-// const signOutUserForm = document.querySelector("#signOut")
-// signOutUserForm.addEventListener("submit", (event)=> {
-//   event.preventDefault()
 
-//   signOut(auth)
-//   .then(() => {
-//     console.log("Signed out")
-//   }).catch((error) => {
-
-//   })
-// })
 
 //Observer
 onAuthStateChanged(auth, (user) => {
@@ -86,8 +51,27 @@ onAuthStateChanged(auth, (user) => {
     //User is signed in
     const uid = user.uid;
     console.log(uid)
-    console.log("Signed In")
+    console.log("Signed In to " + user.displayName)
+    document.getElementById('signedInHeader').style.display='none';
+    document.getElementById('signedOutHeader').style.display='block';
+    
   }else {
     console.log("Signed Out")
+    document.getElementById('signedInHeader').style.display='block';
+    document.getElementById('signedOutHeader').style.display='none';
+
+   
   }
+})
+
+const signOutUserForm = document.querySelector("#signedOutHeader")
+signOutUserForm.addEventListener("submit", (event)=> {
+  event.preventDefault()
+
+  signOut(auth)
+  .then(() => {
+    console.log("Signed out")
+  }).catch((error) => {
+
+  })
 })
