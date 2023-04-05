@@ -12,9 +12,9 @@
 </head>
 <body>
   <script src = "gatherData.bundle.js"></script>
- 
-    <div class="container-fluid bg-top fixed-top" style="box-shadow: 0 4px 2px -2px black;">
-      <div class="container-md" style="height: 12%;">
+  
+    <div class="container-fluid bg-top  fixed-top" style="box-shadow: 0 4px 2px -2px black;">
+      <div class="container-md container-lg" style="height: 12%;">
         <header class="d-lg-flex flex-wrap justify-content-center py-3" style="margin-bottom: 0;">
           <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-decoration-none" style="color:#ff5722;font-family: 'Abhaya Libre', serif;">
             <span class="fs-1">CINඞSUS</span>
@@ -29,91 +29,92 @@
             <form class="nav-item fs-5" id="signedOutHeader"><input type="submit" value="Sign Out" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;"></input></form>
           </ul>
         </header>
+        
       </div>
-    </div><br><br><br><br>
+     
+    </div>
 
-    <div class="container" style="border-bottom: solid; border-bottom-color:#222831;">
+     <div class="container sticky-top" id="movieSelectTimes">
+    <div class="container" style="border-bottom: solid; border-bottom-color:#222831;z-index: index 50;">
       <form id="weekDay">
-        <h1 style="color: #222831; font-weight:bold;">Showtimes</h1><br>
+        <h4 style="color: #222831; font-weight:bold;">Showtimes</h4>
         <div class="row">
-          <div class="col-sm">
+          <div class="col-lg col-md">
             <label>
               <input type="radio" name="weekDay" value="Monday" checked>
-              <span style="font-size: 20px; color:#222831;">Monday</span>
+              <span style="font-size: 18px; color:#222831;">Monday</span>
             </label>
           </div>
-          <div class="col-sm">
+          <div class="col-lg col-md">
             <label>
               <input type="radio" name="weekDay" value="Tuesday">
-              <span style="font-size: 20px; color:#222831;">Tuesday</span>
+              <span style="font-size: 18px; color:#222831;">Tuesday</span>
             </label>
           </div>
-          <div class="col-sm">
+          <div class="col-lg col-md">
             <label>
               <input type="radio" name="weekDay" value="Wednesday">
-              <span style="font-size: 20px; color:#222831;">Wednesday</span>
+              <span style="font-size: 18px; color:#222831;">Wednesday</span>
             </label>
           </div>
-          <div class="col-sm">
+          <div class="col-lg col-md">
             <label>
               <input type="radio" name="weekDay" value="Thursday">
-              <span style="font-size: 20px; color:#222831;">Thursday</span>
+              <span style="font-size: 18px; color:#222831;">Thursday</span>
             </label>
           </div>
-          <div class="col-sm">
+          <div class="col-lg col-md">
             <label>
               <input type="radio" name="weekDay" value="Friday">
-              <span style="font-size: 20px; color:#222831;">Friday</span>
+              <span style="font-size: 18px; color:#222831;">Friday</span>
             </label>
           </div>
-          <div class="col-sm">
+          <div class="col-lg col-md">
             <label>
               <input type="radio" name="weekDay" value="Saturday">
-              <span style="font-size: 20px; color:#222831;">Saturday</span>
+              <span style="font-size: 18px; color:#222831;">Saturday</span>
             </label>
           </div>
-          <div class="col-sm">
+          <div class="col-lg col-md">
             <label>
               <input type="radio" name="weekDay" value="Sunday">
-              <span style="font-size: 20px; color:#222831;">Sunday</span>
+              <span style="font-size: 18px; color:#222831;">Sunday</span>
             </label>
           </div>
         </div>
       </form>
     </div>
 
-      
-
-    
-  <br><br>
+  <br>
 
   <div class="container" style="border-bottom: solid; border-bottom-color:#222831;">
     <form id="ticketAmount">
-      <h2 style="color: #222831; font-weight:bold;">Tickets</h2><br>
+      <h4 style="color: #222831; font-weight:bold;">Tickets</h4>
       <div class="row mb-4">
-        <div class="col-sm w-25">
-          <h4 style="color: #222831;">Adult</h4>
-          <input type="number" class="form-control w-75"  value="1"s name="adultTickets">
+        <div class="col-lg col-md w-25">
+          <h6 style="color: #222831;">Adult</h6>
+          <input type="number" class="form-control form-control-sm w-50"  value="1"s name="adultTickets">
         </div>
-        <div class="col-sm w-25">
-          <h4 style="color: #222831;">Child</h4>
-          <input type="number" class="form-control w-75"  value="0" name="childTickets">
+        <div class="col-lg col-md w-25">
+          <h6 style="color: #222831;">Child</h6>
+          <input type="number" class="form-control form-control-sm w-50"  value="0" name="childTickets">
         </div>
-        <div class="col-sm w-25">
-          <h4 style="color: #222831;">Senior</h4>
-          <input type="number" class="form-control w-75"  value="0" name="seniorTickets">
+        <div class="col-lg col-md w-25">
+          <h6 style="color: #222831;">Senior</h6>
+          <input type="number" class="form-control form-control-sm w-50"  value="0" name="seniorTickets">
         </div>
       </div>
     </form>
     
-  </div>  <br><br>
+  </div> 
 
-
-
+</div><br><br>  
+<h1 style="text-align:center; font-weight:bold;"">Showtimes</h1>
+<br><br>  
   <!-- 1st movie we are showing -->
-  <div class="container" style="padding-bottom: 35px;" id="movieSelect1">
+  <div class="container fixed" style="padding-bottom:35px;" id="movieSelect1">
     <div class="row bg-color3" style="border-radius: 25px; box-shadow: 0px 3px 10px black;">
-      <div class="col-sm">
+      <div class="col-md col-lg">
         <div id = "movie-image">
           <img id="movieSelect1Image" src="" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:320px; height:450px">
         </div>

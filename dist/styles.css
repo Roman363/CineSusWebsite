@@ -31,6 +31,12 @@ input[type="radio"]:checked+span
   transition: all .1s ease-out;
 }
 
+#movieSelectTimes{
+  background-color: #eeeeee;
+  border-radius: 25px;
+  padding-top: 100px; 
+}
+
 #mainNav{
   display: block;
   z-index: 10000;
