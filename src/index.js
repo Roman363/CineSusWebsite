@@ -33,7 +33,7 @@ onAuthStateChanged(auth, (user) => {
     console.log(uid)
     console.log("Signed In to " + user.displayName)
     document.getElementById('signedInHeader').style.display='none';
-    document.getElementById('signedOutHeader').style.display='block';
+    document.getElementById('signedOutHeader').style.display='block'; 
     
   }else {
     console.log("Signed Out")
@@ -45,16 +45,19 @@ onAuthStateChanged(auth, (user) => {
 })
 
 const signOutUserForm = document.querySelector("#signedOutHeader")
-signOutUserForm.addEventListener("submit", (event)=> {
-  event.preventDefault()
-
-  signOut(auth)
-  .then(() => {
-    console.log("Signed out")
-  }).catch((error) => {
-
+if(signOutUserForm){
+  signOutUserForm.addEventListener("submit", (event)=> {
+    event.preventDefault()
+  
+    signOut(auth)
+    .then(() => {
+      console.log("Signed out")
+    }).catch((error) => {
+  
+    })
   })
-})
+}
+
 
 
 
