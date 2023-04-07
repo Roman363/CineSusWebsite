@@ -105,3 +105,5 @@ signOutUserForm.addEventListener("submit", (event)=> {
 
   })
 })
+
+sessionStorage.removeItem("discount")

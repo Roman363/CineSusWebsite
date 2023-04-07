@@ -19,7 +19,8 @@ const firebaseConfig = {
 const fireApp = initializeApp(firebaseConfig);
 const auth = getAuth(fireApp);
 
-
+var discountCodesString = sessionStorage.getItem('discountCodes')
+var discountCodes = JSON.parse(discountCodesString)
 
 
 
@@ -38,6 +39,24 @@ onAuthStateChanged(auth, (user) => {
     document.getElementById('rewardsPageSignedIn').style.display = 'block';
     document.getElementById('rewardsPageSignedOut').style.display = 'none';
     document.getElementById("rewardsPageUsername").innerHTML = user.displayName
+
+    //update the discount code
+    document.getElementById("discount100").addEventListener("click", function(e){
+      sessionStorage.setItem("discount", JSON.stringify("discount100"))
+      document.getElementById("codeSelected").innerHTML = "You have selected the 100% discount, go to checkout to get your discount"
+    })
+    document.getElementById("discount50").addEventListener("click", function(e){
+      sessionStorage.setItem("discount", JSON.stringify("discount50"))
+      document.getElementById("codeSelected").innerHTML = "You have selected the 100% discount, go to checkout to get your discount"
+    })
+    document.getElementById("discount25").addEventListener("click", function(e){
+      sessionStorage.setItem("discount", JSON.stringify("discount25"))
+      document.getElementById("codeSelected").innerHTML = "You have selected the 100% discount, go to checkout to get your discount"
+    })
+    document.getElementById("removeDiscount").addEventListener("click", function(e){
+      sessionStorage.removeItem("discount")
+      document.getElementById("codeSelected").innerHTML = "No discounts currently selected"
+    })
     
   }else {
     console.log("Signed Out")

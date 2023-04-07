@@ -59,6 +59,16 @@ var dataArray = JSON.parse(dataArrayString)
 var movieDataString = sessionStorage.getItem('movieData')
 var movieData = JSON.parse(movieDataString)
 
+var discountString = sessionStorage.getItem('discount')
+var discount = JSON.parse(discountString)
+
+
+console.log(discount);
+
+
+
+
+
 console.log(dataArray);
 console.log(movieData);
 //empty cart 
@@ -79,12 +89,28 @@ var elderTickets = dataArray["seniorTickets"]
 
 
 
+
 var totalTickets = parseInt(childTickets) + parseInt(adultTickets) + parseInt(elderTickets)
 var subtotal = totalTickets * 7.99
+
+
+if (discount == 'discount100') {
+  subtotal = (subtotal * 0)
+}else if(discount == 'discount50'){
+  subtotal = (subtotal * .5)
+}else if(discount == 'discount25'){
+  subtotal = (subtotal * .75)
+}
+
+subtotal = parseFloat(parseFloat(subtotal).toFixed(2))
+
+
+
 var tax = (subtotal * 0.0825) // tax amount based on texas
 var total = (subtotal + tax)
 
 tax = tax.toFixed(2)
+total = parseFloat(total)
 total = total.toFixed(2)
 
 console.log(total);
@@ -120,6 +146,4 @@ console.log(dataArray);
 
 //sending the information
 sessionStorage.setItem("dataArray", JSON.stringify(dataArray))
-
-
 

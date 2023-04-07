@@ -104,6 +104,3 @@ getDocs(movieCollection).then((snapshot) => {
 
 
 
-
-
-

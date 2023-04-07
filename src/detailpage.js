@@ -10,7 +10,7 @@ var ticketsArrayString = sessionStorage.getItem("ticketsArray")
 var ticketsArray = JSON.parse(ticketsArrayString)
 
 //creating dataArray with information of the movieSelect page (movie name, movie time, weekday, tickets)
-var dataArray = {"movieName":movieName, "movieTime": movieTime, "weekDay":weekDay, "adultTickets": ticketsArray[0], "childTickets": ticketsArray[1], "seniorTickets": ticketsArray[2]}
+var dataArray = {"movieName":movieName, "movieTime": movieTime, "weekDay":weekDay, "adultTickets": ticketsArray[0], "childTickets": ticketsArray[1], "seniorTickets": ticketsArray[2], "discount": ""}
 console.log(dataArray);
 
 //sending the information
