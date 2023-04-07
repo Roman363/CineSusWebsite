@@ -47,11 +47,11 @@ onAuthStateChanged(auth, (user) => {
     })
     document.getElementById("discount50").addEventListener("click", function(e){
       sessionStorage.setItem("discount", JSON.stringify("discount50"))
-      document.getElementById("codeSelected").innerHTML = "You have selected the 100% discount, go to checkout to get your discount"
+      document.getElementById("codeSelected").innerHTML = "You have selected the 50% discount, go to checkout to get your discount"
     })
     document.getElementById("discount25").addEventListener("click", function(e){
       sessionStorage.setItem("discount", JSON.stringify("discount25"))
-      document.getElementById("codeSelected").innerHTML = "You have selected the 100% discount, go to checkout to get your discount"
+      document.getElementById("codeSelected").innerHTML = "You have selected the 25% discount, go to checkout to get your discount"
     })
     document.getElementById("removeDiscount").addEventListener("click", function(e){
       sessionStorage.removeItem("discount")
