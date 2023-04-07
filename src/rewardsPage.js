@@ -19,8 +19,6 @@ const firebaseConfig = {
 const fireApp = initializeApp(firebaseConfig);
 const auth = getAuth(fireApp);
 
-var discountCodesString = sessionStorage.getItem('discountCodes')
-var discountCodes = JSON.parse(discountCodesString)
 
 
 
@@ -40,6 +38,10 @@ onAuthStateChanged(auth, (user) => {
     document.getElementById('rewardsPageSignedOut').style.display = 'none';
     document.getElementById("rewardsPageUsername").innerHTML = user.displayName
 
+    console.log(sessionStorage.getItem("discount"));
+
+
+
     //update the discount code
     document.getElementById("discount100").addEventListener("click", function(e){
       sessionStorage.setItem("discount", JSON.stringify("discount100"))
@@ -48,6 +50,7 @@ onAuthStateChanged(auth, (user) => {
     document.getElementById("discount50").addEventListener("click", function(e){
       sessionStorage.setItem("discount", JSON.stringify("discount50"))
       document.getElementById("codeSelected").innerHTML = "You have selected the 50% discount, go to checkout to get your discount"
+      
     })
     document.getElementById("discount25").addEventListener("click", function(e){
       sessionStorage.setItem("discount", JSON.stringify("discount25"))
@@ -57,6 +60,8 @@ onAuthStateChanged(auth, (user) => {
       sessionStorage.removeItem("discount")
       document.getElementById("codeSelected").innerHTML = "No discounts currently selected"
     })
+
+
     
   }else {
     console.log("Signed Out")
@@ -81,3 +86,18 @@ signOutUserForm.addEventListener("submit", (event)=> {
 
   })
 })
+
+
+var discountString = sessionStorage.getItem("discount")
+var discount = JSON.parse(discountString)
+
+if (discount == "discount100") {
+  document.getElementById("codeSelected").innerHTML = "You have selected the 100% discount, go to checkout to get your discount"
+}
+if (discount == "discount50") {
+  document.getElementById("codeSelected").innerHTML = "You have selected the 50% discount, go to checkout to get your discount"
+}
+if (discount == "discount25") {
+  document.getElementById("codeSelected").innerHTML = "You have selected the 25% discount, go to checkout to get your discount"
+}
+
