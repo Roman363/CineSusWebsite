@@ -55,23 +55,30 @@ function updateSelectedCount(){
     var left = parseInt(total) - parseInt(selectedSeatsCount)
     count = document.getElementById("tickets-left").innerHTML = left;
     selected = selectedSeatsCount
+    return selected;
 }
 
 //listens for any seat selection/change that happens
 seatingGrid.addEventListener('click', e => {
     if(
         e.target.classList.contains('seat') &&
-        !e.target.classList.contains('unavailable')
+        !e.target.classList.contains('unavailable') && count != 0
     ){
-        e.target.classList.toggle('selected')
-
+        e.target.classList.toggle('selected');
         //toggles from unselected -> selected and vice versa for every click
         toggleItem(e);
         //updates seating information and prints to console updated dataArray
-        updateSelectedCount()
-        var newSeats = mappingSeats()
+        updateSelectedCount();
+        var newSeats = mappingSeats();
         console.log(updateDataArray(newSeats));
         
+    }
+    else{
+        if(e.target.classList.contains('selected')){
+            e.target.classList.toggle('selected');
+            toggleItem(e);
+            updateSelectedCount();
+        }
     }
 });
 
