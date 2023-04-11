@@ -33,43 +33,66 @@
     </div>
 
     <div id="rewardsPageSignedIn" style="color: black; padding: 30px; display: none;">
-      <h2 id="rewardsText" style="color: #222831; text-align: center;">Rewards:</h2>
-      <p>Welcome, </p>
-      <p id ='rewardsPageUsername'>Valeria</p>
-      <p>These are your rewards:</p><br>
+      <!-- <h2 id="rewardsText" style="color: #222831; text-align: center;">Rewards:</h2> -->
+      <br><br><br>
+      <h2 id="greeting" style="color: #222831; display: inline;">
+      Welcome, <div id ='rewardsPageUsername' style="color: #222831; display: inline;"></div>. These are your rewards:<br>
+      </h2>
   
-      <p style="text-align: center;">Current points:</p>
-      <p  id = 'rewardPoints' style="text-align: center;">500 points</p><br>
-      <div id = 'rewardInfo' style="color: #222831">
-        <img src = './pictures/ticket-vector.webp' style="height: 25%; width: 25%;">
-        <p>$1 spent = 10 points</p><br>
-        <p>One free ticket for every 250 points</p><br>
-        <button type = 'button' style="color: #ff5722;" onclick = "location.href = 'paymentPage.html'">Redeem now!</button>
+      <div id="outside-box" style="color:#eeeeee; background-color: #222831; padding: 2%; border-radius: 5%;">
+        <div id="top-right" style="float: right; width: 10%;">
+        <h3 id="points" style="background-color: #eeeeee; color: #ff5722; border-radius: 35%; padding-right: 1%; padding-left: 1%; float: right; margin: 2.5%;">
+      <!-- <p style="text-align: center;">Current points:</p> -->
+      <p  id = 'rewardPoints' style="text-align: center; font-weight: bolder; padding-top: 20%; padding-bottom: 0%; margin-bottom: auto;">500 pts.</p><br>
+        </h3>
+        <p style="text-align: right; color: #ff5722; margin-top: 110px;">$1 spent = 10 points</p>
+        <p style="text-align: right; color: #ff5722; margin-top: 10px;">One free ticket for every 250 points</p><br>
+      </div>
+      <div id = 'rewardInfo' style="color: #eeeeee">
+        <div id="img" style=" padding: 2%; border-radius: 15%;  margin: 2%; width: 40%; float: left;">
+        <img src = './pictures/ticket-vector.webp' style="height: 80%; width: 80%; ">
+      </div>
+        <!-- <p>$1 spent = 10 points</p><br>
+        <p>One free ticket for every 250 points</p><br> -->
+        <h3>You are eligible for 2 free tickets!</h3><br>
+        <button type = 'button' style="background-color: #ff5722; color:#011A27; 5px; font-weight: 700; padding: 7px;" onclick = "location.href = 'paymentPage.html'">Redeem now!</button>
       </div>
 
-      <h3>Click one of the buttons for a discount:</h3><br>
+      <h5>Click one of the buttons for a discount:</h5><br>
 
-      <button id="discount100">100% Discount</button><br><br>
-      <button id="discount50">50% Discount</button><br><br>
-      <button id="discount25">25% Discount</button><br><br>
-      <button id="removeDiscount">Remove Discount</button><br><br>
+      <button id="discount100" style="border-radius: 5px; font-weight: 600; background-color: #ff5722; color: #222831;">100% Discount</button><br><br>
+      <button id="discount50" style="border-radius: 5px; font-weight: 600; background-color: #ff5722; color: #222831;">50% Discount</button><br><br>
+      <button id="discount25" style="border-radius: 5px; font-weight: 600; background-color: #ff5722; color: #222831;">25% Discount</button><br><br>
+      <button id="removeDiscount" style="border-radius: 5px; font-weight: 600; background-color: gray;">Remove Discount</button><br><br>
       <p id="codeSelected">No discounts currently selected</p>
     </div>
+  </div>
+</div>
           
 
 
     <div id="rewardsPageSignedOut" style="color:black; display: block;">
-      <p>Welcome! Not a member?</p>
-      <button type = 'button' style="color: #ff5722;" onclick = "location.href = 'createAccount.html'">Create your account here!</button> <p>& start saving now!</p>
-      <div id = 'rewardInfo' style="color: #222831">
-          <img src = './pictures/ticket-vector.webp' style="height: 25%; width: 25%;">
-          <p>$1 spent = 10 points</p><br>
-          <p>One free ticket for every 250 points</p><br>
-      </div>
-      <p>Have an account?</p>
-      <button type = 'button' onclick = "location.href = 'signIn.html'">Sign in here</button>
-    </div>
+      <br><br><br><br><br>
+      <!-- <p>Welcome! Not a member?</p>
+      <button type = 'button' style="color: #ff5722;" onclick = "location.href = 'createAccount.html'">Create your account here!</button> <p>& start saving now!</p> -->
 
+    <div id="outside-box" style="color:#eeeeee; background-color: #222831; padding: 2%; border-radius: 5%; padding-bottom: 7%;">
+      <div id="info-outside-img" style="float: right; margin-right: 30%;">
+      <h2>Welcome! Not a member?</h2><br>
+      <button type = 'button' style="background-color: #ff5722; color:#222831; padding: 3%; border-radius: 5px;" onclick = "location.href = 'createAccount.html'">Create your account here!</button><br><br> <p>& start saving now!</p> <p>$1 spent = 10 points</p>
+      <p>We provide you with one free ticket for every 250 points</p>
+      <p>You also have the chance to use discount codes on your purchase. </p>
+        <p>Don't miss out on this amazing opportunity!</p>
+    </div>
+      <div id = 'rewardInfo' style="color: #eeeeee;">
+          <img src = './pictures/ticket-vector.webp' style="height: 25%; width: 25%; padding-top: 5%;">
+      </div>
+      <div id="signin" style="padding-top: 5%;">
+      <h5 style="float: right; margin-right: 3%; padding-right: 3%;">Have an account?</h5>
+      <button type = 'button' style="background-color: #ff5722; color: #222831; float: right; margin-top: 3%;"onclick = "location.href = 'signIn.html'">Sign in here</button>
+    </div>
+    </div>
+    </div>
 
 
     <form id="signOut">
