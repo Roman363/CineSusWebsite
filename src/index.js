@@ -32,22 +32,32 @@ onAuthStateChanged(auth, (user) => {
     const uid = user.uid;
     console.log(uid)
     console.log("Signed In to " + user.displayName)
+    document.getElementById('signedInHeader').style.display='none';
+    document.getElementById('signedOutHeader').style.display='block'; 
+    
   }else {
     console.log("Signed Out")
+    document.getElementById('signedInHeader').style.display='block';
+    document.getElementById('signedOutHeader').style.display='none';
+
+   
   }
 })
 
-const signOutUserForm = document.querySelector("#signOut")
-signOutUserForm.addEventListener("submit", (event)=> {
-  event.preventDefault()
-
-  signOut(auth)
-  .then(() => {
-    console.log("Signed out")
-  }).catch((error) => {
-
+const signOutUserForm = document.querySelector("#signedOutHeader")
+if(signOutUserForm){
+  signOutUserForm.addEventListener("submit", (event)=> {
+    event.preventDefault()
+  
+    signOut(auth)
+    .then(() => {
+      console.log("Signed out")
+    }).catch((error) => {
+  
+    })
   })
-})
+}
+
 
 
 
@@ -91,9 +101,6 @@ getDocs(movieCollection).then((snapshot) => {
   .catch(err => {
   console.log(err.message)
 })
-
-
-
 
 
 

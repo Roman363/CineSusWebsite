@@ -70,4 +70,35 @@ onAuthStateChanged(auth, (user) => {
   }
 })
 
+//Observer
+onAuthStateChanged(auth, (user) => {
+  
+  if (user) {
+    //User is signed in
+    const uid = user.uid;
+    console.log(uid)
+    console.log("Signed In to " + user.displayName)
+    document.getElementById('signedInHeader').style.display='none';
+    document.getElementById('signedOutHeader').style.display='block';
+    
+  }else {
+    console.log("Signed Out")
+    document.getElementById('signedInHeader').style.display='block';
+    document.getElementById('signedOutHeader').style.display='none';
+
+   
+  }
+})
+
+const signOutUserForm = document.querySelector("#signedOutHeader")
+signOutUserForm.addEventListener("submit", (event)=> {
+  event.preventDefault()
+
+  signOut(auth)
+  .then(() => {
+    console.log("Signed out")
+  }).catch((error) => {
+
+  })
+})
 

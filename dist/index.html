@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineSus</title>
-    <link href="/css/main.min.css" rel="stylesheet" >
+    <link href="bStyles.css" rel="stylesheet" >
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
  
@@ -25,7 +25,8 @@
             <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
             <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
             <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
-            <li class="nav-item fs-5" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+            <li class="nav-item fs-5" id="signedInHeader" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+            <form class="nav-item fs-5" id="signedOutHeader"><input type="submit" value="Sign Out" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;"></form>
           </ul>
         </header>
       </div>
@@ -75,62 +76,82 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div>
-
+    </div><br><br>
+    <h1 style="text-align:center; font-weight:bold">Features</h1>
 
     <!-- movie spaces  -->
-  
-    <div class="col" style="top:100%;">
+    <div class="container">
+    <div class="row">
 
-      <div id="indexMovie1" class="movieSpace" >
-        <a href="movieSelect.html#movieSelect1"><img id="indexMovie1Image" src="pictures/loading.gif" alt="moviePicture1" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
-        <div class="container" style="width: 420px;" >
+      <div id="indexMovie1" class="movieSpace col-lg-4 col-md-4">
+        <a href="movieSelect.html#movieSelect1"><img id="indexMovie1Image" src="pictures/loading.gif" alt="moviePicture1" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:300px; height:455px"></a>
+        <div class="col-lg-12 col-md-12" style="margin-top: 5px;">
           <div class="p2 bg-color3 rounded">
             <label class="posters" id="indexMovie1Details">Now Loading...</label>
           </div>
         </div>
       </div>
 
-      <div id="indexMovie2" class="movieSpace" >
-        <a href="movieSelect.html#movieSelect2"><img id="indexMovie2Image" src="pictures/loading.gif" alt="moviePicture2" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
-        <div class="container" style="width: 420px;" >
+      <div id="indexMovie2" class="movieSpace col-lg-4 col-md-4" >
+        <a href="movieSelect.html#movieSelect2"><img id="indexMovie2Image" src="pictures/loading.gif" alt="moviePicture2" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%;width:300px; height:455px"></a>
+        <div class="col-lg-12 col-md-12" style="margin-top: 5px;">
           <div class="p2 bg-color3 rounded">
             <label class="posters" id="indexMovie2Details">Now Loading...</label>
           </div>
         </div>
       </div>
 
-      <div id="indexMovie3" class="movieSpace" >
-        <a href="movieSelect.html#movieSelect3"><img id="indexMovie3Image" src="pictures/loading.gif" alt="moviePicture3" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
-        <div class="container" style="width: 420px;" >
+      <div id="indexMovie3" class="movieSpace col-lg-4 col-md-4" >
+        <a href="movieSelect.html#movieSelect3"><img id="indexMovie3Image" src="pictures/loading.gif" alt="moviePicture3" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:300px; height:455px"></a>
+        <div class="col-lg-12 col-md-12" style="margin-top: 5px;">
           <div class="p2 bg-color3 rounded">
             <label class="posters" id="indexMovie3Details">Now Loading...</label>
           </div>
         </div>
       </div>
-
-      <div id="indexMovie4" class="movieSpace" >
-        <a href="movieSelect.html#movieSelect4"><img id="indexMovie4Image" src="pictures/loading.gif" alt="moviePicture4" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:350px; height:530px"></a>
-        <div class="container" style="width: 420px;" >
+    </div>
+      <div class="row">
+      <div id="indexMovie4" class="movieSpace col-lg-4 col-md-4" >
+        <a href="movieSelect.html#movieSelect4"><img id="indexMovie4Image" src="pictures/loading.gif" alt="moviePicture4" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%;width:300px; height:455px"></a>
+        <div class="col-lg-12 col-md-12" style="margin-top: 5px;">
           <div class="p2 bg-color3 rounded">
             <label class="posters" id="indexMovie4Details">Now Loading...</label>
           </div>
         </div>
       </div>
 
+      <div id="indexMovie5" class="movieSpace col-lg-4 col-md-4" >
+        <a href="movieSelect.html#movieSelect3"><img id="indexMovie3Image" src="pictures/loading.gif" alt="moviePicture3" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:300px; height:455px"></a>
+        <div class="col-lg-12 col-md-12" style="margin-top: 5px;">
+          <div class="p2 bg-color3 rounded">
+            <label class="posters" id="indexMovie3Details">Now Loading...</label>
+          </div>
+        </div>
+      </div>
+
+      <div id="indexMovie6" class="movieSpace col-lg-4 col-md-4" >
+        <a href="movieSelect.html#movieSelect3"><img id="indexMovie3Image" src="pictures/loading.gif" alt="moviePicture3" style="border:none; border-radius: 25px; background-repeat:no-repeat;background-size:100% 100%; width:300px; height:455px"></a>
+        <div class="col-lg-12 col-md-12" style="margin-top: 5px;">
+          <div class="p2 bg-color3 rounded">
+            <label class="posters" id="indexMovie3Details">Now Loading...</label>
+          </div>
+        </div>
+      </div>
 
 
     </div>
+    </div>
+  </div>
 <br><br>
 
 
 
-<form id="signOut">
+<!-- <form id="signOut">
   <input type="submit" value="signOut">
 </form>
 
 <p>CINඞSUS</p>
-    
+     -->
 
 
 <script defer src = "index.bundle.js"></script>

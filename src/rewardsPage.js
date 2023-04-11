@@ -23,7 +23,6 @@ const auth = getAuth(fireApp);
 
 
 
-
 //Observer
 onAuthStateChanged(auth, (user) => {
   
@@ -32,23 +31,51 @@ onAuthStateChanged(auth, (user) => {
     const uid = user.uid;
     console.log(uid)
     console.log("Signed In to " + user.displayName)
-
+    document.getElementById('signedInHeader').style.display='none';
+    document.getElementById('signedOutHeader').style.display='block';
     // Show signed-in content
     document.getElementById('rewardsPageSignedIn').style.display = 'block';
     document.getElementById('rewardsPageSignedOut').style.display = 'none';
     document.getElementById("rewardsPageUsername").innerHTML = user.displayName
 
+    console.log(sessionStorage.getItem("discount"));
+
+
+
+    //update the discount code
+    document.getElementById("discount100").addEventListener("click", function(e){
+      sessionStorage.setItem("discount", JSON.stringify("discount100"))
+      document.getElementById("codeSelected").innerHTML = "You have selected the 100% discount, go to checkout to get your discount"
+    })
+    document.getElementById("discount50").addEventListener("click", function(e){
+      sessionStorage.setItem("discount", JSON.stringify("discount50"))
+      document.getElementById("codeSelected").innerHTML = "You have selected the 50% discount, go to checkout to get your discount"
+      
+    })
+    document.getElementById("discount25").addEventListener("click", function(e){
+      sessionStorage.setItem("discount", JSON.stringify("discount25"))
+      document.getElementById("codeSelected").innerHTML = "You have selected the 25% discount, go to checkout to get your discount"
+    })
+    document.getElementById("removeDiscount").addEventListener("click", function(e){
+      sessionStorage.removeItem("discount")
+      document.getElementById("codeSelected").innerHTML = "No discounts currently selected"
+    })
+
+
+    
   }else {
     console.log("Signed Out")
-
+    document.getElementById('signedInHeader').style.display='block';
+    document.getElementById('signedOutHeader').style.display='none';
     // Show non-signed-in content
     document.getElementById('rewardsPageSignedIn').style.display = 'none';
     document.getElementById('rewardsPageSignedOut').style.display = 'block';
 
-}
+   
+  }
 })
 
-const signOutUserForm = document.querySelector("#signOut")
+const signOutUserForm = document.querySelector("#signedOutHeader")
 signOutUserForm.addEventListener("submit", (event)=> {
   event.preventDefault()
 
@@ -59,4 +86,18 @@ signOutUserForm.addEventListener("submit", (event)=> {
 
   })
 })
+
+
+var discountString = sessionStorage.getItem("discount")
+var discount = JSON.parse(discountString)
+
+if (discount == "discount100") {
+  document.getElementById("codeSelected").innerHTML = "You have selected the 100% discount, go to checkout to get your discount"
+}
+if (discount == "discount50") {
+  document.getElementById("codeSelected").innerHTML = "You have selected the 50% discount, go to checkout to get your discount"
+}
+if (discount == "discount25") {
+  document.getElementById("codeSelected").innerHTML = "You have selected the 25% discount, go to checkout to get your discount"
+}
 

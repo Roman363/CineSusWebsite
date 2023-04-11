@@ -1,7 +1,54 @@
 import { initializeApp } from "firebase/app"
-import{ getFirestore, collection, getDocs, addDoc, deleteDoc, doc, updateDoc, query, orderBy, onSnapshot} from "firebase/firestore"
-import { getAuth,onAuthStateChanged} from 'firebase/auth'
+import { getAuth,onAuthStateChanged,signOut} from 'firebase/auth'
 
+
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCXO12r4N_stiHoEcXrjUJksTniRAOwdxw",
+  authDomain: "team-5-7b28e.firebaseapp.com",
+  projectId: "team-5-7b28e",
+  storageBucket: "team-5-7b28e.appspot.com",
+  messagingSenderId: "638627407505",
+  appId: "1:638627407505:web:390587f6f32e9467784130"
+};
+
+
+// // Initialize Firebase
+const fireApp = initializeApp(firebaseConfig);
+
+const auth = getAuth(fireApp);
+//Observer
+onAuthStateChanged(auth, (user) => {
+  
+  if (user) {
+    //User is signed in
+    const uid = user.uid;
+    console.log(uid)
+    console.log("Signed In to " + user.displayName)
+    document.getElementById('signedInHeader').style.display='none';
+    document.getElementById('signedOutHeader').style.display='block';
+    
+  }else {
+    console.log("Signed Out")
+    document.getElementById('signedInHeader').style.display='block';
+    document.getElementById('signedOutHeader').style.display='none';
+
+   
+  }
+})
+
+const signOutUserForm = document.querySelector("#signedOutHeader")
+signOutUserForm.addEventListener("submit", (event)=> {
+  event.preventDefault()
+
+  signOut(auth)
+  .then(() => {
+    console.log("Signed out")
+  }).catch((error) => {
+
+  })
+})
 
 
 
@@ -12,8 +59,27 @@ var dataArray = JSON.parse(dataArrayString)
 var movieDataString = sessionStorage.getItem('movieData')
 var movieData = JSON.parse(movieDataString)
 
+var discountString = sessionStorage.getItem('discount')
+var discount = JSON.parse(discountString)
+
+
+console.log(discount);
+
+
+
+
+
 console.log(dataArray);
 console.log(movieData);
+//empty cart 
+if(!dataArray){
+  document.getElementById('fullCart').style.display='none';
+  document.getElementById('emptyCart').style.display='block';
+}else {
+  document.getElementById('fullCart').style.display='block';
+  document.getElementById('emptyCart').style.display='none';
+}
+
 
 
 // calculating total
@@ -26,10 +92,25 @@ var elderTickets = dataArray["seniorTickets"]
 
 var totalTickets = parseInt(childTickets) + parseInt(adultTickets) + parseInt(elderTickets)
 var subtotal = totalTickets * 7.99
+
+
+if (discount == 'discount100') {
+  subtotal = (subtotal * 0)
+}else if(discount == 'discount50'){
+  subtotal = (subtotal * .5)
+}else if(discount == 'discount25'){
+  subtotal = (subtotal * .75)
+}
+
+subtotal = parseFloat(parseFloat(subtotal).toFixed(2))
+
+
+
 var tax = (subtotal * 0.0825) // tax amount based on texas
 var total = (subtotal + tax)
 
 tax = tax.toFixed(2)
+total = parseFloat(total)
 total = total.toFixed(2)
 
 console.log(total);
@@ -66,44 +147,3 @@ console.log(dataArray);
 //sending the information
 sessionStorage.setItem("dataArray", JSON.stringify(dataArray))
 
-
-
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyCXO12r4N_stiHoEcXrjUJksTniRAOwdxw",
-  authDomain: "team-5-7b28e.firebaseapp.com",
-  projectId: "team-5-7b28e",
-  storageBucket: "team-5-7b28e.appspot.com",
-  messagingSenderId: "638627407505",
-  appId: "1:638627407505:web:390587f6f32e9467784130"
-};
-
-// //from the get method, find out what movie the user wants to see information from
-// const movieName = new URLSearchParams(window.location.search).get('movieName')
-// console.log(movieName); 
-
-// // Initialize Firebase
-const fireApp = initializeApp(firebaseConfig);
-
-const auth = getAuth(fireApp);
-
-// const db = getFirestore(fireApp);
-// const movieCollection = collection(db, 'movie_info')
-
-
-
-
-
-    //Observer
-onAuthStateChanged(auth, (user) => {
-  
-    if (user) {
-      //User is signed in
-      const uid = user.uid;
-      console.log(uid)
-      console.log("Signed In to " + user.displayName)
-    }else {
-      console.log("Signed Out")
-    }
-  })

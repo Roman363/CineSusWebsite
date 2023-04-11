@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineSus</title>
-    <link href="/css/main.min.css" rel="stylesheet" >
+    <link href="bStyles.css" rel="stylesheet" >
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -22,14 +22,18 @@
             <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
             <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
             <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
-            <li class="nav-item fs-5" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+            <li class="nav-item fs-5" id="signedInHeader" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+            <form class="nav-item fs-5" id="signedOutHeader"><input type="submit" value="Sign Out" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;"></input></form>
           </ul>
         </header>
       </div>
-
     </div></br></br>
 
-    <div class="container">
+    <div id="emptyCart">
+      <h2 style="text-align:center; color:black;">Your shopping cart is empty.</h2>
+    </div>
+
+    <div class="container" id="fullCart">
       <form method="get" action="purchasepage.html" class="row">
       <!-- <div class ="row">  -->
         <div class="col col-lg-9" style="background-color: #222831; border-radius: 25px;">
@@ -42,33 +46,17 @@
               </div>
             </div>  
            
-          
+            
        <div class="col">
           <!---Text -->
           <div id="moviePayInfo" style="position:relative; top: 50px; right:50px;">
             <Strong for="displayMovie" id="paymentPageTitle">Now Loading...</Strong></br>
-
-    </div>
-
-
-    <div id="featured">
-
-        <form method="get" action="purchasepage.html">
-          block
-          <div id="movieSpace">
-            <img src="" width="254" height="432" left= "-4" top = "187" id="displayMovie">
-            <label for="displayMovie" id="movieInfoPayment">Now Loading...</label>
-          </div>
-        
-        <div id="moviePayInfo">
-            <Strong>Saturday, February 18 at 3:50 PM</Strong></br>
-            <Strong>XD Luxury Lounger 3D  </Strong></br>
-
             <Strong>Cinesus 7 XD </Strong></br>
             <Strong>123456 Montana Blvd W, El Paso TX 79936 </Strong></br>
             <Strong id="paymentPageDateAndTime">Saturday, February 18 at 3:50 PM</Strong></br></br>
             <Strong>Price&emsp;Qty</Strong></br>
             <Strong id="paymentPagePriceAndAmount">$14.25&emsp;1</Strong></br></br></br></br></br>
+            
          </div>
         </div>
       </div>
@@ -83,7 +71,9 @@
             <text id="tax" style ="position: relative; left: 160px; font-size: 20;">$...</text></br></br></br></br>
             <hr size= 25 style="position: relative; color: white; width: 100%;">
             <text id="payBox" style ="position: relative; left: 15px; font-size: 20;">Total</text>
-            <text id="total" style ="position: relative; left: 130px; font-size: 20;">$...</text></br></br>
+            <text id="total" style ="position: relative; left: 130px; font-size: 20;">$...</text></br>
+            <!-- added a form for the discount codes -->
+
     
             <a href="signIn.html">
               <div class="d-flex justify-content-center">
@@ -137,6 +127,7 @@
           </div>
         </form>
       </div>
+
   
     <script src="paymentPage.bundle.js"></script>
 
