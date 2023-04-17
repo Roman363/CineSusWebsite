@@ -89,6 +89,7 @@ signOutUserForm.addEventListener("submit", (event)=> {
   })
 })
 
+
 // $('.datepicker').datepicker({
 //   inline: true,
 //  showMonthsShort: true,
@@ -217,6 +218,7 @@ signOutUserForm.addEventListener("submit", (event)=> {
 //  }
 // })
  
+
 
 
 
