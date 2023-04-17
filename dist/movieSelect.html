@@ -7,10 +7,11 @@
     <title>CineSus</title>
     <link href="bStyles.css" rel="stylesheet" >
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
- 
+
 </head>
-<body>
+<body> 
   <script src = "gatherData.bundle.js"></script>
   
     <div class="container-fluid bg-top  fixed-top" style="box-shadow: 0 4px 2px -2px black;">
@@ -24,18 +25,28 @@
             
             <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
             <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
-            <li class="nav-item fs-5"><a href="aboutUs.html" class="nav-link text-color4">About Us</a></li>
             <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
             <li class="nav-item fs-5" id="signedInHeader" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
             <form class="nav-item fs-5" id="signedOutHeader"><input type="submit" value="Sign Out" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;"></input></form>
           </ul>
         </header>
         
+        
       </div>
-     
-    </div>
-
-  <div class="container sticky-top" id="movieSelectTimes">
+      <div class="md-form md-outline input-with-post-icon datepicker w-25">
+        <input placeholder="Select date" type="date" id="example" class="form-control" required>
+      </div>
+    </div><br>
+    
+<!-- <div class="container fixed-top">
+<div class="col col-lg-12 col-md-12">
+<div class="md-form md-outline input-with-post-icon datepicker w-25">
+  <input placeholder="Select date" type="date" id="example" class="form-control">
+  <label for="example">Try me...</label>
+</div>
+</div>
+</div> -->
+     <!-- <div class="container sticky-top" id="movieSelectTimes">
     <div class="container" style="border-bottom: solid; border-bottom-color:#222831;z-index: index 50;">
       <form id="weekDay">
         <h4 style="color: #222831; font-weight:bold;">Showtimes</h4>
@@ -86,9 +97,28 @@
       </form>
     </div>
 
-  <br>
+  <br> -->
 
-  
+  <!-- <div class="container" style="border-bottom: solid; border-bottom-color:#222831;">
+    <form id="ticketAmount">
+      <h4 style="color: #222831; font-weight:bold;">Tickets</h4>
+      <div class="row mb-4">
+        <div class="col-lg col-md w-25">
+          <h6 style="color: #222831;">Adult</h6>
+          <input type="number" class="form-control form-control-sm w-50"  value="1"s name="adultTickets">
+        </div>
+        <div class="col-lg col-md w-25">
+          <h6 style="color: #222831;">Child</h6>
+          <input type="number" class="form-control form-control-sm w-50"  value="0" name="childTickets">
+        </div>
+        <div class="col-lg col-md w-25">
+          <h6 style="color: #222831;">Senior</h6>
+          <input type="number" class="form-control form-control-sm w-50"  value="0" name="seniorTickets">
+        </div>
+      </div>
+    </form>
+    
+  </div>  -->
 
 </div><br><br>  
 <h1 style="text-align:center; font-weight:bold;"">Showtimes</h1>
