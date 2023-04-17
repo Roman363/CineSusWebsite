@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app"
 import { getAuth,onAuthStateChanged,signOut} from 'firebase/auth'
+import { Timestamp } from "firebase/firestore";
 
 
 
@@ -104,6 +105,7 @@ if (discount == 'discount100') {
   subtotal = subtotal - discountAmount
 }
 
+// console.log(Timestamp(dataArray["movieDate"]));
 //weekday discount
 if (dataArray["movieDate"] == "Tuesday") {
   discountAmount =  discountAmount + (subtotal * .5)
@@ -129,7 +131,7 @@ document.getElementById("subTotal").innerHTML = subtotal.toString()
 document.getElementById("tax").innerHTML = tax
 document.getElementById("total").innerHTML = total
 document.getElementById("paymentPageTitle").innerHTML = dataArray["movieName"]
-document.getElementById("paymentPageDateAndTime").innerHTML = dataArray["weekDay"] + " | " + dataArray["movieTime"]
+document.getElementById("paymentPageDateAndTime").innerHTML = dataArray["movieDate"] + " | " + dataArray["movieTime"]
 document.getElementById("paymentPagePriceAndAmount").innerHTML = "$" + total + "&emsp;" + totalTickets
 
 
