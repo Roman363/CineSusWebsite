@@ -33,8 +33,12 @@
         
         
       </div>
-      <div class="md-form md-outline input-with-post-icon datepicker w-25">
+      <!-- <div class="md-form md-outline input-with-post-icon datepicker w-25">
         <input placeholder="Select date" type="date" id="example" class="form-control" required>
+      </div> -->
+
+      <div>
+        <input type="date" id="movieDate" name="movieName" required>
       </div>
     </div><br>
     
@@ -48,48 +52,48 @@
 </div> -->
      <!-- <div class="container sticky-top" id="movieSelectTimes">
     <div class="container" style="border-bottom: solid; border-bottom-color:#222831;z-index: index 50;">
-      <form id="weekDay">
+      <form id="movieDate">
         <h4 style="color: #222831; font-weight:bold;">Showtimes</h4>
         <div class="row">
           <div class="col-lg col-md">
             <label>
-              <input type="radio" name="weekDay" value="Monday" checked>
+              <input type="radio" name="movieDate" value="Monday" checked>
               <span style="font-size: 18px; color:#222831;">Monday</span>
             </label>
           </div>
           <div class="col-lg col-md">
             <label>
-              <input type="radio" name="weekDay" value="Tuesday">
+              <input type="radio" name="movieDate" value="Tuesday">
               <span style="font-size: 18px; color:#222831;">Tuesday</span>
             </label>
           </div>
           <div class="col-lg col-md">
             <label>
-              <input type="radio" name="weekDay" value="Wednesday">
+              <input type="radio" name="movieDate" value="Wednesday">
               <span style="font-size: 18px; color:#222831;">Wednesday</span>
             </label>
           </div>
           <div class="col-lg col-md">
             <label>
-              <input type="radio" name="weekDay" value="Thursday">
+              <input type="radio" name="movieDate" value="Thursday">
               <span style="font-size: 18px; color:#222831;">Thursday</span>
             </label>
           </div>
           <div class="col-lg col-md">
             <label>
-              <input type="radio" name="weekDay" value="Friday">
+              <input type="radio" name="movieDate" value="Friday">
               <span style="font-size: 18px; color:#222831;">Friday</span>
             </label>
           </div>
           <div class="col-lg col-md">
             <label>
-              <input type="radio" name="weekDay" value="Saturday">
+              <input type="radio" name="movieDate" value="Saturday">
               <span style="font-size: 18px; color:#222831;">Saturday</span>
             </label>
           </div>
           <div class="col-lg col-md">
             <label>
-              <input type="radio" name="weekDay" value="Sunday">
+              <input type="radio" name="movieDate" value="Sunday">
               <span style="font-size: 18px; color:#222831;">Sunday</span>
             </label>
           </div>
@@ -262,14 +266,10 @@
   <script>
     function submitForms() {
 
-      
-      var weekDay = new FormData(document.getElementById("weekDay"));
-      // Combine the form data into a single object
-      var formData = [];
-      for (var pair of weekDay.entries()) {
-        formData[pair[0]] = pair[1];
-      }
-      sessionStorage.setItem("weekDay", JSON.stringify(formData["weekDay"]))
+
+
+      var movieDate = document.getElementById("movieDate").value
+      sessionStorage.setItem("movieDate", JSON.stringify(movieDate))
     }
 
   </script>
