@@ -35,8 +35,8 @@ onAuthStateChanged(auth, (user) => {
        address2: initialProfileForm.address2.value,
        city: initialProfileForm.city.value ,
        state: initialProfileForm.state.value,
-       zip: initialProfileForm.zip.value
-
+       zip: initialProfileForm.zip.value,
+       isAdmin: false
     }
 
     updateProfile(auth.currentUser,{

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid bg-top fixed-top" style="box-shadow: 0 4px 2px -2px black;">
+        <div class="container-md" style="height: 12%;">
+          <header class="d-lg-flex flex-wrap justify-content-center py-3" style="margin-bottom: 0;">
+            <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-decoration-none" style="color:#ff5722;font-family: 'Abhaya Libre', serif;">
+              <span class="fs-1">CINඞSUS</span>
+            </a>
+        
+            <ul class="nav nav-pills nav-fill align-items-center">
+              
+              <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
+              <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
+              <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
+              <li class="nav-item fs-5" id="signedInHeader" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+              <form class="nav-item fs-5" id="signedOutHeader"><input type="submit" value="Sign Out" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;"></form>
+            </ul>
+          </header>
+        </div>
+    </div>
+
+
+    <div id="notAnAdmin" style="display: block;">
+      <h1>Please Sign in as an ADMIN to this page</h1>
+    </div>
+
+    <div id="adminContent" style="display: none;">
+      <h1>Hello, Admin!</h1>
+
+      <h2>Total Sales: </h2>
+      <table id="totalSales">
+
+      </table>
+
+    </div>
+
+
+
+    
+
+
+    <br><a href="index.html">back to index</a>
+
+    <script defer src = "adminPage.bundle.js"></script>
+</body>
+</html>

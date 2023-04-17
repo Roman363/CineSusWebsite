@@ -54,25 +54,7 @@ document.getElementById("purchasePageImage").setAttribute("src", imageLink)
 
 console.log(dataArray);
 //uploading transactions to database
-const transactionCollection = collection(db, 'transactions')
 
-
-const transaction = {
-  adultTickets: dataArray["adultTickets"],
-  childTickets: dataArray["childTickets"],
-  seniorTickets: dataArray["seniorTickets"],
-  weekDay: dataArray["weekDay"],
-  movie: dataArray["movieName"],
-  time: dataArray["movieTime"],
-  totalPrice: dataArray["total"]
-
-}
-
-addDoc(transactionCollection, transaction).then((doc) =>{
-  console.log(doc)
-}).catch((e) =>{
-  console.log(e);
-})
 
 //Observer
 onAuthStateChanged(auth, (user) => {
@@ -81,17 +63,87 @@ onAuthStateChanged(auth, (user) => {
     //User is signed in
     const uid = user.uid;
     console.log(uid)
+    const customerName = user.displayName
     console.log("Signed In to " + user.displayName)
     document.getElementById('signedInHeader').style.display='none';
     document.getElementById('signedOutHeader').style.display='block';
+
+
+    const transactionCollection = collection(db, 'transactions')
+
+
+    const transaction = {
+      adultTickets: dataArray["adultTickets"],
+      childTickets: dataArray["childTickets"],
+      seniorTickets: dataArray["seniorTickets"],
+      weekDay: dataArray["weekDay"],
+      movie: dataArray["movieName"],
+      totalTickets: dataArray["totalTickets"],
+      tax: dataArray["tax"],
+      discountAmount: dataArray["discountAmount"],
+      customerName: customerName,
+      customerId: uid,
+      time: dataArray["movieTime"],
+      totalPrice: dataArray["total"]
+
+    }
+
+    addDoc(transactionCollection, transaction).then((doc) =>{
+      console.log(doc)
+    }).catch((e) =>{
+      console.log(e);
+    })
+
+
+
+
+
     
   }else {
     console.log("Signed Out")
     document.getElementById('signedInHeader').style.display='block';
     document.getElementById('signedOutHeader').style.display='none';
 
+
+    const transactionCollection = collection(db, 'transactions')
+
+
+    const transaction = {
+      adultTickets: dataArray["adultTickets"],
+      childTickets: dataArray["childTickets"],
+      seniorTickets: dataArray["seniorTickets"],
+      weekDay: dataArray["weekDay"],
+      movie: dataArray["movieName"],
+      totalTickets: dataArray["totalTickets"],
+      tax: dataArray["tax"],
+      discountAmount: dataArray["discountAmount"],
+      customerName: "Guest",
+      customerId: "N/A",
+      time: dataArray["movieTime"],
+      totalPrice: dataArray["total"]
+
+    }
+
+    addDoc(transactionCollection, transaction).then((doc) =>{
+      console.log(doc)
+    }).catch((e) =>{
+      console.log(e);
+    })
+
+
+
+
+
+
    
   }
+
+
+
+
+
+
+  
 })
 
 const signOutUserForm = document.querySelector("#signedOutHeader")

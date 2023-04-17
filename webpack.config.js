@@ -14,6 +14,7 @@ module.exports =
     movieSelect: './src/movieSelect.js',
     gatherData: './src/gatherData.js',
     rewardsPage: './src/rewardsPage.js',
+    adminPage: './src/adminPage.js',
     updateInfo: './src/updateInfo.js'},
   
     output: 
