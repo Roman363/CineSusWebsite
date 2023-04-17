@@ -21,7 +21,6 @@
             
             <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
             <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
-            <li class="nav-item fs-5"><a href="aboutUs.html" class="nav-link text-color4">About Us</a></li>
             <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
             <li class="nav-item fs-5" id="signedInHeader" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
             <form class="nav-item fs-5" id="signedOutHeader"><input type="submit" value="Sign Out" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;"></input></form>
@@ -34,7 +33,7 @@
       <h2 style="text-align:center; color:black;">Your shopping cart is empty.</h2>
     </div>
 
-    <div class="container" id="fullCart">
+    <div class="container"id="fullCart" >
       <form method="get" action="purchasepage.html" class="row">
       <!-- <div class ="row">  -->
         <div class="col col-lg-9" style="background-color: #222831; border-radius: 25px;">
@@ -76,7 +75,7 @@
             <!-- added a form for the discount codes -->
 
     
-            <a href="signIn.html">
+            <!-- <a href="signIn.html">
               <div class="d-flex justify-content-center">
                 <button  type="button" class="btn btn-top margin-auto"style="color:#eeeee;">Sign in</button>
               </div></br>
@@ -87,48 +86,96 @@
                 Continue as guest
               </button>
               <ul class="dropdown-menu ticketPayDropDown">
-                <text id="payBox" style ="position: absolute; left: 20px;">Payment Information</text></br></br></br>
-    
-                
-    
-                <text id="payBox">Card Number</text></br>
-                <div class="input-group input-group-sm mb-3">
-                  <span class="input-group-text" id="inputGroup-sizing-sm"></span>
-                  <input type="text" id="cardNumber" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-                </div>
-    
-                <text id="payBox" style ="text-align: left;">Expiration date</text></br>
-                <div class="input-group">
-                  <span class="input-group-text">MM/YYYY</span>
-                  <input type="text" aria-label="First name" id="month" class="form-control" required>
-                  <input type="text" aria-label="Last name" id="year" class="form-control" required>
-                </div></br>
-    
-                <text id="payBox" style ="text-align: left;">Billing Zip Code</text></br>
-                <div class="row justify-content-center">
-                <div class="input-group input-group-sm w-50">
-                  <span class="input-group-text" id="inputGroup-sizing-sm"></span>
-                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="zipCode" required>
-                </div>
-              </div></br>
-                <text id="payBox" style ="text-align: center;">Security Code</text></br>
-                <div class="row justify-content-center">
-                <div class="input-group input-group-sm w-50">
-                  <span class="input-group-text" id="inputGroup-sizing-sm"></span>
-                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="securityCode" required>
-                </div>
-              </div></br></br>
-    
-                <div class="d-flex justify-content-center">
-                  <input type="hidden" id="currentMovieGet" name="movieName" value="">
-                  <button type="submit" class="btn btn-top margin-auto">Submit</button>
-                </div>
-              </ul>
-            </div> 
+                <text id="payBox" style ="position: absolute; left: 20px;">Payment Information</text></br></br></br> -->
+     
           </div>
-        </form>
+          <div class="container mt-2">
+            <div class="col col-lg-12 col-md-12 bg-top align-self-center" style="border-radius: 25px;">
+            <p id="payBox">Card Number</p></br>
+            <div class="row justify-content-center">
+            <div class="input-group input-group-sm mb-3 w-50 align-self-center">
+              <span class="input-group-text" id="inputGroup-sizing-sm"></span>
+              <input type="text" id="cardNumber" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+          </div>
+    
+            <p id="payBox">Expiration date</p></br>
+            <div class="row justify-content-center">
+            <div class="input-group w-25">
+              <span class="input-group-text justify-content-center">MM/YYYY</span>
+              <input type="text" aria-label="First name" id="month" class="form-control" required>
+              <input type="text" aria-label="Last name" id="year" class="form-control" required>
+            </div>
+            </div></br>
+    
+            <p id="payBox">Billing Zip Code</p></br>
+            <div class="row justify-content-center">
+            <div class="input-group input-group-sm w-25">
+              <span class="input-group-text" id="inputGroup-sizing-sm"></span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="zipCode" required>
+            </div>
+          </div></br>
+            <p id="payBox" style ="text-align: center;">Security Code</p></br>
+            <div class="row justify-content-center">
+            <div class="input-group input-group-sm w-25">
+              <span class="input-group-text" id="inputGroup-sizing-sm"></span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="securityCode" required>
+            </div>
+          </div></br>
+    
+            <div class="d-flex justify-content-center">
+              <input type="hidden" id="currentMovieGet" name="movieName" value="">
+              <button type="submit" class="btn btn-color1 mb-3">Submit</button>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </form>
+        </div></br>
+      
+
+      <!-- </div></br>
+      <div class="container" id="fullCart">
+        <div class="col col-lg-12 col-md-12 bg-top align-self-center" style="border-radius: 25px;">
+        <p id="payBox">Card Number</p></br>
+        <div class="row justify-content-center">
+        <div class="input-group input-group-sm mb-3 w-50 align-self-center">
+          <span class="input-group-text" id="inputGroup-sizing-sm"></span>
+          <input type="text" id="cardNumber" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+        </div>
       </div>
 
+        <p id="payBox">Expiration date</p></br>
+        <div class="row justify-content-center">
+        <div class="input-group w-25">
+          <span class="input-group-text justify-content-center">MM/YYYY</span>
+          <input type="text" aria-label="First name" id="month" class="form-control" required>
+          <input type="text" aria-label="Last name" id="year" class="form-control" required>
+        </div>
+        </div></br>
+
+        <p id="payBox">Billing Zip Code</p></br>
+        <div class="row justify-content-center">
+        <div class="input-group input-group-sm w-25">
+          <span class="input-group-text" id="inputGroup-sizing-sm"></span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="zipCode" required>
+        </div>
+      </div></br>
+        <p id="payBox" style ="text-align: center;">Security Code</p></br>
+        <div class="row justify-content-center">
+        <div class="input-group input-group-sm w-25">
+          <span class="input-group-text" id="inputGroup-sizing-sm"></span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="securityCode" required>
+        </div>
+      </div></br>
+
+        <div class="d-flex justify-content-center">
+          <input type="hidden" id="currentMovieGet" name="movieName" value="">
+          <button type="submit" class="btn btn-color1 mb-3">Submit</button>
+        </div>
+      </ul>
+    </div>
+  </div> -->
   
     <script src="paymentPage.bundle.js"></script>
 
