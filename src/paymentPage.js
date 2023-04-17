@@ -105,7 +105,7 @@ if (discount == 'discount100') {
 }
 
 //weekday discount
-if (dataArray["weekDay"] == "Tuesday") {
+if (dataArray["movieDate"] == "Tuesday") {
   discountAmount =  discountAmount + (subtotal * .5)
   subtotal = subtotal * .5
 }

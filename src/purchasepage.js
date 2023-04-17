@@ -112,7 +112,7 @@ onAuthStateChanged(auth, (user) => {
       adultTickets: dataArray["adultTickets"],
       childTickets: dataArray["childTickets"],
       seniorTickets: dataArray["seniorTickets"],
-      weekDay: dataArray["weekDay"],
+      Date: dataArray["movieDate"],
       movie: dataArray["movieName"],
       totalTickets: dataArray["totalTickets"],
       tax: dataArray["tax"],
