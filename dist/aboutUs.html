@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSus</title>
+    <link href="bStyles.css" rel="stylesheet" >
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+    <script src = "gatherData.bundle.js"></script>
+ 
+    <div class="container-fluid bg-top fixed-top" style="box-shadow: 0 4px 2px -2px black;">
+      <div class="container-md container-lg" style="height: 12%;">
+        <header class="d-lg-flex flex-wrap justify-content-center py-3" style="margin-bottom: 0;">
+          <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-decoration-none" style="color:#ff5722;font-family: 'Abhaya Libre', serif;">
+            <span class="fs-1">CINඞSUS</span>
+          </a>
+      
+          <ul class="nav nav-pills nav-fill align-items-center">
+            
+            <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
+            <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
+            <li class="nav-item fs-5"><a href="aboutUs.html" class="nav-link text-color4">About Us</a></li>
+            <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
+            <li class="nav-item fs-5" id="signedInHeader" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
+            <form class="nav-item fs-5" id="signedOutHeader"><input type="submit" value="Sign Out" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;"></input></form>
+          </ul>
+        </header>
+      </div>
+    </div>
+
+    <div id="aboutUs" style="background-color: #222831; color: #eeeeee; padding: 3%; border-radius: 5%; margin-top: 7%;">
+        <br>
+        <div id="Header" style="text-align: center;">
+        <h2>Get to know team 5 - Hella Hydrated Homies!</h2><br>
+        <img src = './pictures/2023-02-07 (3).png' style="height: 50%; width: 50%; ">
+    </div>
+    <div id="description" style="padding: 10%">
+    <h4 style="text-align: center;">Founders of CineSus:</h4><br>
+    <h5>Valeria Martin del Campo</h5><br>
+    <img src = './pictures/val.jpg' style="height: 15%; width: 15%; align-content: start; float: left; margin: 3%;"><br>
+    <p>Hey! My name is Valeria, and I am currently a senior at UTEP studying Computer Science. I live with my mom and my brother and my dog, but I will soon be moving to Philadelphia for a job offer. 
+        I am pretty nervous but I'm also excited because of the opportunities and experiences this will bring. I work as an IA for the CS Department right now, but I will soon be working for Lockheed Martin. 
+        My goal is to move to the Space department and maybe one day work for NASA. I love space and physics and I want to get a MS in physics; my dream would be to make a cool discovery or help humanity in understanding space. 
+        If all this fails though, my plan B is to be a frontend web developer or UX/UI designer for any company; I don't really have a preference. Thanks for choosing CineSus!</p>
+    <br><br><br><br>
+    <h5 style="text-align: end;">Giovanna Munoz</h5><br>
+    <img src = './pictures/gio.png' style="height: 20%; width: 20%; align-content: start; float: right; margin: 3%;"><br>
+    <p>Hello everyone, my name is Gio and I am a CS undergrad graduating this Spring 2023. After graduation, I will be working full-time as a Software Engineer in the Dallas, TX area. My passions in CS include: software engineering, data analytics, and product development. 
+      I aspire to obtain my Master's in Software Engineering within ten years from now. In my free time,  I enjoy listening to metal music, attending metal concerts, and playing Tetris. My favorite bands are: Septicflesh, Metallica, and Whitechapel.</p>
+    <br><br><br><br><br>
+    <h5 style="text-align: start;">Hiram Morales</h5><br>
+    <img src = './pictures/hiram.jpg' style="height: 15%; width: 15%; align-content: start; float: left; margin: 3%;"><br>
+    <p>Hello! My name is Hiram Morales. I am currently a senior at The University of Texas at El Paso and I'm majoring in Computer Science. Some of my hobbies include playing video games, listening to rock/metal music and attending concerts. 
+      Some of my favorite bands are Whitechapel, Metallica, Megadeth, and Trivium. When I graduate, I plan on moving to Dallas Tx and become a full time Software Engineer, or Web developer.</p>
+    <br><br><br><br><br>
+    <h5 style="text-align: end;">Carlos Cepeda</h5><br>
+    <img src = './pictures/carlos.jpg' style="height: 20%; width: 20%; align-content: start; float: right; margin: 3%;"><br>
+    <p>Hello! My name is Carlos Cepeda. I'm a Computer Science student at The University of Texas at El Paso with a concentration on software engineering. My goal is to become a Software Engineer for Microsoft.
+       I love being outdoors, my hobbies include playing sports, going to the gym, and traveling.</p>
+    <br><br><br><br><br>
+    <h5 style="text-align: start;">Roman Soto</h5><br>
+    <img src = './pictures/romanskis.jpg' style="height: 20%; width: 20%; align-content: start; float: left; margin: 3%;"><br>
+    <p>My name is Roman G. Soto and I was born in El Paso, Texas. I am studying Comp. Sci. and will be graduating in Fall 2023 with my Bachelor's. I am really into  going to raves, working out and playing/listening to music. 
+      I really enjoy music, as I have learned how to play 20+ instruments over the last 10 or so years since I started my music journey. My goal is to work at Google as a Software Engineer and/or Front End Engineer!</p>
+    </div>
+    <h6 style="text-align: center;">On behalf of the team, we would like to thank you for choosing us!</h6>
+</div>
+
+<script defer src = "aboutUs.bundle.js"></script>
+    
+</body>
+</html>

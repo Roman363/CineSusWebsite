@@ -24,6 +24,7 @@
             
             <li class="nav-item fs-5"><a href="movieSelect.html" class="nav-link text-color4">Movies</a></li>
             <li class="nav-item fs-5"><a href="rewardsPage.html" class="nav-link text-color4">Rewards</a></li>
+            <li class="nav-item fs-5"><a href="aboutUs.html" class="nav-link text-color4">About Us</a></li>
             <li class="nav-item fs-5"><a href="paymentPage.html" class="nav-link text-color4">Cart</a></li>
             <li class="nav-item fs-5" id="signedInHeader" ><a href="signIn.html" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;">Sign In</a></li>
             <form class="nav-item fs-5" id="signedOutHeader"><input type="submit" value="Sign Out" class="nav-link active bg-color4" aria-current="page" style="color: #011A27;"></input></form>
@@ -37,9 +38,9 @@
     <div class = "seating-container">
 
       <!--showtime info on top of page-->
-        <div class = "seating-info" style="color: #011A27;">
+        <div class = "seating-info" style="color: #011A27;"><br> <br> <br>
           <p id = "movie-title"> Movie </p>
-          <p id = "weekDay">Date |</p>
+          <p id = "movieDate">Date |</p>
           <p id = "time">Time</p>
           <p id = "ticket-counter"><span id = "tickets-left"> # </span> Tickets Left</p>
         </div>
@@ -126,6 +127,27 @@
         </div>     
       </div>
     </div>
+
+    <div class="container" style="border-bottom: solid; border-bottom-color:#222831;">
+      <form id="ticketAmount">
+        <h4 style="color: #222831; font-weight:bold;">Tickets</h4>
+        <div class="row mb-4">
+          <div class="col-lg col-md w-25">
+            <h6 style="color: #222831;">Adult</h6>
+            <input type="number" class="form-control form-control-sm w-50"  value="0" id="adultTickets">
+          </div>
+          <div class="col-lg col-md w-25">
+            <h6 style="color: #222831;">Child</h6>
+            <input type="number" class="form-control form-control-sm w-50"  value="0" id="childTickets">
+          </div>
+          <div class="col-lg col-md w-25">
+            <h6 style="color: #222831;">Senior</h6>
+            <input type="number" class="form-control form-control-sm w-50"  value="0" id="seniorTickets">
+          </div>
+        </div>
+      </form>
+      
+    </div> 
     <!-- need footer -->
     <script src="detailpage.bundle.js"></script>  
   </body>

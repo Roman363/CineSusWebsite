@@ -93,11 +93,17 @@ input[type="radio"]:checked+span
   margin: 10px;
   /* outline: solid 1px red; */
 }
-#featuredText, #rewardsText, #thanksText {
+#featuredText, #rewardsText, #thanksText, #purchasePageDateAndTime, #purchasePageTotalTickets {
   color: #ff5722;
   font-family: 'Abhaya Libre', serif;
 }
 
+#purchasePageTitle {
+  color: #ff5722;
+  font-family: 'Abhaya Libre', serif;
+  position: relative;
+  left: 118px;
+}
 
 #regularText {
   color: #ffffff;
@@ -279,6 +285,7 @@ color: #FFFFFF;
   }
   
   #payBox{
+      text-align: center;
       font-size: 28px;
       font-family: 'Inter';
       font-weight: 800;

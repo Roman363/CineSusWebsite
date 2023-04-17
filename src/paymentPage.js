@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app"
 import { getAuth,onAuthStateChanged,signOut} from 'firebase/auth'
+import { Timestamp } from "firebase/firestore";
 
 
 
@@ -88,18 +89,27 @@ var adultTickets = dataArray["adultTickets"]
 var elderTickets = dataArray["seniorTickets"]
 
 
-
-
 var totalTickets = parseInt(childTickets) + parseInt(adultTickets) + parseInt(elderTickets)
 var subtotal = totalTickets * 7.99
+var discountAmount = 0
 
 
 if (discount == 'discount100') {
-  subtotal = (subtotal * 0)
+  discountAmount = subtotal
+  subtotal = subtotal - discountAmount
 }else if(discount == 'discount50'){
-  subtotal = (subtotal * .5)
+  discountAmount = subtotal * .5
+  subtotal = subtotal - discountAmount
 }else if(discount == 'discount25'){
-  subtotal = (subtotal * .75)
+  discountAmount = subtotal * .25
+  subtotal = subtotal - discountAmount
+}
+
+// console.log(Timestamp(dataArray["movieDate"]));
+//weekday discount
+if (dataArray["movieDate"] == "Tuesday") {
+  discountAmount =  discountAmount + (subtotal * .5)
+  subtotal = subtotal * .5
 }
 
 subtotal = parseFloat(parseFloat(subtotal).toFixed(2))
@@ -113,6 +123,7 @@ tax = tax.toFixed(2)
 total = parseFloat(total)
 total = total.toFixed(2)
 
+console.log(discountAmount);
 console.log(total);
 
 //replacing the placeholder info to the actual info
@@ -120,7 +131,7 @@ document.getElementById("subTotal").innerHTML = subtotal.toString()
 document.getElementById("tax").innerHTML = tax
 document.getElementById("total").innerHTML = total
 document.getElementById("paymentPageTitle").innerHTML = dataArray["movieName"]
-document.getElementById("paymentPageDateAndTime").innerHTML = dataArray["weekDay"] + " | " + dataArray["movieTime"]
+document.getElementById("paymentPageDateAndTime").innerHTML = dataArray["movieDate"] + " | " + dataArray["movieTime"]
 document.getElementById("paymentPagePriceAndAmount").innerHTML = "$" + total + "&emsp;" + totalTickets
 
 
@@ -137,8 +148,10 @@ console.log(imageLink);
 document.getElementById("paymentPageImage").setAttribute("src", imageLink)
 
 
-dataArray["totalTickets"] = totalTickets
+dataArray["totalTickets"] = totalTickets.toString()
 dataArray["total"] = total
+dataArray["tax"] = tax
+dataArray["discountAmount"] = discountAmount.toFixed(2)
 
 console.log(dataArray);
 
