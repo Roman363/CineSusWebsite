@@ -147,7 +147,7 @@ $('.datepicker').datepicker({
  closeOnClear: true,
  
  // Events
- onStart: function(){
+ onStart: function(){ 
  
  },
  onRender: undefined,
