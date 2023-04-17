@@ -34,7 +34,7 @@
      
     </div>
 
-     <div class="container sticky-top" id="movieSelectTimes">
+  <div class="container sticky-top" id="movieSelectTimes">
     <div class="container" style="border-bottom: solid; border-bottom-color:#222831;z-index: index 50;">
       <form id="weekDay">
         <h4 style="color: #222831; font-weight:bold;">Showtimes</h4>
@@ -87,26 +87,7 @@
 
   <br>
 
-  <div class="container" style="border-bottom: solid; border-bottom-color:#222831;">
-    <form id="ticketAmount">
-      <h4 style="color: #222831; font-weight:bold;">Tickets</h4>
-      <div class="row mb-4">
-        <div class="col-lg col-md w-25">
-          <h6 style="color: #222831;">Adult</h6>
-          <input type="number" class="form-control form-control-sm w-50"  value="1"s name="adultTickets">
-        </div>
-        <div class="col-lg col-md w-25">
-          <h6 style="color: #222831;">Child</h6>
-          <input type="number" class="form-control form-control-sm w-50"  value="0" name="childTickets">
-        </div>
-        <div class="col-lg col-md w-25">
-          <h6 style="color: #222831;">Senior</h6>
-          <input type="number" class="form-control form-control-sm w-50"  value="0" name="seniorTickets">
-        </div>
-      </div>
-    </form>
-    
-  </div> 
+  
 
 </div><br><br>  
 <h1 style="text-align:center; font-weight:bold;"">Showtimes</h1>
@@ -252,27 +233,12 @@
 
       
       var weekDay = new FormData(document.getElementById("weekDay"));
-      var ticketAmount = new FormData(document.getElementById("ticketAmount"));
-
-      
       // Combine the form data into a single object
       var formData = [];
       for (var pair of weekDay.entries()) {
         formData[pair[0]] = pair[1];
       }
-      for (var pair of ticketAmount.entries()) {
-        formData[pair[0]] = pair[1];
-      }
-
-      var ticketsArray = []
-      ticketsArray.push(formData["adultTickets"])
-      ticketsArray.push(formData["childTickets"])
-      ticketsArray.push(formData["seniorTickets"])
-
-
       sessionStorage.setItem("weekDay", JSON.stringify(formData["weekDay"]))
-      sessionStorage.setItem("ticketsArray", JSON.stringify(ticketsArray))
-
     }
 
   </script>
