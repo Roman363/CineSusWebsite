@@ -105,7 +105,8 @@ if (discount == 'discount100') {
   subtotal = subtotal - discountAmount
 }
 
-// console.log(Timestamp(dataArray["movieDate"]));
+
+
 //weekday discount
 if (dataArray["movieDate"] == "Tuesday") {
   discountAmount =  discountAmount + (subtotal * .5)
