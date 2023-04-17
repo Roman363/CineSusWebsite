@@ -15,6 +15,7 @@ module.exports =
     gatherData: './src/gatherData.js',
     rewardsPage: './src/rewardsPage.js',
     adminPage: './src/adminPage.js',
+    aboutUs: './src/aboutUs.js',
     updateInfo: './src/updateInfo.js'},
   
     output: 
