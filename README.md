@@ -1,4 +1,4 @@
-# Sun City Software - Team 6 Project
+# Agile Methodologies - Team 6 Project
 
 ## Overview
 
